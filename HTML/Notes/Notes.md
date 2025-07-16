@@ -84,6 +84,7 @@ w## 🧱 What is HTML?
   
   Closing Tag – </p>
 ```
+🔗 **[View Practical Example](../Practical-Examples/syntax.html)**
 
 ---
 ## 📄 HTML File Extension
@@ -117,7 +118,6 @@ w## 🧱 What is HTML?
 - `.BAT` – Batch file  
 - `.COM` – Command file  
 - `.ZIP` – Compressed archive
-
 ---
 ## 🏗️ HTML Document / Structure
 
@@ -179,7 +179,7 @@ Every HTML file follows a standard structure that defines how the content is org
 
 
 > 📌 Every HTML page **must have one** `<html>`, one `<head>`, and one `<body>` section to be valid and well-structured.
-
+🔗 **[View Practical Example](../Practical-Examples/html_structure.html)**
 ---
 ## 🔖 HTML Attributes
 
@@ -388,6 +388,7 @@ All other HTML elements must be nested inside this tag.
 - The <html> tag is required in every HTML document.
 - It must follow immediately after <!DOCTYPE html>.
 - Only one <html> element is allowed per HTML page.
+🔗 **[View Practical Example](../Practical-Examples/html_tag.html)**
 ---
 ## 🧠 `<head>` Tag
 
@@ -427,7 +428,7 @@ It is placed **between** `<html>` and `<body>` tags.
 - The <head> tag must be placed before <body>
 - Use <meta> and <title> tags for better SEO
 - Avoid adding visible content inside <head>
-
+🔗 **[View Practical Example](../Practical-Examples/head_tag.html)**
 ---
 
 ## 🏷️ `<title>` Tag
@@ -465,7 +466,7 @@ The `<title>` tag is placed **inside the `<head>`** section of an HTML document.
 | Use **relevant keywords** to improve SEO                        |
 | Do **not leave** the `<title>` tag empty                        |
 | Only **one `<title>` tag** is allowed per document              |
-
+🔗 **[View Practical Example](../Practical-Examples/title_tag.html)**
 ---
 ## 🏷️ `<body>` Tag
 
@@ -506,7 +507,7 @@ It is placed **after the `<head>` tag** and **inside the `<html>` tag**.
 | Keep structure **organized** with headings, sections             |
 | Don't place `<body>` inside other elements                       |
 | Use semantic tags inside `<body>` for better readability and SEO |
-
+🔗 **[View Practical Example](../Practical-Examples/body%20_tag.html)**
 ---
 ## 🏷️ HTML Heading Tags
 
@@ -575,6 +576,7 @@ It is placed **after the `<head>` tag** and **inside the `<html>` tag**.
 </body>
 </html>
 ```
+🔗 **[View Practical Example](../Practical-Examples/heading_tag.html)**
 ---
 ## 🏷️ `<p>` – Paragraph Tag
 
@@ -643,6 +645,7 @@ Inserts a **single line break**. It’s a **self-closing tag**.
 ```
 
 ✅ Use inside paragraphs or where line breaks are needed without starting a new block.
+🔗 **[View Practical Example](../Practical-Examples/br_hr_b_strong_i_em_u_tags.html)**
 ---
 ## 🧱 `<hr>` – Horizontal Rule
 
@@ -653,7 +656,7 @@ Adds a **thematic horizontal line** or divider. Also self-closing.
 ```
 
 ✅ Commonly used to separate sections of content.
-
+🔗 **[View Practical Example](../Practical-Examples/br_hr_b_strong_i_em_u_tags.html)**
 ---
 ## 🏷️ `<b>` vs `<strong>` – Bold Text
 
@@ -666,7 +669,7 @@ Adds a **thematic horizontal line** or divider. Also self-closing.
 ```
 
 ✅ Prefer `<strong>` for accessibility and SEO.
-
+🔗 **[View Practical Example](../Practical-Examples/br_hr_b_strong_i_em_u_tags.html)**
 ---
 
 ## 🏷️ `<i>` vs `<em>` – Italic Text
@@ -680,7 +683,7 @@ Adds a **thematic horizontal line** or divider. Also self-closing.
 ```
 
 ✅ Use `<em>` when you want screen readers to apply emphasis.
-
+🔗 **[View Practical Example](../Practical-Examples/br_hr_b_strong_i_em_u_tags.html)**
 ---
 
 ## 🏷️ `<u>` – Underlined Text
@@ -692,7 +695,7 @@ Displays text with an underline.
 ```
 
 ⚠️ Often replaced with CSS: `text-decoration: underline;`
-
+🔗 **[View Practical Example](../Practical-Examples/br_hr_b_strong_i_em_u_tags.html)**
 ---
 
 ## 🔗 `<a>` – Anchor Tag
@@ -767,6 +770,7 @@ a {
   color: red;
 }
 ```
+🔗 **[View Practical Example](../Practical-Examples/anchor_tag.html)**
 ---
 ## 🖼️ `<img>` – Image Tag
 
@@ -840,6 +844,7 @@ img {
 </body>
 </html>
 ```
+🔗 **[View Practical Example](../Practical-Examples/img_tag.html)**
 ---
 ## 📦 `<div>` – Block-Level Container
 
@@ -887,6 +892,7 @@ this is css part
   border: 1px solid #ccc;
 }
 ```
+🔗 **[View Practical Example](../Practical-Examples/div_span_tags.html)**
 ---
 ## 🧩 `<span>` – Inline Container
 - The <span> tag is an inline element used to style or manipulate small parts of text or elements.
@@ -928,6 +934,7 @@ this is css part
 | Use Case       | Layout/Structure   | Inline styling/effects |
 | Common Content | Paragraphs, images | Words, icons           |
 
+🔗 **[View Practical Example](../Practical-Examples/div_span_tags.html)**
 
 ---
 ## 📋 HTML List Tags – `<ul>`, `<ol>`, `<li>`
@@ -1107,6 +1114,7 @@ Lists can be nested inside each other.
 </body>
 </html>
 ```
+🔗 **[View Practical Example](../Practical-Examples/ul_ol_li_tags.html)**
 
 ---
 ## 📋 HTML Table Tags – `<table>`, `<tr>`, `<td>`, `<th>`, `<thead>`, `<tbody>`
@@ -1331,7 +1339,7 @@ Groups the main content (body rows) of the table.
 </body>
 </html>
 ```
-
+🔗 **[View Practical Example](../Practical-Examples/table.html)**
 
 ---
 ## 📋 HTML Form Tags – `<form>`, `<input>`, `<label>`, `<textarea>`, `<select>`, `<option>`, `<button>`
@@ -1536,7 +1544,7 @@ Used for form submission or actions.
 </body>
 </html>
 ```
-
+🔗 **[View Practical Example](../Practical-Examples/form.html)**
 ---
 ## 📋 HTML `<iframe>` Tag – Inline Frame
 
@@ -1646,8 +1654,8 @@ You can combine multiple values using space:
 </body>
 </html>
 ```
-
-
+🔗 **[View Practical Example](../Practical-Examples/iframe.html)**
+---
 ## 📋 HTML `<fieldset>` and `<legend>` Tags
 
 The `<fieldset>` and `<legend>` tags are used to group and label related elements within a form, improving organization and accessibility.
@@ -1765,6 +1773,7 @@ Defines a **title** or **caption** for the `<fieldset>` block.
 </body>
 </html>
 ```
+🔗 **[View Practical Example](../Practical-Examples/form.html)**
 
 ---
 ## 📋 HTML `<audio>` and `<video>` Tags
@@ -1887,7 +1896,7 @@ Allows you to embed and control video playback.
 </body>
 </html>
 ```
-
+🔗 **[View Practical Example](../Practical-Examples/audio_video_tags.html)**
 ---
 ## 🖼️ `<picture>` Tag in HTML
 
@@ -1945,6 +1954,7 @@ It is mainly used for **responsive images** and modern **image optimization** (e
 - Ensure all images are relevant and visually aligned.
 
 - Combine with alt attributes for accessibility.
+🔗 **[View Practical Example](../Practical-Examples/picture.html)**
 
 ---
 
@@ -2078,6 +2088,7 @@ function greet(name) {
 </body>
 </html>
 ```
+🔗 **[View Practical Example](../Practical-Examples/code_pre_abbr_cite_tags.html)**
 
 ---
 ## 📋 HTML `<figure>` and `<figcaption>` Tags
@@ -2194,7 +2205,7 @@ def hello():
 - For images with descriptions
 - For code blocks with explanations
 - For videos or charts that need context
-
+🔗 **[View Practical Example](../Practical-Examples/figure_figcaption_tags.html)**
 ---
 ## 📋 HTML `<mark>` and `<progress>` Tags
 
@@ -2287,6 +2298,7 @@ Represents the completion progress of a task.
 - Use `<mark>` only when highlighting adds meaning.
 - Use `<progress>` for non-interactive visual feedback (not to be confused with `<meter>`).
 
+🔗 **[View Practical Example](../Practical-Examples/mark_progress_tags.html)**
 
 
 ---
@@ -2394,6 +2406,7 @@ details[open] summary {
 - Use `<details>` and `<summary>` to improve user interaction and content structure.
 - Always provide descriptive text inside `<summary>`.
 - Avoid overusing it for critical content—use it mainly for optional or extended information.
+🔗 **[View Practical Example](../Practical-Examples/details_summary_tags.html)**
 
 ---
 ## 📋 HTML `<template>`, `<dialog>`, and `<canvas>` Tags
@@ -2547,6 +2560,7 @@ Creates an area for graphics rendering (via JavaScript). Used for games, charts,
 | `<template>` | Define reusable HTML fragments             |
 | `<dialog>`   | Create modal or popup dialog boxes         |
 | `<canvas>`   | Draw graphics with JS (2D or WebGL)        |
+🔗 **[View Practical Example](../Practical-Examples/template_dialog_canvas_tags.html)**
 
 
 ---
@@ -2657,6 +2671,7 @@ Provides alternate content for users with JavaScript **disabled** or unsupported
 | `<script>`  | Run or link to JavaScript for interactivity     |
 | `<noscript>`| Provide fallback content if JavaScript is disabled |
 
+🔗 **[View Practical Example](../Practical-Examples/link_meta_style_script_nosctipt_tags.html)**
 
 
 ---
@@ -2797,7 +2812,7 @@ Defines internal CSS rules directly in the HTML document.
 | `<meta>` | Define metadata about the document           |
 | `<style>`| Add internal CSS styling                     |
 
-
+🔗 **[View Practical Example](../Practical-Examples/link_meta_style_script_nosctipt_tags.html)**
 ---
 ## 📋 HTML5 Semantic Elements
 
@@ -2973,7 +2988,7 @@ Represents the dominant content of a web page.
 | `<header>`| Page or section header                       |
 | `<footer>`| Page or section footer                       |
 | `<main>`  | Main content of the page (used once)         |
-
+🔗 **[View Practical Example](../Practical-Examples/symantic_tags.html)**
 ---
 ## ✍️ HTML Text Formatting Tags
 
@@ -3101,7 +3116,7 @@ This is
 - Prefer CSS for styling.
 - Avoid deprecated or purely visual tags unless necessary.
 
-
+🔗 **[View Practical Example](../Practical-Examples/text_formatting_tags.html)**
 --- 
 ## 🚫 HTML Empty Elements (Self-Closing Tags)
 
@@ -3156,7 +3171,7 @@ These are the often-overlooked but highly important parts of writing clean, acce
 - Used to **explain code** or leave notes for developers.
 - **Ignored by browsers**.
 - Not shown to users.
-
+🔗 **[View Practical Example](../Practical-Examples/self_closing_tags.html)**
 ---
 ### 📌 3. HTML Entities (Extended)
 Used to display reserved characters, special punctuation, symbols, and accents.
@@ -3192,7 +3207,7 @@ Used to display reserved characters, special punctuation, symbols, and accents.
 | `&raquo;`  | »      | Right-pointing angle quotation |
 | `&times;`  | ×      | Multiplication sign            |
 | `&divide;` | ÷      | Division sign                  |
-
+🔗 **[View Practical Example](../Practical-Examples/entities.html)**
 --- 
 ### 🌐 4. Meta Tags in `<head>`
 
@@ -3269,7 +3284,7 @@ These tags are outdated and should not be used in modern HTML. Use CSS and seman
 
 > ⚠️ These tags may still work in some browsers but are not supported in HTML5.
 > ✅ Always prefer semantic HTML and CSS for styling and structure.
-
+🔗 **[View Practical Example](../Practical-Examples/Deprecated_Tags.html)**
 ---
 ### 📱 8. Responsive Design Basics
 
