@@ -3438,3 +3438,135 @@ HTML image maps allow you to define clickable areas within a single image using 
 
 
 
+# 🚀 Emmet Shortcuts for HTML (With Examples)
+
+> Emmet is a powerful toolkit that allows you to write HTML faster using abbreviations.
+
+---
+
+## 🔹 Basic HTML Tags
+
+| Abbreviation | Description                     | Output Example                             |
+|--------------|----------------------------------|---------------------------------------------|
+| `html:5`     | Basic HTML5 boilerplate          | `<!DOCTYPE html> ... </html>`               |
+| `!`          | Shorthand for `html:5`           | HTML5 skeleton                             |
+| `p`          | Paragraph tag                    | `<p></p>`                                   |
+| `h1`         | Heading                          | `<h1></h1>`                                 |
+| `img`        | Image tag with src and alt       | `<img src="" alt="">`                       |
+| `a`          | Anchor tag                       | `<a href=""></a>`                           |
+| `input`      | Input tag                        | `<input type="text">`                       |
+
+---
+
+## 🔹 Tag with Class / ID
+
+| Abbreviation       | Description                  | Output                             |
+|--------------------|-------------------------------|-------------------------------------|
+| `div.container`    | `div` with a class            | `<div class="container"></div>`    |
+| `p#para`           | `p` with an id                | `<p id="para"></p>`                |
+| `span.red.bold`    | `span` with two classes       | `<span class="red bold"></span>`  |
+
+---
+
+## 🔹 Nesting Tags
+
+| Abbreviation     | Description                     | Output                                          |
+|------------------|----------------------------------|-------------------------------------------------|
+| `ul>li`          | `li` inside `ul`                | `<ul><li></li></ul>`                           |
+| `div>p`          | `p` inside `div`                | `<div><p></p></div>`                           |
+| `section>h1+p`   | `h1` and `p` inside `section`   | `<section><h1></h1><p></p></section>`          |
+
+---
+
+## 🔹 Multiplication (*)
+
+| Abbreviation     | Description                     | Output                                           |
+|------------------|----------------------------------|--------------------------------------------------|
+| `ul>li*3`        | 3 `li` tags inside `ul`         | `<ul><li></li><li></li><li></li></ul>`          |
+| `p*2`            | Two paragraphs                  | `<p></p><p></p>`                                |
+
+---
+
+## 🔹 Siblings (+)
+
+| Abbreviation     | Description                     | Output                                         |
+|------------------|----------------------------------|------------------------------------------------|
+| `h1+p`           | `h1` followed by `p`            | `<h1></h1><p></p>`                             |
+| `ul+ol`          | `ul` then `ol`                  | `<ul></ul><ol></ol>`                           |
+
+---
+
+## 🔹 Grouping ( )
+
+| Abbreviation         | Description                        | Output                                                  |
+|----------------------|-------------------------------------|----------------------------------------------------------|
+| `(header>h1)+footer` | Group `header>h1` then add `footer` | `<header><h1></h1></header><footer></footer>`          |
+
+---
+
+## 🔹 Attributes in Elements
+
+| Abbreviation                    | Description                        | Output                                      |
+|---------------------------------|-------------------------------------|---------------------------------------------|
+| `a[href="https://example.com"]` | Anchor with href                   | `<a href="https://example.com"></a>`        |
+| `input[type=checkbox]`          | Input with type checkbox           | `<input type="checkbox">`                   |
+| `img[src="image.jpg" alt="pic"]`| Image with src and alt             | `<img src="image.jpg" alt="pic">`           |
+
+---
+
+## 🔹 Text Content
+
+| Abbreviation       | Description                    | Output                                      |
+|--------------------|-------------------------------|---------------------------------------------|
+| `p{Hello World}`   | Paragraph with text            | `<p>Hello World</p>`                         |
+| `a{Click Here}`    | Link with text                 | `<a href="">Click Here</a>`                 |
+| `button{Submit}`   | Button text                    | `<button>Submit</button>`                   |
+
+---
+
+## 🔹 Lists, Tables, and Forms
+
+| Abbreviation       | Description                     | Output                                        |
+|--------------------|----------------------------------|-----------------------------------------------|
+| `ul>li.item$*3`    | List with class + numbering      | `<li class="item1"></li><li class="item2"></li>` |
+| `table>tr*2>td*3`  | 2 rows, each with 3 columns      | Standard table structure                     |
+| `form>input:text+input:submit` | Form with text and submit fields | `<form><input type="text"><input type="submit"></form>` |
+
+---
+
+## 🔹 Special Inputs
+
+| Abbreviation        | Output                                       |
+|---------------------|----------------------------------------------|
+| `input:password`    | `<input type="password">`                   |
+| `input:email`       | `<input type="email">`                      |
+| `input:radio`       | `<input type="radio">`                      |
+| `input:checkbox`    | `<input type="checkbox">`                   |
+| `input:submit`      | `<input type="submit">`                     |
+| `input:text`        | `<input type="text">`                       |
+
+---
+
+## 💡 Bonus: Common Patterns
+
+```emmet
+div#main.container>header>h1{Welcome}+nav>ul>li*3>a{Link $}
+```
+
+```html
+<div id="main" class="container">
+  <header>
+    <h1>Welcome</h1>
+    <nav>
+      <ul>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+```
+
+
+
