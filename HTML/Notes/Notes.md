@@ -3330,3 +3330,111 @@ These tags are outdated and should not be used in modern HTML. Use CSS and seman
 - Keep your code readable and maintainable.
 
 ✅ These final topics complete your foundational HTML learning. Master them, and you'll write code that's clean, accessible, and ready for the modern web!
+
+
+---
+# Some Important Topic
+---
+## 🔗 Anchor Tag with Clickable Image
+
+You can use the `<a>` tag to make an image clickable, allowing users to navigate to another page or website when they click the image.
+
+### ✅ HTML Example
+
+```html
+<!-- Clickable Image -->
+<a href="https://www.example.com" target="_blank">
+  <img src="logo.png" alt="Clickable Logo" width="200" height="100">
+</a>
+```
+
+### 🔍 Explanation
+
+| Element                    | Description                                                    |
+|----------------------------|----------------------------------------------------------------|
+| `<a href="...">`           | Anchor tag to wrap the image and make it clickable             |
+| `target="_blank"`          | Opens the link in a new tab (optional but common)              |
+| `<img src="..." alt="...">`| Image to be displayed and made clickable                       |
+| `width` / `height`         | Control the size of the image (can also be done via CSS)       |
+
+### 🎯 Real-World Example
+
+```html
+<a href="https://youtube.com" target="_blank">
+  <img src="youtube-logo.png" alt="YouTube Logo" width="150">
+</a>
+```
+
+### 📝 Best Practices
+
+- Always use meaningful `alt` text for accessibility.
+- Use `target="_blank"` with `rel="noopener noreferrer"` for external links.
+- Keep image sizes optimized for fast loading.
+
+### 💡 Bonus: Combine with Image Map (Optional)
+
+You can combine the `<a>` tag with an image map (`<map>`) for multiple clickable areas within a single image. Let me know if you'd like that too!
+#### 🔗 **[View Practical Example](../Practical-Examples/img_tag.html)**
+
+---
+## 🗺️ HTML Image Map with `<map>` and `<area>` Tags
+
+HTML image maps allow you to define clickable areas within a single image using the `<map>` and `<area>` elements.
+
+### 🔧 Syntax
+
+```html
+<img src="world-map.jpg" alt="World Map" usemap="#worldmap">
+
+<map name="worldmap">
+  <area shape="rect" coords="34,44,270,350" href="https://example.com/usa" alt="USA">
+  <area shape="circle" coords="400,200,60" href="https://example.com/brazil" alt="Brazil">
+  <area shape="poly" coords="130,160,180,200,160,240,100,220" href="https://example.com/india" alt="India">
+</map>
+```
+
+### 📌 Attributes of `<area>`
+
+| Attribute | Description |
+|-----------|-------------|
+| `shape`   | The shape of the area (`rect`, `circle`, `poly`) |
+| `coords`  | Coordinates for the area (based on shape) |
+| `href`    | The link to navigate when area is clicked |
+| `alt`     | Alternative text for the area |
+| `target`  | Where to open the link (`_blank`, `_self`) |
+
+### 🎯 Shape and Coords Guide
+
+- **Rectangle (`rect`)**: `coords="x1,y1,x2,y2"` (top-left to bottom-right)
+- **Circle (`circle`)**: `coords="x,y,radius"` (center and radius)
+- **Polygon (`poly`)**: `coords="x1,y1,x2,y2,x3,y3,...,xn,yn"`
+
+### ✅ Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Map Example</title>
+</head>
+<body>
+
+  <h2>Clickable World Map</h2>
+  <img src="world-map.jpg" alt="World Map" usemap="#worldmap">
+
+  <map name="worldmap">
+    <area shape="rect" coords="34,44,270,350" href="https://example.com/usa" alt="USA" target="_blank">
+    <area shape="circle" coords="400,200,60" href="https://example.com/brazil" alt="Brazil" target="_blank">
+    <area shape="poly" coords="130,160,180,200,160,240,100,220" href="https://example.com/india" alt="India" target="_blank">
+  </map>
+
+</body>
+</html>
+```
+
+📝 **Tip**: Use image editing tools or online HTML image map generators to get coordinates.
+#### 🔗 **[View Practical Example](../Practical-Examples/img_tag.html)**
+
+
+
+
