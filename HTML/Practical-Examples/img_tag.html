@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Tag Full Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #888;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+    <!-- In this you add your own images link and path here only examples -->
+  <h1>🖼️ HTML &lt;img&gt; Tag Examples</h1>
+
+  <!-- 1. Basic Image -->
+  <h2>1. Basic Image</h2>
+  <img src="nature.jpg" alt="Beautiful Nature" width="400" height="300">
+
+  <!-- 2. Responsive Image with Style -->
+  <h2>2. Responsive Image with CSS</h2>
+  <img src="responsive.jpg" alt="Responsive Image" class="responsive-img">
+
+  <!-- 3. Tooltip using title -->
+  <h2>3. Image with Title</h2>
+  <img src="sunset.jpg" alt="Sunset" title="Sunset at the Beach" width="300">
+
+  <!-- 4. Lazy Loading -->
+  <h2>4. Lazy Loading</h2>
+  <img src="lazy.jpg" alt="Lazy Load Example" loading="lazy" width="300">
+
+  <!-- 5. Inline Styled Image -->
+  <h2>5. Inline Style Image</h2>
+  <img src="flower.jpg" alt="Flower Image" style="border-radius: 12px; box-shadow: 0 0 12px #444;" width="250">
+
+  <!-- 6. Broken Image (with alt text shown) -->
+  <h2>6. Broken Image (Fallback Text)</h2>
+  <img src="notfound.jpg" alt="Image failed to load" width="200">
+
+  <!-- 7. External Image -->
+  <h2>7. External Image</h2>
+  <img src="https://via.placeholder.com/250x150" alt="Placeholder Image">
+
+  <!-- 8. Clickable Image -->
+  <h2>8. Clickable Image (Anchor)</h2>
+  <a href="https://www.google.com" target="_blank" title="Visit Google">
+    <img src="google-logo.png" alt="Google Logo" width="200">
+  </a>
+
+  <!-- 9. Image Map Example -->
+  <h2>9. Image Map with Clickable Areas</h2>
+  <img src="world-map.jpg" alt="World Map" usemap="#worldmap" width="500">
+
+  <map name="worldmap">
+    <!-- Rectangle: top-left-x, top-left-y, bottom-right-x, bottom-right-y -->
+    <area shape="rect" coords="100,50,200,150" href="https://en.wikipedia.org/wiki/North_America" alt="North America" target="_blank">
+    
+    <!-- Circle: center-x, center-y, radius -->
+    <area shape="circle" coords="300,200,40" href="https://en.wikipedia.org/wiki/Africa" alt="Africa" target="_blank">
+
+    <!-- Polygon: x1,y1,x2,y2,x3,y3... -->
+    <area shape="poly" coords="400,100,420,120,440,100,430,80" href="https://en.wikipedia.org/wiki/Europe" alt="Europe" target="_blank">
+  </map>
+
+</body>
+</html>

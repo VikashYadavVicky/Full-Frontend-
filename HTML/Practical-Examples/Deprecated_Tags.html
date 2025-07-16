@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚫 Deprecated Tags Demo</title>
+  <style>
+    .centered { text-align: center; }
+    .big-text { font-size: 1.5em; }
+    .underline { text-decoration: underline; }
+    .strike { text-decoration: line-through; }
+    .mono { font-family: monospace; }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✅ Modern HTML & CSS Instead of Deprecated Tags</h1>
+
+  <!-- ❌ Old way: <font> -->
+  <!-- <font color="red" size="5">This is red text</font> -->
+  <p style="color: red; font-size: 24px;">✅ Modern: This is red text using CSS</p>
+
+  <!-- ❌ Old: <center> -->
+  <!-- <center>This is centered</center> -->
+  <p class="centered">✅ Modern: This is centered using CSS</p>
+
+  <!-- ❌ Old: <big> -->
+  <!-- <big>This is big text</big> -->
+  <p class="big-text">✅ Modern: Big text using font-size</p>
+
+  <!-- ❌ Old: <u> -->
+  <!-- <u>This is underlined</u> -->
+  <p class="underline">✅ Modern: Underlined using CSS</p>
+
+  <!-- ❌ Old: <strike> -->
+  <!-- <strike>This is struck through</strike> -->
+  <p class="strike">✅ Modern: Line-through using CSS</p>
+
+  <!-- ❌ Old: <tt> -->
+  <!-- <tt>This is teletype text</tt> -->
+  <p class="mono">✅ Modern: Monospace font using CSS</p>
+
+  <!-- ❌ Old: <blink> -->
+  <!-- <blink>This text blinks</blink> -->
+  <p class="blink">⚠️ Discouraged: Blink effect using CSS animation</p>
+
+  <!-- ❌ Old: <marquee> -->
+  <!-- <marquee>Scrolling text</marquee> -->
+  <div style="overflow: hidden; white-space: nowrap; animation: scroll 5s linear infinite;">
+    ✅ Modern: Scrolling text using CSS animation
+  </div>
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+
+  <!-- ❌ Old: <applet> -->
+  <!-- <applet code="Example.class" width="300" height="300"></applet> -->
+  <object data="example.swf" type="application/x-shockwave-flash" width="300" height="300">
+    ⚠️ Modern Replacement: <object> (limited use today)
+  </object>
+
+  <!-- ❌ Old: <frame> and <frameset> -->
+  <!-- Modern: Use <iframe> or layout via CSS -->
+  <iframe src="https://example.com" width="300" height="200" title="Example"></iframe>
+
+  <!-- ❌ Old: <acronym> -->
+  <!-- <acronym title="World Health Organization">WHO</acronym> -->
+  <abbr title="World Health Organization">WHO</abbr>
+
+</body>
+</html>

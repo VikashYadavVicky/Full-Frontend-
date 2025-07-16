@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📋 Enhanced Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+    form {
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 1px solid #999;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+      font-size: 1.1rem;
+    }
+    label {
+      display: block;
+      margin: 12px 0 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="file"],
+    input[type="color"],
+    input[type="range"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+    }
+    button[type="reset"] {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📋 Enhanced Contact Form</h2>
+
+  <form action="/submit" method="post" enctype="multipart/form-data">
+
+    <!-- Personal Info -->
+    <fieldset>
+      <legend>👤 Personal Information</legend>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
+    </fieldset>
+
+    <!-- Message Section -->
+    <fieldset>
+      <legend>💬 Message Details</legend>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+      <label for="topic">Topic:</label>
+      <select id="topic" name="topic" required>
+        <option value="">-- Select Topic --</option>
+        <option value="feedback">Feedback</option>
+        <option value="support">Support</option>
+        <option value="business">Business Inquiry</option>
+      </select>
+
+      <label for="attachment">Upload a File:</label>
+      <input type="file" id="attachment" name="attachment">
+    </fieldset>
+
+    <!-- Preferences -->
+    <fieldset>
+      <legend>⚙️ Preferences</legend>
+
+      <label>Preferred Contact Method:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="contact_method" value="email" checked> Email</label>
+        <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+        <label><input type="radio" name="contact_method" value="whatsapp"> WhatsApp</label>
+      </div>
+
+      <label>Select Services Interested In:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="services" value="web"> Web Design</label>
+        <label><input type="checkbox" name="services" value="seo"> SEO</label>
+        <label><input type="checkbox" name="services" value="marketing"> Marketing</label>
+      </div>
+
+      <label for="rating">Rate Our Website:</label>
+      <input type="range" id="rating" name="rating" min="0" max="10" step="1">
+
+      <label for="color">Choose a Theme Color:</label>
+      <input type="color" id="color" name="color">
+    </fieldset>
+
+    <!-- Submission -->
+    <fieldset>
+      <legend>📝 Confirmation</legend>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the terms and conditions.
+      </label>
+    </fieldset>
+
+    <div class="button-group">
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</body>
+</html>

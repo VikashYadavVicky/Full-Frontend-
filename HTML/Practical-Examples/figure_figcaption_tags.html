@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Figure and Figcaption Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    figure {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 20px 0;
+      background-color: #f9f9f9;
+    }
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 8px;
+      color: #555;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+ <!-- For video and images use your own links or path of file -->
+  <h1>Using &lt;figure&gt; and &lt;figcaption&gt; in HTML</h1>
+
+  <!-- Image Example -->
+  <figure>
+    <img src="sunset.jpg" alt="Sunset over the ocean" width="500">
+    <figcaption>Sunset view from the beach, taken in 2024</figcaption>
+  </figure>
+
+  <!-- Video Example -->
+  <figure>
+    <video controls width="400">
+      <source src="intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Introductory video about our startup</figcaption>
+  </figure>
+
+  <!-- Code Block Example -->
+  <figure>
+    <pre><code>function greet() {
+  console.log("Hello, world!");
+}</code></pre>
+    <figcaption>JavaScript function to print a greeting in the console</figcaption>
+  </figure>
+
+</body>
+</html>

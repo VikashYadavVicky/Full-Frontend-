@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced <a> Tag Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+    a:hover {
+      color: crimson;
+    }
+    section {
+      margin-top: 60px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+    <!-- You add you own link for working here is the only exmaples -->
+
+  <h1>🔗 Anchor Tag Advanced Examples</h1>
+
+  <!-- 1. Basic External Link -->
+  <p>
+    <strong>1. External Link:</strong>
+    <a href="https://developer.mozilla.org">Visit MDN Docs</a>
+  </p>
+
+  <!-- 2. Open in New Tab -->
+  <p>
+    <strong>2. New Tab:</strong>
+    <a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI (New Tab)</a>
+  </p>
+
+  <!-- 3. Internal Link -->
+  <p>
+    <strong>3. Internal Navigation:</strong>
+    <a href="#about">Go to About Section</a>
+  </p>
+
+  <!-- 4. Email Link -->
+  <p>
+    <strong>4. Email Link:</strong>
+    <a href="mailto:support@example.com?subject=Help Needed">Contact Support</a>
+  </p>
+
+  <!-- 5. Phone Call Link -->
+  <p>
+    <strong>5. Phone Link:</strong>
+    <a href="tel:+911234567890">Call Us Now</a>
+  </p>
+
+  <!-- 6. Download File -->
+  <p>
+    <strong>6. Download File:</strong>
+    <a href="files/sample.pdf" download="MyFile.pdf">Download PDF</a>
+  </p>
+
+  <!-- 7. Tooltip with title -->
+  <p>
+    <strong>7. Tooltip:</strong>
+    <a href="https://example.com" title="This will take you to Example.com">Hover me</a>
+  </p>
+
+  <!-- 8. Hreflang attribute -->
+  <p>
+    <strong>8. hreflang:</strong>
+    <a href="https://es.wikipedia.org" hreflang="es" target="_blank">Wikipedia in Spanish</a>
+  </p>
+
+  <!-- 9. Link with accesskey (Alt + H) -->
+  <p>
+    <strong>9. accesskey:</strong>
+    <a href="https://example.com" accesskey="h">Press Alt + H to open this link</a>
+  </p>
+
+  <!-- 10. tabindex attribute -->
+  <p>
+    <strong>10. Tab Order:</strong><br>
+    <a href="#first" tabindex="2">Second Tab</a><br>
+    <a href="#second" tabindex="1">First Tab</a>
+  </p>
+
+  <!-- 11. Link to open in parent frame -->
+  <p>
+    <strong>11. Open in Parent:</strong>
+    <a href="https://example.com" target="_parent">Open in Parent Frame</a>
+  </p>
+
+  <!-- 12. Open in top window -->
+  <p>
+    <strong>12. Open in Top Window:</strong>
+    <a href="https://example.com" target="_top">Open in Top Window</a>
+  </p>
+
+  <!-- 13. Link with type (for download MIME hinting) -->
+  <p>
+    <strong>13. MIME Type:</strong>
+    <a href="resume.pdf" type="application/pdf" download>Download Resume (PDF)</a>
+  </p>
+
+  <!-- 14. Anchor within a page -->
+  <p>
+    <strong>14. Same Page Navigation:</strong>
+    <a href="#bottom">Go to Bottom ⬇️</a>
+  </p>
+
+  <section id="about">
+    <h2>📍 About Section</h2>
+    <p>This is where internal links like #about will land.</p>
+  </section>
+
+  <!-- Placeholder spacing -->
+  <div style="height: 400px;"></div>
+
+  <section id="bottom">
+    <h2>📍 Bottom of Page</h2>
+    <p>You’ve reached the bottom of the page using anchor link.</p>
+  </section>
+
+</body>
+</html>

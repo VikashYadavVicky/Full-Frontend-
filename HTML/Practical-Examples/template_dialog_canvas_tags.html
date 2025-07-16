@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📋 HTML &lt;template&gt;, &lt;dialog&gt;, &lt;canvas&gt; Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    canvas {
+      border: 1px solid #000;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📋 HTML Tags: &lt;template&gt;, &lt;dialog&gt;, &lt;canvas&gt;</h1>
+
+  <!-- ========================== -->
+  <!-- 1️⃣ <template> Tag Example -->
+  <!-- ========================== -->
+  <h2>1. &lt;template&gt; – Hidden HTML Template</h2>
+  <template id="user-card">
+    <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+      <h3>User Name</h3>
+      <p>Email: user@example.com</p>
+    </div>
+  </template>
+
+  <button onclick="addUser()">Add User Card</button>
+  <div id="user-container"></div>
+
+  <script>
+    function addUser() {
+      const template = document.getElementById("user-card");
+      const clone = template.content.cloneNode(true);
+      document.getElementById("user-container").appendChild(clone);
+    }
+  </script>
+
+  <!-- ========================== -->
+  <!-- 2️⃣ <dialog> Tag Example -->
+  <!-- ========================== -->
+  <h2>2. &lt;dialog&gt; – Modal Dialog Box</h2>
+  <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+
+  <dialog id="myDialog">
+    <p>This is a native HTML dialog element.</p>
+    <button onclick="document.getElementById('myDialog').close()">Close</button>
+  </dialog>
+
+  <!-- ========================== -->
+  <!-- 3️⃣ <canvas> Tag Example -->
+  <!-- ========================== -->
+  <h2>3. &lt;canvas&gt; – Drawing Area</h2>
+  <canvas id="myCanvas" width="300" height="150"></canvas>
+
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Draw a rectangle
+    ctx.fillStyle = 'lightblue';
+    ctx.fillRect(10, 10, 100, 50);
+
+    // Draw text
+    ctx.font = '16px Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText('Hello Canvas', 120, 40);
+  </script>
+
+</body>
+</html>

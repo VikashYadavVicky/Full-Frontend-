@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Table Example</title>
+  <style>
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin: 30px auto;
+      font-family: Arial, sans-serif;
+    }
+
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 12px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #f2f2f2;
+    }
+
+    tfoot {
+      background-color: #eaeaea;
+      font-weight: bold;
+    }
+
+    td[colspan], td[rowspan] {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 📋 Basic Table Example with All Semantic Tags -->
+  <table>
+    <!-- 🏷️ Optional: Table Caption -->
+    <caption>📊 Monthly Sales Report</caption>
+
+    <!-- 🔼 Table Head -->
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Product A</th>
+        <th>Product B</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+
+    <!-- 📦 Table Body -->
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>120</td>
+        <td>90</td>
+        <td>210</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>140</td>
+        <td>80</td>
+        <td>220</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>130</td>
+        <td>100</td>
+        <td>230</td>
+      </tr>
+    </tbody>
+
+    <!-- 📉 Table Footer (Summarize or Total) -->
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td>390</td>
+        <td>270</td>
+        <td>660</td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+  <!-- Table for best example -->
+     <table>
+    <!-- Table Title -->
+    <caption>📊 Employee Shift Schedule</caption>
+
+    <!-- Table Head -->
+    <thead>
+      <tr>
+        <th rowspan="2">Employee</th>
+        <th colspan="3">Morning Shift</th>
+        <th colspan="3">Evening Shift</th>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td colspan="3">On Leave</td> <!-- colspan example -->
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Charlie</td>
+        <td rowspan="2">✔️</td> <!-- rowspan example -->
+        <td>❌</td>
+        <td>✔️</td>
+        <td colspan="2">Half Day</td> <!-- colspan across two days -->
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td>David</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+      </tr>
+    </tbody>
+
+    <!-- Table Footer -->
+    <tfoot>
+      <tr>
+        <td colspan="7">Legend: ✔️ = Present, ❌ = Absent, "On Leave"/"Half Day" = Status</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

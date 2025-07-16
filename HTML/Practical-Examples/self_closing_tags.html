@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Empty Elements Example</title>
+
+  <!-- <base>: Base URL for relative links -->
+  <base href="https://example.com/">
+
+  <!-- <link>: Linking external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- <meta>: Metadata -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="John Doe">
+</head>
+<body>
+
+  <h1>HTML Empty Elements (Self-Closing Tags)</h1>
+
+  <!-- <br>: Line break -->
+  <p>Line one<br>Line two after a break</p>
+
+  <!-- <hr>: Horizontal line -->
+  <hr>
+
+  <!-- <img>: Displaying an image -->
+  <img src="cat.jpg" alt="Cute cat" width="300">
+
+  <!-- <input>: Text input field -->
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- <embed>: Embed external media -->
+  <embed src="file.pdf" width="400" height="300">
+
+  <!-- <source>: Used in video/audio elements -->
+  <video controls width="320">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- <track>: Subtitle track for video -->
+  <video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+  </video>
+
+  <!-- <param>: Parameters for embedded objects -->
+  <object data="movie.swf" type="application/x-shockwave-flash" width="400" height="300">
+    <param name="autoplay" value="true">
+    <param name="loop" value="false">
+  </object>
+
+  <!-- <col>: Column settings inside a <colgroup> -->
+  <table border="1">
+    <colgroup>
+      <col span="1" style="background-color: lightgray;">
+      <col span="1" style="background-color: lightblue;">
+    </colgroup>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>25</td>
+    </tr>
+  </table>
+
+  <!-- <wbr>: Line break opportunity -->
+  <p>ThisIsAReallyLong<wbr>WordThatCan<wbr>BreakHere</p>
+
+  <!-- <area>: Inside an image map -->
+  <img src="map.jpg" usemap="#image-map" alt="Clickable map">
+  <map name="image-map">
+    <area shape="rect" coords="34,44,270,350" href="link1.html" alt="Link 1">
+    <area shape="circle" coords="337,300,44" href="link2.html" alt="Link 2">
+  </map>
+
+</body>
+</html>

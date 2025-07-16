@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Image with &lt;picture&gt; Tag</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+ <!-- For images use your own images here only example -->
+  <h1>📸 HTML &lt;picture&gt; Tag Example</h1>
+
+  <!-- ✅ Responsive image based on screen width -->
+  <h2>1️⃣ Responsive Image by Screen Size</h2>
+  <picture>
+    <!-- Large image for screens 800px and up -->
+    <source media="(min-width: 800px)" srcset="large.jpg">
+    <!-- Medium image for screens 400px and up -->
+    <source media="(min-width: 400px)" srcset="medium.jpg">
+    <!-- Fallback small image for small screens -->
+    <img src="small.jpg" alt="A responsive image of a mountain landscape">
+  </picture>
+
+  <!-- ✅ WebP support with fallback -->
+  <h2>2️⃣ Format-Based Optimization (WebP First)</h2>
+  <picture>
+    <!-- Modern WebP format if browser supports it -->
+    <source srcset="photo.webp" type="image/webp">
+    <!-- Fallback JPEG version -->
+    <source srcset="photo.jpg" type="image/jpeg">
+    <!-- Fallback for old browsers -->
+    <img src="photo-fallback.jpg" alt="High-quality photo in modern format">
+  </picture>
+
+</body>
+</html>

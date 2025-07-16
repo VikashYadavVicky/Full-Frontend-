@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>div and span Example</title>
+  <style>
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #444;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      width: 45%;
+      padding: 10px;
+      margin: 10px;
+      border: 2px dashed #888;
+      display: inline-block;
+      vertical-align: top;
+      background-color: #e0f7fa;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+      background-color: yellow;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📦 &lt;div&gt; and &lt;span&gt; Examples</h1>
+
+  <!-- 1. Basic div container -->
+  <h2>1. Basic &lt;div&gt; Usage</h2>
+  <div class="container">
+    <p>This content is wrapped inside a <strong>&lt;div&gt;</strong> container.</p>
+    <p>It behaves as a block-level element.</p>
+  </div>
+
+  <!-- 2. Two side-by-side divs using inline-block -->
+  <h2>2. Side-by-side Boxes with &lt;div&gt;</h2>
+  <div class="box">This is Box 1 (div)</div>
+  <div class="box">This is Box 2 (div)</div>
+
+  <!-- 3. span for inline text styling -->
+  <h2>3. Inline Styling with &lt;span&gt;</h2>
+  <p>This sentence includes a <span class="highlight">highlighted</span> word using &lt;span&gt;.</p>
+
+  <!-- 4. div vs span: block vs inline -->
+  <h2>4. Block vs Inline Behavior</h2>
+  <div style="background: lightgreen; padding: 10px;">This is a block (div) element</div>
+  <p>This is a sentence with <span style="background: lightblue;">an inline (span)</span> element in between.</p>
+
+  <!-- 5. Nested example -->
+  <h2>5. Nesting Span inside Div</h2>
+  <div class="container">
+    <p>Welcome <span class="highlight">User</span> to the website!</p>
+  </div>
+
+  <!-- 6. span used for labels and notes -->
+  <h2>6. span for Notes and Inline Labels</h2>
+  <p><strong>Note:</strong> <span class="note">Always close your HTML tags properly.</span></p>
+
+</body>
+</html>

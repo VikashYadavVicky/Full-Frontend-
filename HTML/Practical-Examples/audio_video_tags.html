@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎵 Audio and 🎬 Video Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    h2 {
+      color: #333;
+      margin-top: 40px;
+    }
+    audio, video {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+    <!-- In all videos and audios you use your own file here is only examples -->
+
+  <h1>🎧 HTML Audio and Video Elements</h1>
+
+  <!-- 🔊 AUDIO PLAYER WITH MULTIPLE FORMATS -->
+  <h2>1️⃣ Audio Player – Multiple Formats</h2>
+  <audio controls preload="auto">
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🔄 AUDIO AUTOPLAY, LOOP, MUTED -->
+  <h2>2️⃣ Audio – Autoplay, Loop & Muted</h2>
+  <audio controls autoplay loop muted>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🎬 BASIC VIDEO EMBED -->
+  <h2>3️⃣ Basic Video Player</h2>
+  <video width="640" height="360" controls preload="metadata">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🖼️ VIDEO WITH POSTER IMAGE -->
+  <h2>4️⃣ Video with Poster (Thumbnail)</h2>
+  <video width="640" height="360" controls poster="thumbnail.jpg">
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🔄 VIDEO – AUTOPLAY, LOOP, MUTED -->
+  <h2>5️⃣ Video Autoplay, Loop & Muted</h2>
+  <video width="400" autoplay loop muted playsinline>
+    <source src="short-loop.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- ⚠️ FALLBACK & NOTES -->
+  <h2>6️⃣ Incorrect vs Correct Usage</h2>
+  <!-- ❌ Wrong -->
+  <p><b>Wrong Usage:</b></p>
+  <audio>audio.mp3</audio>
+
+  <!-- ✅ Correct -->
+  <p><b>Correct Usage:</b></p>
+  <audio controls src="audio.mp3"></audio>
+
+</body>
+</html>

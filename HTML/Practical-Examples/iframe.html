@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced iframe Tag Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h2 {
+      color: #444;
+    }
+    iframe {
+      border: 2px solid #ccc;
+      margin-bottom: 30px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 HTML <code>&lt;iframe&gt;</code> - Full Usage Examples</h1>
+
+  <!-- 1. Basic iframe -->
+  <h2>1️⃣ Embed Another Website</h2>
+  <iframe 
+    src="https://www.wikipedia.org" 
+    width="600" 
+    height="400" 
+    title="Wikipedia Homepage">
+  </iframe>
+
+  <!-- 2. Embed YouTube Video with allow attributes -->
+  <h2>2️⃣ YouTube Video with Permissions</h2>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <!-- 3. Lazy Loading Map -->
+  <h2>3️⃣ Google Maps with Lazy Loading</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086914682034!2d-122.41941508468191!3d37.774929779759975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809cbbb6ec3f%3A0xf4ed7c0b1d6c3c1d!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615187195362!5m2!1sen!2sus"
+    width="600" 
+    height="400" 
+    loading="lazy"
+    title="Google Map of San Francisco">
+  </iframe>
+
+  <!-- 4. Inline PDF -->
+  <h2>4️⃣ Embedded PDF</h2>
+  <iframe 
+    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+    width="600" 
+    height="500"
+    title="Dummy PDF Document">
+  </iframe>
+
+  <!-- 5. Iframe with sandbox (very restricted) -->
+  <h2>5️⃣ Sandbox Enabled (No Scripts, No Forms, etc.)</h2>
+  <iframe 
+    src="https://example.com" 
+    width="600" 
+    height="200" 
+    sandbox 
+    title="Sandboxed Example">
+  </iframe>
+
+  <!-- 6. Sandbox with exceptions -->
+  <h2>6️⃣ Sandbox with Exceptions</h2>
+  <iframe 
+    src="https://example.com"
+    width="600"
+    height="200"
+    sandbox="allow-scripts allow-forms"
+    title="Sandboxed with Scripts and Forms">
+  </iframe>
+
+  <!-- 7. Referrer Policy -->
+  <h2>7️⃣ Using Referrer Policy</h2>
+  <iframe 
+    src="https://example.com"
+    width="600"
+    height="200"
+    referrerpolicy="no-referrer"
+    title="No Referrer Sent">
+  </iframe>
+
+</body>
+</html>

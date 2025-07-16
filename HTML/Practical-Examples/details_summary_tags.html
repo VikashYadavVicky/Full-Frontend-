@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>&lt;details&gt; and &lt;summary&gt; Tag Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    details {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📋 HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> Example</h1>
+
+  <!-- Basic Example -->
+  <details>
+    <summary>Click to expand</summary>
+    <p>This content is hidden by default. It becomes visible when the user clicks the summary.</p>
+  </details>
+
+  <!-- FAQ Style Example -->
+  <details>
+    <summary>What is HTML?</summary>
+    <p>HTML stands for HyperText Markup Language. It is used to create web pages and applications.</p>
+  </details>
+
+  <details>
+    <summary>What does &lt;summary&gt; do?</summary>
+    <p>The <code>&lt;summary&gt;</code> tag defines the visible heading for the <code>&lt;details&gt;</code> element.</p>
+  </details>
+
+  <!-- Nested Details -->
+  <details>
+    <summary>More Info</summary>
+    <p>This is some general information.</p>
+    <details>
+      <summary>Nested Detail</summary>
+      <p>This is more specific content inside a nested &lt;details&gt; block.</p>
+    </details>
+  </details>
+
+</body>
+</html>
