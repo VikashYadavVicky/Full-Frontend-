@@ -3761,10 +3761,4 @@ Use `transform-style: preserve-3d;` and `perspective` to give depth to child ele
   transform: translateY(-4px);
 }
 ```
-Let me know if you'd like:
-
-* 🌈 Scroll-based animation triggers
-* 🎯 Interactive transform controls with JS
-* 🪄 Animated component templates
-
 
