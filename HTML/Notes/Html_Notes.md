@@ -1,4 +1,50 @@
-w## 🧱 What is HTML?
+## 📚 Internal Topics Table
+Navigate through the entire HTML curriculum using this clickable internal index:
+
+| Emoji | Topic                                                                 | Link |
+|-------|------------------------------------------------------------------------|------|
+| 🔣   | HTML Syntax                                                           | [Go](./Notes/Html_Notes.md#-html-syntax) |
+| 📄   | HTML File Extension                                                   | [Go](./Notes/Html_Notes.md#-html-file-extension) |
+| 🏗️   | HTML Document / Structure                                             | [Go](./Notes/Html_Notes.md#️-html-document--structure) |
+| 🔖   | HTML Attributes                                                       | [Go](./Notes/Html_Notes.md#-html-attributes) |
+| 🏷️   | HTML Tags                                                             | [Go](./Notes/Html_Notes.md#-html-tags) |
+| 🧩   | Types of HTML Tags                                                    | [Go](./Notes/Html_Notes.md#-types-of-html-tags) |
+| 🏷️   | `<html>` Tag                                                          | [Go](./Notes/Html_Notes.md#html-tag) |
+| 🧠   | `<head>` Tag                                                          | [Go](./Notes/Html_Notes.md#head-tag) |
+| 🏷️   | `<title>` Tag                                                         | [Go](./Notes/Html_Notes.md#title-tag) |
+| 🏷️   | `<body>` Tag                                                          | [Go](./Notes/Html_Notes.md#body-tag) |
+| 🏷️   | Heading Tags                                                          | [Go](./Notes/Html_Notes.md#html-heading-tags) |
+| 🏷️   | `<p>` – Paragraph                                                     | [Go](./Notes/Html_Notes.md#p--paragraph-tag) |
+| 🧱   | `<br>` – Line Break                                                   | [Go](./Notes/Html_Notes.md#br--line-break) |
+| 🧱   | `<hr>` – Horizontal Rule                                              | [Go](./Notes/Html_Notes.md#hr--horizontal-rule) |
+| 🏷️   | `<b>` vs `<strong>` – Bold                                            | [Go](./Notes/Html_Notes.md#b-vs-strong--bold-text) |
+| 🏷️   | `<i>` vs `<em>` – Italic                                              | [Go](./Notes/Html_Notes.md#i-vs-em--italic-text) |
+| 🏷️   | `<u>` – Underlined                                                    | [Go](./Notes/Html_Notes.md#u--underlined-text) |
+| 🔗   | `<a>` – Anchor Tag                                                    | [Go](./Notes/Html_Notes.md#a--anchor-tag) |
+| 🖼️   | `<img>` – Image Tag                                                   | [Go](./Notes/Html_Notes.md#img--image-tag) |
+| 📦   | `<div>` – Block-Level Container                                       | [Go](./Notes/Html_Notes.md#div--block-level-container) |
+| 🧩   | `<span>` – Inline Container                                           | [Go](./Notes/Html_Notes.md#span--inline-container) |
+| 📋   | HTML Lists (`<ul>`, `<ol>`, `<li>`)                                   | [Go](./Notes/Html_Notes.md#html-list-tags) |
+| 📋   | HTML Tables (`<table>`, `<tr>`, etc.)                                 | [Go](./Notes/Html_Notes.md#html-table-tags) |
+| 📋   | HTML Forms (`<form>`, `<input>`, etc.)                                | [Go](./Notes/Html_Notes.md#html-form-tags) |
+| 📋   | `<iframe>`                                                            | [Go](./Notes/Html_Notes.md#iframe-tag--inline-frame) |
+| 📋   | `<fieldset>`, `<legend>`                                              | [Go](./Notes/Html_Notes.md#fieldset-and-legend-tags) |
+| 📋   | `<audio>`, `<video>`                                                  | [Go](./Notes/Html_Notes.md#audio-and-video-tags) |
+| 🖼️   | `<picture>`                                                           | [Go](./Notes/Html_Notes.md#picture-tag-in-html) |
+| 📋   | `<code>`, `<pre>`, `<abbr>`, `<cite>`                                 | [Go](./Notes/Html_Notes.md#code-pre-abbr-and-cite-tags) |
+| 📋   | `<figure>`, `<figcaption>`                                            | [Go](./Notes/Html_Notes.md#figure-and-figcaption-tags) |
+| 📋   | `<mark>`, `<progress>`                                                | [Go](./Notes/Html_Notes.md#mark-and-progress-tags) |
+| 📋   | `<details>`, `<summary>`                                              | [Go](./Notes/Html_Notes.md#details-and-summary-tags) |
+| 📋   | `<template>`, `<dialog>`, `<canvas>`                                  | [Go](./Notes/Html_Notes.md#template-dialog-and-canvas-tags) |
+| 📋   | `<script>`, `<noscript>`                                              | [Go](./Notes/Html_Notes.md#script-and-noscript-tags) |
+| 📋   | `<link>`, `<meta>`, `<style>`                                         | [Go](./Notes/Html_Notes.md#link-meta-and-style-tags) |
+| 📋   | HTML5 Semantic Elements                                               | [Go](./Notes/Html_Notes.md#html5-semantic-elements) |
+| ✍️   | Text Formatting                                                       | [Go](./Notes/Html_Notes.md#html-text-formatting-tags) |
+| 🚫   | Empty Elements (Self-Closing)                                         | [Go](./Notes/Html_Notes.md#html-empty-elements-self-closing-tags) |
+| 🧩   | Final HTML Essentials                                                 | [Go](./Notes/Html_Notes.md#final-html-essentials--small-but-crucial-topics) |
+
+
+## 🧱 What is HTML?
 
 - HTML stands for **HyperText Markup Language**.
 - It is the **standard markup language** used to create the **structure** of web pages.
