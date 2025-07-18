@@ -1,31 +1,3 @@
-## 📚 Table of Contents
-
-- [🔍 CSS Selectors](#-css-selectors)
-- [📊 CSS Specificity](#-css-specificity)
-- [👨‍👩‍👧 CSS Inheritance](#-css-inheritance)
-- [🎨 CSS Colors](#-css-colors)
-- [📏 CSS Units](#-css-units)
-- [📦 CSS Box Model](#-css-box-model)
-- [📝 CSS Typography](#-css-typography)
-- [🔗 CSS Styling Links](#-css-styling-links)
-- [📋 CSS List Styling](#-css-list-styling)
-- [📐 CSS Display Property](#-css-display-property)
-- [🌊 CSS Float Property](#-css-float-property)
-- [📰 CSS Columns](#-css-columns)
-- [📌 CSS Position Property](#-css-position-property)
-- [🧮 CSS Z-Index](#-css-z-index)
-- [🌊 CSS Overflow, Opacity, and Object-fit/Object-position](#-css-overflow-opacity-and-object-fitobject-position)
-- [🧱 CSS Flexbox (Flexible Box Layout)](#-css-flexbox-flexible-box-layout)
-- [📊 CSS Grid Layout](#-css-grid-layout)
-- [CSS Images in Depth](#-css-images-in-depth)
-- [🌈 CSS Gradients - Full Guide](#-css-gradients---full-guide)
-- [📱 CSS Media Queries Full Guide](#-css-media-queries-full-guide)
-- [🎯 CSS Pseudo-elements Full Guide](#-css-pseudo-elements-full-guide)
-- [🧪 CSS Pseudo-Classes - Full Guide](#-css-pseudo-classes---full-guide)
-- [⚙️ CSS Variables (Custom Properties) Full Guide](#-css-variables-custom-properties-full-guide)
-- [📚 CSS Functions – Summary Table & Details](#-css-functions--summary-table--details)
-- [CSS Animations – All Properties & Their Values](#-css-animations--all-properties--their-values)
-
 ## 📘 CSS Topics – Internal Navigation + Official Reference
 
 | 🧩 **CSS Topic** | 🔗 **Internal Link** | 🌐 **MDN Reference** |

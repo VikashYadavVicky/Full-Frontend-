@@ -20,7 +20,7 @@ HTML/
 
 ## 📘 What’s Inside
 
-### 🔹 [Notes](./Notes/Notes.md)
+### 🔹 [Notes](./Notes/Html_Notes.md)
 - Easy-to-read Markdown files covering the basics to advanced HTML.
 - Great for revision and concept clarity.
 
