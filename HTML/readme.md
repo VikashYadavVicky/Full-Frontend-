@@ -18,13 +18,29 @@ HTML/
 
 ---
 
-## 📘 What’s Inside
+# 📘 What’s Inside
 
-### 🔹 [Notes](./Notes/Html_Notes.md)
-- Easy-to-read Markdown files covering the basics to advanced HTML.
-- Great for revision and concept clarity.
+---
 
-### 🔹 [Practical Examples](./Practical-Examples/)
+## 🔹 [Notes](./Notes/Html_Notes.md)
+
+📘 **Complete HTML Guide — from Beginner to Advanced**
+
+- Covers all fundamental topics: **Tags, Elements, Attributes, Forms, Tables, Media, Semantic HTML, and more**
+- Includes **interview questions**, practical tips, and important syntax highlights
+- 🔍 Every tag is explained with proper **usage**, **structure**, and **real-world examples**
+- 📎 Internal and external links are embedded for **quick reference and smooth navigation**
+- 🧠 Focused on **concept clarity**, **accessibility**, and **modern best practices**
+- 🛠️ Perfect for **revision**, **hands-on practice**, and building strong foundational knowledge
+
+✅ **Bonus:**
+
+- 🌐 List of recommended resources for deeper learning (MDN, W3Schools, freeCodeCamp, etc.)
+- 📁 Practical Example Files linked at the end of each topic to reinforce concepts
+- 🚀 Helps in mastering HTML for **web development, frontend projects**, and **interviews**
+
+---
+## 🔹 [Practical Examples](./Practical-Examples/)
 
 - 💻 Code files demonstrating **real usage** of HTML tags and elements.
 - 📂 Each tag or topic has its **own dedicated `.html` file** for better readability and quick reference.
@@ -42,11 +58,11 @@ HTML/
 
 ---
 
-### 🔹 Projects
+## 🔹 Projects
 - Beginner-friendly HTML-only projects like forms, landing pages, etc.
 - No CSS/JS dependency — purely structural.
-
-### 🔹 [Interview Questions](./Interview-Questions/)
+---
+## 🔹 [Interview Questions](./Interview-Questions/)
 
 - 📗 [Basic Questions](./Interview-Questions/Basic_Html_Questions.md)  
   – Frequently asked beginner-level HTML questions with concise answers.  
