@@ -43,6 +43,45 @@ Navigate through the entire HTML curriculum using this clickable internal index:
 | 🚫   | Empty Elements (Self-Closing)                                         | [Go](./Notes/Html_Notes.md#html-empty-elements-self-closing-tags) |
 | 🧩   | Final HTML Essentials                                                 | [Go](./Notes/Html_Notes.md#final-html-essentials--small-but-crucial-topics) |
 
+| 📘 Topic | 🔗 Internal Link | 🌐 MDN External Link |
+|---------|------------------|----------------------|
+| 🔣 HTML Syntax | [HTML Syntax](#-html-syntax) | [HTML - Syntax](https://developer.mozilla.org/en-US/docs/Web/HTML) |
+| 📄 HTML File Extension | [HTML File Extension](#-html-file-extension) | [HTML Intro](https://developer.mozilla.org/en-US/docs/Web/HTML) |
+| 🏗️ HTML Document / Structure | [HTML Structure](#-html-document--structure) | [HTML Structure](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html) |
+| 🔖 HTML Attributes | [HTML Attributes](#-html-attributes) | [HTML Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) |
+| 🏷️ `<html>` Tag | [`<html>` Tag](#-html-tag) | [`<html>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html) |
+| 🧠 `<head>` Tag | [`<head>` Tag](#-head-tag) | [`<head>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) |
+| 🏷️ `<title>` Tag | [`<title>` Tag](#-title-tag) | [`<title>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) |
+| 🏷️ `<body>` Tag | [`<body>` Tag](#-body-tag) | [`<body>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body) |
+| 🏷️ HTML Heading Tags | [Heading Tags](#-html-heading-tags) | [Headings – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) |
+| 🏷️ `<p>` – Paragraph Tag | [`<p>` – Paragraph](#-p--paragraph-tag) | [`<p>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) |
+| 🧱 `<br>` – Line Break | [`<br>` – Line Break](#-br--line-break) | [`<br>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) |
+| 🧱 `<hr>` – Horizontal Rule | [`<hr>` – Horizontal](#-hr--horizontal-rule) | [`<hr>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr) |
+| 🏷️ `<b>` vs `<strong>` | [`<b>` vs `<strong>`](#-b-vs-strong--bold-text) | [`<strong>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) |
+| 🏷️ `<i>` vs `<em>` | [`<i>` vs `<em>`](#-i-vs-em--italic-text) | [`<em>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em) |
+| 🏷️ `<u>` – Underlined Text | [`<u>` – Underlined](#-u--underlined-text) | [`<u>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u) |
+| 🔗 `<a>` – Anchor Tag | [`<a>` – Anchor](#-a--anchor-tag) | [`<a>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) |
+| 🖼️ `<img>` – Image Tag | [`<img>` – Image](#-img--image-tag) | [`<img>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) |
+| 📦 `<div>` – Block-Level | [`<div>` – Block](#-div--block-level-container) | [`<div>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) |
+| 🧩 `<span>` – Inline | [`<span>` – Inline](#-span--inline-container) | [`<span>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) |
+| 📋 HTML List Tags | [List Tags](#-html-list-tags--ul-ol-li) | [List Elements – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) |
+| 📋 HTML Table Tags | [Table Tags](#-html-table-tags--table-tr-td-th-thead-tbody) | [Table – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) |
+| 📋 HTML Form Tags | [Form Tags](#-html-form-tags--form-input-label-textarea-select-option-button) | [Forms – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) |
+| 📋 `<iframe>` Tag | [`<iframe>` Tag](#-html-iframe-tag--inline-frame) | [`<iframe>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) |
+| 📋 `<fieldset>` and `<legend>` | [`<fieldset>` and `<legend>`](#-html-fieldset-and-legend-tags) | [`<fieldset>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) |
+| 📋 `<audio>` and `<video>` | [`<audio>` and `<video>`](#-html-audio-and-video-tags) | [`<audio>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) |
+| 🖼️ `<picture>` Tag | [`<picture>` Tag](#-picture-tag-in-html) | [`<picture>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) |
+| 📋 `<code>`, `<pre>`, `<abbr>`, `<cite>` | [`<code>`, `<pre>`, etc.](#-html-code-pre-abbr-and-cite-tags) | [`<code>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) |
+| 📋 `<figure>` and `<figcaption>` | [`<figure>` and `<figcaption>`](#-html-figure-and-figcaption-tags) | [`<figure>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) |
+| 📋 `<mark>` and `<progress>` | [`<mark>` and `<progress>`](#-html-mark-and-progress-tags) | [`<mark>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark) |
+| 📋 `<details>` and `<summary>` | [`<details>` and `<summary>`](#-html-details-and-summary-tags) | [`<details>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) |
+| 📋 `<template>`, `<dialog>`, `<canvas>` | [`<template>`, etc.](#-html-template-dialog-and-canvas-tags) | [`<template>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) |
+| 📋 `<script>` and `<noscript>` | [`<script>` and `<noscript>`](#-html-script-and-noscript-tags) | [`<script>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) |
+| 📋 `<link>`, `<meta>`, `<style>` | [`<link>`, `<meta>`, etc.](#-html-link-meta-and-style-tags) | [`<link>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) |
+| 📋 HTML5 Semantic Elements | [Semantic Elements](#-html5-semantic-elements) | [Semantic – MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) |
+| ✍️ HTML Text Formatting Tags | [Text Formatting](#-html-text-formatting-tags) | [Text Formatting – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) |
+| 🚫 HTML Empty Elements | [Empty Elements](#-html-empty-elements-self-closing-tags) | [Empty Elements – MDN](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) |
+| 🧩 Final HTML Essentials | [Final Essentials](#-final-html-essentials--small-but-crucial-topics) | [HTML Guide – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) |
 
 ## 🧱 What is HTML?
 
