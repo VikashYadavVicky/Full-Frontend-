@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Float Property Examples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌊 CSS Float Property Examples</h1>
+
+  <section>
+    <h2>🔹 Float Left with Wrapped Text</h2>
+    <img src="https://via.placeholder.com/150" alt="Example" class="float-left">
+    <p>
+      This paragraph wraps around the image floated to the left. The image is aligned left using
+      <code>float: left</code> and space is created with margin.
+    </p>
+  </section>
+
+  <section class="clearfix">
+    <h2>🔹 Float Right with Clear</h2>
+    <div class="float-right-box"></div>
+    <p class="clear-both">
+      This text appears below the floated box because <code>clear: both</code> is applied.
+    </p>
+  </section>
+
+  <section class="clearfix">
+    <h2>🔹 Clearfix Hack (Legacy Fix)</h2>
+    <div class="float-half left-box">Left</div>
+    <div class="float-half right-box">Right</div>
+  </section>
+
+  <section>
+    <h2>🔹 Float with Flow Root</h2>
+    <div class="flow-root-wrapper">
+      <div class="float-box"></div>
+      <p>
+        The parent uses <code>display: flow-root</code> to expand and contain the floated box.
+      </p>
+    </div>
+  </section>
+</body>
+</html>

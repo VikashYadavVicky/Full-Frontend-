@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Variables Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🎨 CSS Variables (Custom Properties)</h1>
+
+  <div class="theme-switcher">
+    <button onclick="setLightTheme()">🌞 Light Theme</button>
+    <button onclick="setDarkTheme()">🌙 Dark Theme</button>
+  </div>
+
+  <div class="card">
+    <h2>💡 Custom Properties in Action</h2>
+    <p>This card uses CSS variables for color, padding, and layout.</p>
+  </div>
+
+  <script>
+    function setLightTheme() {
+      document.documentElement.style.setProperty('--BG', '#ffffff');
+      document.documentElement.style.setProperty('--TEXT', '#111111');
+      document.documentElement.style.setProperty('--CARD-BG', '#f9f9f9');
+    }
+
+    function setDarkTheme() {
+      document.documentElement.style.setProperty('--BG', '#111111');
+      document.documentElement.style.setProperty('--TEXT', '#eeeeee');
+      document.documentElement.style.setProperty('--CARD-BG', '#222222');
+    }
+  </script>
+
+</body>
+</html>

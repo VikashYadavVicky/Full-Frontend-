@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+a::before {
+  content: "🔗 ";
+}
+a::after {
+  content: " (external)";
+  color: gray;
+}
+
+.text-sample::first-letter {
+  font-size: 2em;
+  color: crimson;
+}
+.text-sample::first-line {
+  font-weight: bold;
+}
+
+::selection {
+  background-color: navy;
+  color: white;
+}
+
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+ul li::marker {
+  color: red;
+  font-size: 1.5em;
+}
+
+input:invalid::placeholder {
+  color: red;
+}
+
+nav a {
+  text-decoration: none;
+  color: teal;
+  margin-right: 1rem;
+}
+
+nav a:hover::after {
+  content: " →";
+  color: green;
+}
+
+button::before {
+  content: "👉 ";
+  transition: transform 0.2s;
+}
+
+button:hover::before {
+  transform: translateX(5px);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}

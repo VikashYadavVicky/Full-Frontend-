@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model Examples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📦 CSS Box Model Practical Examples</h1>
+
+  <section class="example-section">
+    <h2>1️⃣ Margin Example</h2>
+    <p>This box demonstrates how <strong>margin</strong> adds space around elements.</p>
+    <div class="center-box margin-example">I have a margin!</div>
+  </section>
+
+  <section class="example-section">
+    <h2>2️⃣ Padding Example</h2>
+    <p>This box has internal spacing using <strong>padding</strong> — the content is spaced away from the border.</p>
+    <div class="center-box padded-box">I have padding!</div>
+  </section>
+
+  <section class="example-section">
+    <h2>3️⃣ Border Example</h2>
+    <p>This box is styled with a <strong>border</strong> to separate it visually.</p>
+    <div class="center-box box-border">I have a dashed border!</div>
+  </section>
+
+  <section class="example-section">
+    <h2>4️⃣ Content-Box vs Border-Box</h2>
+    <p>
+      The default <code>box-sizing</code> is <code>content-box</code>, which means padding and border are <em>added</em> to the width.<br>
+      <code>border-box</code> includes padding and border <em>within</em> the width.
+    </p>
+    <div class="dimension-box content-box">Content-Box (200px)</div>
+    <div class="dimension-box border-box">Border-Box (200px)</div>
+  </section>
+</body>
+</html>

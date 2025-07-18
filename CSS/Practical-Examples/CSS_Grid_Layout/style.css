@@ -1,0 +1,113 @@
+/* style.css - CSS Grid Layout Examples */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f8f9fa;
+  line-height: 1.6;
+}
+
+h2, h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.container {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-container .item {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.item1 {
+  grid-column: 1 / 3;
+}
+
+.item2 {
+  grid-row: 1 / 3;
+}
+
+.grid-named {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sidebar content'
+    'footer footer';
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #c8e6c9;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ffe0b2;
+  padding: 10px;
+}
+
+.content {
+  grid-area: content;
+  background-color: #bbdefb;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #d7ccc8;
+  padding: 10px;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.responsive-grid > div {
+  background-color: #f0f4c3;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #dce775;
+  border-radius: 6px;
+}
+
+.grid-lines-demo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-lines-demo > div {
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #64b5f6;
+  border-radius: 4px;
+}

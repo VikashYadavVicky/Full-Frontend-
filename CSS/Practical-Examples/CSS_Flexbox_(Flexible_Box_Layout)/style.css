@@ -1,0 +1,120 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+section {
+  margin-bottom: 50px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic Flex Layout */
+.flex-container-basic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.flex-container-basic div {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Flex Wrap */
+.flex-container-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flex-container-wrap div {
+  background-color: #2196f3;
+  color: white;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Flex Grow */
+.flex-container-grow {
+  display: flex;
+  gap: 15px;
+}
+.flex-grow {
+  background-color: #ff9800;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.flex-grow.one {
+  flex-grow: 1;
+}
+.flex-grow.two {
+  flex-grow: 2;
+}
+.flex-grow.zero {
+  flex-grow: 0;
+}
+
+/* Reorder Items */
+.flex-container-order {
+  display: flex;
+  gap: 15px;
+}
+.flex-container-order div {
+  background-color: #9c27b0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.item-1 {
+  order: 3;
+}
+.item-2 {
+  order: 1;
+}
+.item-3 {
+  order: 2;
+}
+
+/* Align Self */
+.flex-container-align {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  height: 150px;
+}
+.flex-container-align div {
+  background-color: #f44336;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.align-end {
+  align-self: flex-end;
+}
+.align-center {
+  align-self: center;
+}

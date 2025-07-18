@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Position Property Examples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>📌 CSS Position Property Examples</h1>
+
+  <div class="container">
+    <h3>1. Static Position (Default)</h3>
+    <div class="static-box">This box has <strong>position: static</strong>.</div>
+  </div>
+
+  <div class="container">
+    <h3>2. Relative Position</h3>
+    <div class="relative-box">This box is <strong>moved 10px down and 20px right</strong> using <code>top</code> and <code>left</code>.</div>
+  </div>
+
+  <div class="container absolute-wrapper">
+    <h3>3. Absolute Position</h3>
+    <div class="absolute-box">I'm absolutely positioned inside a relatively positioned container.</div>
+  </div>
+
+  <div class="container">
+    <h3>4. Fixed Position</h3>
+    <div class="fixed-box">I stay fixed at the top-right even when you scroll.</div>
+  </div>
+
+  <div class="container">
+    <h3 class="sticky-heading">5. Sticky Position</h3>
+    <p>Scroll down to see the sticky heading stick to the top. Keep adding more text...</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia?</p>
+    <p>Aliquam, vel rerum? Quo optio mollitia, culpa sequi ad eveniet?</p>
+    <p>Scroll more content to activate sticky behavior. Lorem ipsum dolor sit amet consectetur.</p>
+  </div>
+
+  <div class="container zindex-container">
+    <h3>6. Z-Index Example</h3>
+    <div class="zindex-box">This box has a <strong>higher z-index</strong> and appears above others.</div>
+    <div style="position: absolute; top: 30px; left: 30px; background: #bbdefb; padding: 10px; border: 1px solid #64b5f6;">
+      Lower z-index box
+    </div>
+  </div>
+
+</body>
+</html>

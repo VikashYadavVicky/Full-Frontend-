@@ -1,0 +1,89 @@
+/* Basic Selectors */
+* {
+  box-sizing: border-box;
+}
+p {
+  color: #333;
+}
+.box {
+  background-color: #e3f2fd;
+  padding: 10px;
+}
+#unique {
+  font-weight: bold;
+  color: crimson;
+}
+
+/* Grouping Selectors */
+h1, h3, p {
+  font-family: Arial, sans-serif;
+}
+
+/* Combinator Selectors */
+div.parent p {
+  color: darkblue;
+}
+ul > li {
+  color: orangered;
+}
+h3 + p {
+  background-color: #ffeeba;
+}
+h3 ~ p {
+  border-left: 4px solid #17a2b8;
+  padding-left: 10px;
+}
+
+/* Pseudo-class Selectors */
+a:hover {
+  color: blue;
+}
+input:focus {
+  outline: 2px solid #007bff;
+}
+li:first-child {
+  color: green;
+}
+li:nth-child(2) {
+  color: purple;
+}
+
+/* Pseudo-element Selectors */
+.text::first-line {
+  color: navy;
+}
+.text::first-letter {
+  font-size: 200%;
+  color: red;
+}
+.note::before {
+  content: "📌 ";
+  color: gray;
+}
+.note::after {
+  content: " ✅";
+}
+
+/* Attribute Selectors */
+a[target] {
+  color: green;
+}
+a[href^="https"] {
+  font-weight: bold;
+}
+a[href$=".com"] {
+  text-transform: uppercase;
+}
+
+/* Global Selectors */
+:root {
+  --main-bg: #f9f9f9;
+  --text-color: #212121;
+  --base-size: 16px;
+}
+body {
+  background: var(--main-bg);
+  color: var(--text-color);
+  font-size: var(--base-size);
+  padding: 20px;
+}

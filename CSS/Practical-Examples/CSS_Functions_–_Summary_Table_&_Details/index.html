@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧪 CSS Functions Reference</title>
+  <link rel="stylesheet" href="functions.css">
+</head>
+<body>
+
+  <h1>🧪 CSS Functions – Summary Table & Details</h1>
+
+  <section class="container">
+    <h2>📊 Summary Table of Common CSS Functions</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Function</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Example Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>var()</code></td><td>Variables</td><td>Retrieves a CSS custom property</td><td><code>color: var(--primary-color)</code></td></tr>
+          <tr><td><code>calc()</code></td><td>Math</td><td>Calculates values dynamically</td><td><code>width: calc(100% - 50px)</code></td></tr>
+          <tr><td><code>clamp()</code></td><td>Math</td><td>Restricts value between min, ideal, max</td><td><code>font-size: clamp(1rem, 2vw, 2rem)</code></td></tr>
+          <tr><td><code>min()</code></td><td>Math</td><td>Returns smallest value</td><td><code>width: min(500px, 80%)</code></td></tr>
+          <tr><td><code>max()</code></td><td>Math</td><td>Returns largest value</td><td><code>height: max(50vh, 300px)</code></td></tr>
+          <tr><td><code>rgb() / rgba()</code></td><td>Colors</td><td>Defines RGB colors</td><td><code>background: rgba(255, 0, 0, 0.5)</code></td></tr>
+          <tr><td><code>hsl() / hsla()</code></td><td>Colors</td><td>Defines HSL colors</td><td><code>color: hsl(240, 100%, 50%)</code></td></tr>
+          <tr><td><code>url()</code></td><td>URLs</td><td>Inserts file path</td><td><code>background-image: url('img/bg.jpg')</code></td></tr>
+          <tr><td><code>attr()</code></td><td>Content</td><td>Retrieves attribute values</td><td><code>content: attr(data-label)</code></td></tr>
+          <tr><td><code>linear-gradient()</code></td><td>Gradient</td><td>Creates a linear gradient</td><td><code>background: linear-gradient(to right, red, blue)</code></td></tr>
+          <tr><td><code>radial-gradient()</code></td><td>Gradient</td><td>Creates a radial gradient</td><td><code>background: radial-gradient(circle, red, blue)</code></td></tr>
+          <tr><td><code>repeating-linear-gradient()</code></td><td>Gradient</td><td>Repeats linear gradient</td><td><code>background: repeating-linear-gradient(...)</code></td></tr>
+          <tr><td><code>repeating-radial-gradient()</code></td><td>Gradient</td><td>Repeats radial gradient</td><td><code>background: repeating-radial-gradient(...)</code></td></tr>
+          <tr><td><code>cubic-bezier()</code></td><td>Animation</td><td>Custom animation timing</td><td><code>animation-timing-function: cubic-bezier(...)</code></td></tr>
+          <tr><td><code>steps()</code></td><td>Animation</td><td>Stepped animation timing</td><td><code>animation-timing-function: steps(4)</code></td></tr>
+          <tr><td><code>rotate(), scale(), ...</code></td><td>Transform</td><td>Applies transforms</td><td><code>transform: rotate(45deg)</code></td></tr>
+          <tr><td><code>matrix()</code></td><td>Transform</td><td>2D matrix transform</td><td><code>transform: matrix(...)</code></td></tr>
+          <tr><td><code>env()</code></td><td>Environment</td><td>Accesses env constants</td><td><code>padding: env(safe-area-inset-top)</code></td></tr>
+          <tr><td><code>round()</code></td><td>Math (new)</td><td>Rounds values (CSS Values 4)</td><td><code>width: round(23.7px)</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>📚 Function Examples</h2>
+
+    <div class="code-block">
+      <h3>Variables and Environment</h3>
+      <pre><code>:root {
+  --main-color: #4caf50;
+}
+
+p {
+  color: var(--main-color);
+}
+
+body {
+  padding-top: env(safe-area-inset-top);
+}</code></pre>
+    </div>
+
+    <div class="code-block">
+      <h3>Math Functions</h3>
+      <pre><code>width: calc(100% - 50px);
+font-size: clamp(1rem, 2vw, 2rem);
+height: min(80vh, 600px);
+width: max(300px, 50%);
+width: round(25.7px, 0.1px);</code></pre>
+    </div>
+
+    <div class="code-block">
+      <h3>Color Functions</h3>
+      <pre><code>background: rgba(0, 0, 0, 0.5);
+color: hsla(120, 100%, 50%, 0.3);</code></pre>
+    </div>
+
+    <div class="code-block">
+      <h3>Gradient Functions</h3>
+      <pre><code>background: linear-gradient(to right, red, orange);
+background: radial-gradient(circle, red, yellow);
+background: repeating-linear-gradient(45deg, red, yellow 10px);</code></pre>
+    </div>
+
+    <div class="code-block">
+      <h3>Transform & Animation</h3>
+      <pre><code>transform: rotate(45deg) scale(1.2) translateX(30px);
+transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+animation-timing-function: steps(4, end);</code></pre>
+    </div>
+  </section>
+
+</body>
+</html>

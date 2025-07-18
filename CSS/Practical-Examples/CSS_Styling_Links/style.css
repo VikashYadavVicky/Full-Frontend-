@@ -1,0 +1,86 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f6fa;
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2a6592;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: #444;
+  margin-top: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+.note {
+  font-size: 14px;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Link Pseudo-Classes */
+a:link {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:visited {
+  color: #6f42c1;
+}
+
+a:hover {
+  color: #e91e63;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+}
+
+/* Button-Like Link */
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #084298;
+}
+
+/* Focus Link */
+.focus-link:focus {
+  outline: 3px dashed #ff9800;
+  background-color: #fff8e1;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

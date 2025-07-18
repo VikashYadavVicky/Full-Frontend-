@@ -1,0 +1,79 @@
+/* style.css */
+
+/* 🌱 Color Variables */
+:root {
+  --main-bg: #fefefe;
+  --main-color: #222;
+  --primary: #4caf50;
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* 🔷 Named color */
+.named {
+  color: navy;
+}
+
+/* 🟧 Hex color */
+.hex {
+  color: #ff6600;
+}
+
+/* 🔵 RGB color */
+.rgb {
+  color: rgb(0, 128, 255);
+}
+
+/* 🟪 RGBA color */
+.rgba-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  color: white;
+}
+
+/* 🟢 HSL */
+.hsl {
+  color: hsl(120, 100%, 25%);
+}
+
+/* 💜 HSLA */
+.hsla {
+  background-color: hsla(300, 60%, 60%, 0.5);
+  padding: 0.5rem;
+}
+
+/* 🔍 Transparent */
+.transparent {
+  background-color: transparent;
+  border: 2px dashed #888;
+  padding: 1rem;
+}
+
+/* 🟡 currentColor */
+.current {
+  color: gold;
+  border: 2px solid currentColor;
+  padding: 0.5rem;
+}
+
+/* 🧩 Theme variables with :root */
+.themed-box {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}

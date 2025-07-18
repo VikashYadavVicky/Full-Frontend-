@@ -1,0 +1,73 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  color: #222;
+}
+h1 {
+  margin-bottom: 20px;
+}
+hr {
+  margin: 20px 0;
+}
+p {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+/* 1. Element selector (lowest) */
+p {
+  color: red;
+}
+
+/* Class selector */
+.text {
+  color: blue;
+}
+
+/* ID selector */
+#special {
+  color: green;
+}
+
+/* 2. Inline Style will override everything */
+/* Inline style: style="color: purple;" in HTML */
+
+/* 3. Class + Element */
+p.highlight {
+  color: teal;
+}
+
+/* 4. Descendant class rule */
+.parent .child {
+  color: orange;
+}
+
+/* 5. Conflicting: Simple p */
+p.example {
+  color: gray;
+}
+
+/* 6. Higher specificity: .section p */
+.section p {
+  color: brown;
+}
+
+/* 7. ID + Class + Element */
+#combo.wrapper p.target {
+  color: darkmagenta;
+  font-weight: bold;
+}
+
+/* 8. !important overrides all */
+.important {
+  color: red !important;
+}

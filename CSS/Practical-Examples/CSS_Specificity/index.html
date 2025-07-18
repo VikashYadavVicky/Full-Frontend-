@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Specificity Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 id="main-title">🎯 CSS Specificity Examples</h1>
+
+  <hr>
+
+  <!-- Element vs Class vs ID -->
+  <p class="example text" id="special">1️⃣ Element vs Class vs ID</p>
+
+  <!-- Inline Style beats everything -->
+  <p class="example text" id="inline-style" style="color: purple;">2️⃣ Inline Style wins</p>
+
+  <!-- Class + Element vs Element -->
+  <p class="example highlight">3️⃣ Class + Element beats Element</p>
+
+  <!-- Descendant class -->
+  <div class="parent">
+    <p class="child">4️⃣ .parent .child wins over .child</p>
+  </div>
+
+  <!-- Conflicting Rules: p vs .section p -->
+  <p class="example">5️⃣ Simple paragraph with low specificity</p>
+  <div class="section">
+    <p class="example">6️⃣ .section p is more specific</p>
+  </div>
+
+  <!-- ID + Class + Element -->
+  <div id="combo" class="wrapper">
+    <p class="target">7️⃣ #id + .class + element — highest without inline</p>
+  </div>
+
+  <!-- Important rule -->
+  <p class="important">8️⃣ !important always wins</p>
+
+</body>
+</html>

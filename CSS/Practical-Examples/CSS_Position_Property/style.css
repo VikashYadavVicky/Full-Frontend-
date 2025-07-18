@@ -1,0 +1,98 @@
+/* style.css - CSS Position Property Examples */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+.container {
+  margin-bottom: 40px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.container h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.static-box,
+.relative-box,
+.absolute-wrapper,
+.fixed-box,
+.sticky-heading,
+.zindex-box {
+  padding: 15px;
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  margin: 10px 0;
+}
+
+/* Static Example */
+.static-box {
+  position: static;
+}
+
+/* Relative Example */
+.relative-box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+/* Absolute Example */
+.absolute-wrapper {
+  position: relative;
+  height: 150px;
+  background: #fff3e0;
+  border: 1px dashed #ffcc80;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #ffe0b2;
+  border: 1px solid #ffb74d;
+}
+
+/* Fixed Example */
+.fixed-box {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  padding: 10px;
+  z-index: 999;
+}
+
+/* Sticky Example */
+.sticky-heading {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  z-index: 10;
+}
+
+/* z-index Example */
+.zindex-container {
+  position: relative;
+  height: 100px;
+}
+
+.zindex-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: #d1c4e9;
+  border: 1px solid #b39ddb;
+}

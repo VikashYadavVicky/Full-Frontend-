@@ -1,0 +1,61 @@
+
+/* Base Font Size */
+html {
+  font-size: 16px;
+}
+
+/* Font Units Example */
+.font-units p {
+  font-size: 1rem;
+}
+.font-units .em-box {
+  font-size: 20px;
+  padding: 1em;   /* 20px */
+  margin: 1rem;   /* 16px */
+  background-color: #f0f0f0;
+}
+
+/* Percentage Layout */
+.parent {
+  width: 100%;
+  background-color: #e0f7fa;
+}
+.child {
+  width: 50%;
+  background-color: #80deea;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Viewport Units */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d1c4e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.responsive-text {
+  font-size: 5vw;
+}
+
+/* vmin and vmax */
+.box {
+  width: 50vmin;
+  height: 50vmax;
+  background-color: #ffe082;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    font-size: 12pt;
+    margin: 1in;
+  }
+}

@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* Pseudo-classes on nav links */
+nav a {
+  color: #0066cc;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  background: #ddd;
+  color: #000;
+}
+
+nav a:visited {
+  color: purple;
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+/* Form validation pseudo-classes */
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:required {
+  background: #fffcf1;
+}
+
+input:optional {
+  background: #f1fff1;
+}
+
+input:checked {
+  outline: 2px solid #007700;
+}
+
+input:disabled, textarea:disabled {
+  background: #ddd;
+  color: #666;
+}
+
+/* Focus styles */
+input:focus, textarea:focus {
+  border: 2px solid #3399ff;
+  outline: none;
+}
+
+/* List styling with :not() and :nth-child() */
+ul li:not(:nth-child(2n)) {
+  background: #eeeeee;
+  padding: 0.5rem;
+}
+
+ul li:nth-child(2n) {
+  background: #ffffff;
+  padding: 0.5rem;
+}

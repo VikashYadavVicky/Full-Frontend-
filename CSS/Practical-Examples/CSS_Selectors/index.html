@@ -1,0 +1,56 @@
+adf<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Selectors Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 id="main-title">Welcome to CSS Selectors</h1>
+
+  <h2 class="subheading">Basic Selectors</h2>
+  <p>This is a paragraph.</p>
+  <div class="box">Box with class selector</div>
+  <p id="unique">Paragraph with ID selector</p>
+
+  <h2 class="subheading">Grouping Selectors</h2>
+  <h3>Grouped Heading</h3>
+  <p>Grouped paragraph</p>
+
+  <h2 class="subheading">Combinator Selectors</h2>
+  <div class="parent">
+    <p>Descendant of div</p>
+    <section>
+      <p>Nested descendant</p>
+    </section>
+    <ul>
+      <li>Child of ul</li>
+    </ul>
+  </div>
+
+  <h2>Sibling Selectors</h2>
+  <h3>Heading</h3>
+  <p>Adjacent sibling</p>
+  <p>General sibling</p>
+
+  <h2>Pseudo-class Selectors</h2>
+  <a href="#">Hover over me</a>
+  <input type="text" placeholder="Focus me" />
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+  <h2>Pseudo-element Selectors</h2>
+  <p class="text">This is styled with pseudo-elements.</p>
+  <div class="note">Box with before and after</div>
+
+  <h2>Attribute Selectors</h2>
+  <a href="https://example.com" target="_blank">Secure Link</a>
+  <a href="mailto:test@example.com">Email Link</a>
+
+</body>
+</html>

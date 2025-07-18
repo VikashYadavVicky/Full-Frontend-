@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gradient-box {
+  height: 200px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 1. Linear Gradient */
+.linear-gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* 2. Radial Gradient */
+.radial-gradient {
+  background: radial-gradient(circle, #4facfe, #00f2fe);
+}
+
+/* 3. Conic Gradient */
+.conic-gradient {
+  background: conic-gradient(from 0deg, red, yellow, green, red);
+}
+
+/* 4. Repeating Linear Gradient */
+.repeating-gradient {
+  background: repeating-linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4 10px,
+    #ff9a9e 20px
+  );
+}
+
+/* 5. Gradient Text */
+.gradient-text-wrapper {
+  background: #fff;
+  color: black;
+}
+
+.gradient-text {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #f12711, #f5af19);
+  -webkit-text-fill-color: transparent;
+}
+
+/* 6. Hero Banner */
+.hero {
+  height: 300px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://source.unsplash.com/1200x600/?mountains,sky') center/cover no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero .overlay {
+  padding: 20px;
+}

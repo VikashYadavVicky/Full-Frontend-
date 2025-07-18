@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 2rem;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #2b6cb0;
+  margin-top: 2rem;
+  border-bottom: 2px solid #cbd5e0;
+  padding-bottom: 0.3rem;
+}
+
+/* 🔹 Ordered List - Roman Numerals */
+.roman {
+  list-style-type: upper-roman;
+}
+
+/* 🔹 Custom Bullet Image with Size Control */
+.custom-bullet {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.custom-bullet li {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.custom-bullet li::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/32/32355.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 🔹 Full List Styling - Shorthand (custom icon replaced) */
+.styled-list {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.styled-list li {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.styled-list li::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/190/190411.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 🔹 Pseudo-Classes */
+.pseudo-list li:first-child {
+  color: crimson;
+}
+.pseudo-list li:nth-child(2) {
+  font-weight: bold;
+}
+.pseudo-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* 🔹 Marker Styled List */
+.marker-list li::marker {
+  content: '✔️ ';
+  color: green;
+  font-size: 1.2em;
+}

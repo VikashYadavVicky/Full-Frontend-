@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Inheritance Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>👨‍👩‍👧 CSS Inheritance</h1>
+
+  <!-- Inheritable example -->
+  <section class="parent-inherit">
+    <h2>Parent Inheritable</h2>
+    <p>This paragraph inherits color and font-family from its parent.</p>
+    <span>This span also inherits.</span>
+  </section>
+
+  <!-- Non-inheritable example -->
+  <section class="parent-non-inherit">
+    <h2>Parent Non-Inheritable</h2>
+    <div class="child-box">
+      <p>This paragraph does NOT inherit margin or background from parent.</p>
+    </div>
+  </section>
+
+  <!-- Forced inheritance using inherit -->
+  <section class="forced-inherit">
+    <h2>Forced Inherit with <code>inherit</code> Keyword</h2>
+    <div class="force-child">
+      <p>This child's background and margin are forced to inherit.</p>
+    </div>
+  </section>
+
+  <!-- initial and unset -->
+  <section class="initial-unset">
+    <h2>initial / unset Keywords</h2>
+    <p class="initial-example">This paragraph uses <code>initial</code> (color reset to default).</p>
+    <p class="unset-example">This paragraph uses <code>unset</code> (color = inherit).</p>
+  </section>
+
+</body>
+</html>

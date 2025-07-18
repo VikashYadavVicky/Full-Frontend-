@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Columns Example</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📰 CSS Multi-column Layout</h1>
+
+  <section class="example" id="column-count">
+    <h2>🔹 column-count</h2>
+    <div class="multi-column-count">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada...</p>
+    </div>
+  </section>
+
+  <section class="example" id="column-width">
+    <h2>🔹 column-width</h2>
+    <div class="multi-column-width">
+      <p>Content will automatically create as many 200px-wide columns as will fit the container. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+  </section>
+
+  <section class="example" id="column-span">
+    <h2 class="full-span">🔹 column-span: all</h2>
+    <p>This heading spans all columns below. The paragraph below will break into multiple columns.</p>
+    <div class="multi-column-span">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam...</p>
+    </div>
+  </section>
+
+  <section class="example" id="break-inside">
+    <h2>🔹 break-inside: avoid</h2>
+    <div class="multi-column-break">
+      <div class="no-break">
+        <p>This content block will not break across columns.</p>
+      </div>
+      <div class="no-break">
+        <p>This ensures visual continuity in column layout without splitting.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+/* Example 1: column-count */
+.columns-count {
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 2px solid #ccc;
+}
+
+/* Example 2: column-width */
+.columns-width {
+  column-width: 200px;
+  column-gap: 30px;
+}
+
+/* Example 3: columns shorthand */
+.columns-shorthand {
+  columns: 150px 3;
+  column-gap: 15px;
+  column-rule: 1px dashed #666;
+}
+
+/* Example 4: column-span */
+.column-span-heading {
+  column-span: all;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #005a9c;
+}
+
+.columns-with-span {
+  column-count: 2;
+  column-gap: 25px;
+  column-rule: 1px solid #999;
+}
+
+/* Example 5: break-inside */
+.break-avoid-container {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.break-avoid-box {
+  background: #e0f7fa;
+  padding: 1rem;
+  margin: 1rem 0;
+  break-inside: avoid;
+  border-radius: 6px;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .columns-count,
+  .columns-width,
+  .columns-shorthand,
+  .columns-with-span,
+  .break-avoid-container {
+    column-count: 1;
+    column-width: auto;
+    column-gap: 0;
+    column-rule: none;
+  }
+  .column-span-heading {
+    column-span: all;
+  }
+}

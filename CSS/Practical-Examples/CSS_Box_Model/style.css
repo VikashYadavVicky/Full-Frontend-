@@ -1,0 +1,56 @@
+
+/* Universal box-sizing for consistency */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #fdfdfd;
+}
+
+/* Centering box with margin */
+.center-box {
+  width: 400px;
+  margin: 20px auto;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Padded Box */
+.padded-box {
+  padding: 20px 30px;
+  background-color: #eaeaea;
+  margin: 20px 0;
+}
+
+/* Box with border */
+.box-border {
+  border: 3px dashed blue;
+  padding: 10px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+/* Dimension Examples */
+.dimension-box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-box {
+  box-sizing: content-box;
+  background-color: #ff8a65;
+}
+
+.border-box {
+  box-sizing: border-box;
+  background-color: #4db6ac;
+}
