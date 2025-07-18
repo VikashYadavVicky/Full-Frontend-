@@ -50,7 +50,7 @@ Navigate through the entire HTML curriculum using this clickable internal index:
 | 🏗️ HTML Document / Structure | [HTML Structure](#-html-document--structure) | [HTML Structure](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html) |
 | 🔖 HTML Attributes | [HTML Attributes](#-html-attributes) | [HTML Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) |
 | 🏷️ `<html>` Tag | [`<html>` Tag](#-html-tag) | [`<html>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html) |
-| 🧠 `<head>` Tag | [`<head>` Tag](#-head-tag) | [`<head>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) |
+| 🧠 `<head>` Tag | [`<head>` Tag](#head-tag) | [`<head>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) |
 | 🏷️ `<title>` Tag | [`<title>` Tag](#-title-tag) | [`<title>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) |
 | 🏷️ `<body>` Tag | [`<body>` Tag](#-body-tag) | [`<body>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body) |
 | 🏷️ HTML Heading Tags | [Heading Tags](#-html-heading-tags) | [Headings – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) |
@@ -79,7 +79,7 @@ Navigate through the entire HTML curriculum using this clickable internal index:
 | 📋 `<script>` and `<noscript>` | [`<script>` and `<noscript>`](#-html-script-and-noscript-tags) | [`<script>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) |
 | 📋 `<link>`, `<meta>`, `<style>` | [`<link>`, `<meta>`, etc.](#-html-link-meta-and-style-tags) | [`<link>` – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) |
 | 📋 HTML5 Semantic Elements | [Semantic Elements](#-html5-semantic-elements) | [Semantic – MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) |
-| ✍️ HTML Text Formatting Tags | [Text Formatting](#-html-text-formatting-tags) | [Text Formatting – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) |
+| ✍️ HTML Text Formatting Tags | [Text Formatting](#-html-text-formatting-tags-) | [Text Formatting – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) |
 | 🚫 HTML Empty Elements | [Empty Elements](#-html-empty-elements-self-closing-tags) | [Empty Elements – MDN](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) |
 | 🧩 Final HTML Essentials | [Final Essentials](#-final-html-essentials--small-but-crucial-topics) | [HTML Guide – MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) |
 
