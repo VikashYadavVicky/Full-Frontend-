@@ -487,6 +487,8 @@ body {
 
 > 🎯 The right use of selectors is key to writing powerful and scalable CSS!
 
+#### [CSS Selectors Practical Example](../Practical-Examples/CSS_Selectors/)
+
 ---
 # 🎯 CSS Specificity
 
@@ -619,7 +621,9 @@ p {
 
 
 
-✅ **Understanding specificity** is crucial for debugging style conflicts and writing predictable, scalable CSS.
+✅ **Understanding specificity** is crucial for debugging style conflicts and writing predictable, scalable CSS.<br>
+
+#### - [CSS Specificity Practical Example](../Practical-Examples/CSS_Specificity/)
 
 ---
 # 👨‍👩‍👧 CSS Inheritance
@@ -752,6 +756,7 @@ body {
 
 ✅ Inheritance makes styling cleaner, more consistent, and easier to maintain.
 
+#### [CSS Inheritance Practical Example](../Practical-Examples/CSS_Inheritance/)
 ---
 # 🎨 CSS Colors
 
@@ -865,7 +870,10 @@ Make sure your text has enough contrast with its background. Use tools like:
 * Prefer `rgba()` or `hsla()` for overlays and hover effects.
 * Use `currentColor` when matching to the `color` of the element (e.g., for icons or borders).
 
-🚀 With this, you're ready to paint your pages with perfect colors!
+🚀 With this, you're ready to paint your pages with perfect colors!<br>
+
+
+#### [CSS Colors Practical Example](../Practical-Examples/CSS_Colors/)
 
 ---
 # 📏 CSS Units
@@ -1005,6 +1013,7 @@ h1 {
 
 ✅ **Conclusion:** Understanding and using the right units will help you build scalable, responsive, and consistent layouts.
 
+#### [CSS Units Practical Example](../Practical-Examples/CSS_Units/)
 ---
 
 # 📦 CSS Box Model
@@ -1176,6 +1185,7 @@ Let’s say you define a box like this:
 
 ✅ **Conclusion:** Understanding the box model is key to effective layout and spacing in CSS. Always visualize how padding, borders, and margins interact.
 
+#### [CSS Box Model Practical Example](../Practical-Examples/CSS_Box_Model/)
 ---
 
 # 🎨 CSS Typography
@@ -1279,6 +1289,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 ```
+
+#### [CSS Typography Practical Example](../Practical-Examples/CSS_Typography/)
+
 ---
 # 🔗 CSS Styling Links
 
@@ -1367,6 +1380,7 @@ a:active {
 * Don't rely only on color — improve visibility for color-blind users.
 * Group link pseudo-classes in the order `:link`, `:visited`, `:hover`, `:active` to prevent unexpected results.
 
+#### [CSS Styling Links Practical Example](../Practical-Examples/CSS_Styling_Links/)
 
 ---
 
@@ -1467,6 +1481,8 @@ ul li::marker {
 * Use pseudo-classes to selectively target list items for more control
 * Use `::marker` when you want to style just the bullet or number of a list item
 
+#### [CSS List Styling Practical Example](../Practical-Examples/CSS_List_Styling/)
+
 ---
 # 📦 CSS Display Property
 
@@ -1547,6 +1563,7 @@ The `display` property in CSS determines how an element is displayed in the docu
 * Avoid using `display: none` for accessibility-critical content.
 * `display: contents` can help when you want to keep child elements visible but remove the container.
 
+#### [CSS Display Property Practical Example](../Practical-Examples/CSS_Display_Property/)
 ---
 # 🌊 CSS Float Property
 
@@ -1634,6 +1651,7 @@ When a parent contains only floated children, it may collapse. Use clearfix to f
 
 > The parent will expand to wrap the floated child because `flow-root` creates a new block formatting context.
 
+#### [CSS Float Property Practical Example](../Practical-Examples/CSS_Float_Property/)
 ---
 # 📰 CSS Columns
 
@@ -1717,6 +1735,8 @@ These control how breaks behave inside multi-column layouts.
 * Use media queries to adjust column layout on different screen sizes.
 * Browsers may interpret `auto` behavior differently, so always test across multiple environments.
 * The `columns` shorthand can make code concise but may be less readable.
+
+#### [CSS Columns Practical Example](../Practical-Examples/CSS_Columns/)
 
 ---
 # 🎯 CSS Position Property
@@ -1840,6 +1860,7 @@ Note: Only works on positioned (non-static) elements.
 | fixed    | ❌ No             | ✅ Yes        | ❌ No              | ❌ No            |
 | sticky   | ✅ Yes            | ✅ Yes        | ⏳ Depends         | ❌ No            |
 
+#### [CSS Position Property Practical Example](../Practical-Examples/CSS_Position_Property/)
 ---
 # 🧮 CSS Z-Index
 
@@ -1986,6 +2007,8 @@ Even with a high `z-index`, the `.child` **cannot appear above elements outside 
 | Static layout elements     | ❌ No            | z-index won’t apply without positioning |
 | Tooltip or dropdown        | ✅ Yes           | Must be above all base content          |
 
+#### [CSS Z-Index Practical Example](../Practical-Examples/CSS_Z-Index/)
+
 ---
 # 🌊 CSS Overflow, Opacity, and Object-fit/Object-position
 
@@ -2069,6 +2092,7 @@ Used to control how images/videos are resized and positioned in their container.
 * `opacity` sets element transparency.
 * `object-fit` & `object-position` optimize media layout inside containers.
 
+#### [CSS Overflow, Opacity, and Object-fit/Object-position Practical Example](../Practical-Examples/CSS_Overflow,_Opacity,_and_Object-fit_Object-position/)
 ---
 
 # 🧱 CSS Flexbox (Flexible Box Layout)
@@ -2200,6 +2224,9 @@ To start using Flexbox, you must declare a container with:
 * For two-dimensional layouts, prefer **CSS Grid**.
 * `inline-flex` allows flexbox on inline-level containers.
 * Combining `auto`, `0`, and fixed units in `flex` provides powerful control.
+
+#### [CSS Flexbox (Flexible Box Layout) Practical Example](../Practical-Examples/CSS_Flexbox_(Flexible_Box_Layout)/)
+
 
 ---
 # 🔲 CSS Grid Layout
@@ -2367,6 +2394,8 @@ You can try this on [CodePen](https://codepen.io), [JSFiddle](https://jsfiddle.n
   text-align: center;
 }
 ```
+
+#### [CSS Grid Layout Practical Example](../Practical-Examples/CSS_Grid_Layout/)
 ---
 # 🖼️ CSS Images in Depth
 
@@ -2546,6 +2575,8 @@ CSS provides powerful tools for handling images in web design. Whether it's sett
 
 > ⚠️ \*Firefox requires `-webkit-background-clip` with flags for full text clipping support.
 
+#### [CSS Images in Depth Practical Example](../Practical-Examples/CSS_Images_in_Depth/)
+
 ---
 # 🎨 CSS Gradients - Full Guide
 
@@ -2670,6 +2701,8 @@ background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url(imag
   color: white;
 }
 ```
+
+#### [CSS Gradients - Full Guide Practical Example](../Practical-Examples/CSS_Gradients_-_Full_Guide/)
 ---
 # 📱 CSS Media Queries Full Guide
 
@@ -2803,6 +2836,7 @@ Media Queries allow your CSS to adapt to different screen sizes, resolutions, or
 * Media queries can be added inside CSS files or directly in HTML via `<style>` tag.
 * You can also use media queries in JavaScript using `window.matchMedia()`.
 
+#### [CSS Media Queries Full Guide Practical Example](../Practical-Examples/CSS_Media_Queries_Full_Guide/)
 ---
 # 🧱 CSS Pseudo-elements Full Guide
 
@@ -2927,6 +2961,7 @@ input:focus::placeholder {
 * They don’t work on replaced elements like `<img>`.
 * `::` is standard, but some browsers support single-colon `:` for older pseudo-elements.
 
+#### [CSS Pseudo-elements Full Guide Practical Example](../Practical-Examples/CSS_Pseudo-elements_Full_Guide/)
 
 ---
 # 🧪 CSS Pseudo-Classes - Full Guide
@@ -3047,6 +3082,7 @@ li:not(:nth-child(2n)) {
 * Focus ring on form fields
 * Form error states using `:invalid`
 
+#### [CSS Pseudo-Classes - Full Guide Practical Example](../Practical-Examples/CSS_Pseudo-Classes_-_Full_Guide/)
 ---
 # 🎨 CSS Variables (Custom Properties) Full Guide
 
@@ -3262,6 +3298,8 @@ You can copy and use this as a base in any project!
 | 🔄 General | `--transition-speed` | `0.3s`        | `transition: all var(--transition-speed);` |
 | 🌗 Theme   | `--bg-color`         | `#ffffff`     | `background: var(--bg-color);`             |
 
+
+#### [CSS Variables (Custom Properties) Full Guide Practical Example](../Practical-Examples/CSS_Variables_(Custom_Properties)_Full_Guide/)
 ---
 # 🧪 CSS Functions – Summary Table & Details
 
@@ -3462,7 +3500,7 @@ transform: matrix(1, 0.3, 0.5, 1, 0, 0);
 * All functions can be used inside relevant CSS property declarations.
 * Can be combined for dynamic styles (e.g., `calc(var(--spacing) * 2)`)
 
-
+#### [CSS Functions – Summary Table & Details Practical Example](../Practical-Examples/CSS_Functions_–_Summary_Table_&_Details/)
 ---
 # 🎞️ CSS Animations – All Properties & Their Values
 
@@ -3762,3 +3800,4 @@ Use `transform-style: preserve-3d;` and `perspective` to give depth to child ele
 }
 ```
 
+#### [CSS Animations – All Properties & Their Values Practical Example](../Practical-Examples/CSS_Animations_–_All_Properties_&_Their_Values/)
