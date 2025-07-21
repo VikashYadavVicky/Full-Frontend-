@@ -1445,7 +1445,7 @@ Used to perform mathematical operations like addition, subtraction, etc.
 | `++`     | Increment           | `a = 5; a++` | `6`    |
 | `--`     | Decrement           | `a = 5; a--` | `4`    |
 
-### 2. 🧮 Assignment Operators
+### 2. 🧮 Assignment Operators(Compound Operators)
 
 Used to assign values to variables.
 
@@ -1777,6 +1777,868 @@ When you want to write a short and simple `if...else` decision in a single line.
 | Ternary               | `condition ? val1 : val2`     | Short `if...else` decisions, compact syntax |
 
 ---
+
+# 🧠 How to See JavaScript Variable Address in Chrome DevTools
+
+> Inspecting how and where variables live in memory is useful for debugging references, memory leaks, and object tracking.
+
+
+### ✅ Step-by-Step Guide to Track Variable Address via DevTools
+
+#### 1. **Create a Sample JavaScript Object**
+
+Use your Console or a test script:
+
+```js
+let user = { name: "Vicky", age: 23 };
+let username = 'Vikash'
+window.myUser = user; // ✅ Make it global
+```
+
+#### 2. **Open Chrome DevTools**
+
+* Right-click anywhere on the webpage > **Inspect**
+* OR press `Ctrl + Shift + I` (Windows) / `Cmd + Option + I` (Mac)
+
+### 3. **Go to the "Memory" Tab**
+
+* At the top of DevTools, find and click the **Memory** tab.
+
+#### 4. **Take a Heap Snapshot**
+
+* On the left sidebar, select `Heap snapshot`.
+* Click **"Take snapshot"**.
+
+#### 5. **Search for Your Variable or Value**
+
+* Use the top-right search bar.
+* Search for `myUser` or a unique value like `"Vicky"` For objects.
+* Same as for string search value like `'Vikash'`.
+* Look for entries in the snapshot that match your object.
+* When you find your variable then copy the context address like `@375931`.
+* Then search this context address you find your context and see all variables and objects address.
+
+#### 6. **Inspect the Object**
+
+* Click the object to expand it.
+* You'll see:
+
+  * Object **type** (e.g., Object)
+  * **Properties**
+  * **Memory address ID** (like `@123456`)
+
+#### 7. **Trace References (Retainers)**
+
+* In the object view, check the **Retainers** tab:
+
+  * Shows which object is holding the reference.
+  * E.g., `window.myUser → Object`
+
+
+### 🔎 Notes:
+
+* 🧱 Primitive types (string, number, boolean) won't appear with reference chains.
+* 🧠 Objects, arrays, and functions are trackable via memory snapshot.
+
+
+### 💡 Best Practices:
+
+* Always attach to `window` for global access: `window.obj = yourObj`
+* Name your variables clearly to find them quickly in memory.
+* Use `console.log(obj)` and **right-click → Store as Global Variable** for inspection too.
+
+---
+
+# 🧱 JavaScript Objects Full Guide
+
+JavaScript Objects allow us to store multiple values in a single variable using a key-value pair structure.
+
+### 🔹 What is an Object?
+
+An object is a standalone entity, with properties and type. It's similar to real-life objects like a car or a book.
+
+```js
+let person = {
+  name: "John",
+  age: 30,
+  isStudent: false
+};
+```
+
+Here `person` is an object with 3 properties: `name`, `age`, and `isStudent`.
+
+
+### 🔹 Object Syntax
+
+```js
+let objectName = {
+  key1: value1,
+  key2: value2,
+  ...
+};
+```
+
+* **Keys** are strings (or symbols)
+* **Values** can be any data type: string, number, array, object, function, etc.
+
+### 🔹 Accessing Object Properties
+
+#### Dot Notation
+
+```js
+console.log(person.name); // John
+```
+
+#### Bracket Notation
+
+```js
+console.log(person["age"]); // 30
+```
+
+Use bracket notation when:
+
+* The property name contains spaces or special characters
+* You use variables as property keys
+
+Example:
+
+```js
+let user2 = {
+  firstName: "Rahul",
+  lastName: "Kumar"
+};
+console.log(user2["first" + "Name"]); // Rahul
+```
+
+
+### 🔹 Adding & Updating Properties
+
+```js
+person.city = "Delhi";           // Adding
+person.age = 31;                 // Updating
+user2["middleName"] = "Singh";   // Adding using bracket notation
+user2.lastName = "Verma";        // Updating
+```
+
+### 🔹 Deleting a Property
+
+```js
+delete person.isStudent;
+```
+
+
+### 🔹 Nested Objects
+
+```js
+let student = {
+  name: "Vikash",
+  address: {
+    city: "Patna",
+    zip: 800001
+  }
+};
+console.log(student.address.city); // Patna
+```
+
+### 🔹 Object Methods
+
+Objects can contain functions known as **methods**.
+
+```js
+let car = {
+  brand: "Tata",
+  start: function () {
+    return "Car Started";
+  }
+};
+console.log(car.start());
+```
+
+Shorthand:
+
+```js
+let car = {
+  brand: "Tata",
+  start() {
+    return "Car Started";
+  }
+};
+```
+
+### 🔹 `this` Keyword
+
+Inside methods, `this` refers to the object calling it.
+
+```js
+let user = {
+  name: "Vikash",
+  greet() {
+    return `Hello, ${this.name}`;
+  }
+};
+```
+
+### 🔹 Check if Property Exists
+
+```js
+"name" in person;           // true
+person.hasOwnProperty("age"); // true
+```
+
+### 🔹 Looping Through Objects
+
+```js
+for (let key in person) {
+  console.log(key, person[key]);
+}
+```
+
+### 🔹 Object.keys, Object.values, Object.entries
+
+```js
+Object.keys(person);    // ["name", "age", "city"]
+Object.values(person);  // ["John", 31, "Delhi"]
+Object.entries(person); // [["name", "John"], ["age", 31], ["city", "Delhi"]]
+```
+
+### 🔹 Copying Objects
+
+#### Using Spread Operator
+
+```js
+let newPerson = { ...person };
+```
+
+#### Using Object.assign()
+
+```js
+let clone = Object.assign({}, person);
+```
+
+Note: This is a **shallow copy** — nested objects will still refer to the same memory.
+
+## 🔹 Object Destructuring
+
+```js
+let { name, age } = person;
+console.log(name); // John
+```
+
+### 🔹 Object Freezing & Sealing
+
+#### Object.freeze(obj)
+
+Prevents any change (add/update/delete):
+
+```js
+Object.freeze(person);
+person.age = 40; // won't change
+```
+
+#### Object.seal(obj)
+
+Allows changing existing properties but blocks new ones:
+
+```js
+Object.seal(person);
+person.age = 40; // works
+person.gender = "Male"; // won't add
+```
+
+---
+
+# 📚 JavaScript Arrays Full Guide
+
+JavaScript Arrays are used to store multiple values in a single variable, organized by index.
+
+### 🔹 What is an Array?
+
+An array is a special type of object used to store ordered collections.
+
+```js
+let fruits = ["apple", "banana", "orange"];
+```
+
+Each value is accessible by its **index** (starting from `0`).
+
+
+### 🔹 Array Syntax
+
+```js
+let arrayName = [item1, item2, item3, ...];
+```
+
+* Can store any data type: string, number, boolean, objects, functions, even other arrays.
+
+Example:
+
+```js
+let mixed = ["text", 42, true, {name: "A"}, [1, 2]];
+```
+
+
+### 🔹 Accessing Array Elements
+
+```js
+console.log(fruits[0]); // apple
+console.log(fruits[2]); // orange
+```
+
+
+### 🔹 Updating Array Elements
+
+```js
+fruits[1] = "mango";
+console.log(fruits); // ["apple", "mango", "orange"]
+```
+
+
+### 🔹 Array Length
+
+```js
+console.log(fruits.length); // 3
+```
+
+
+### 🔹 Adding Elements
+
+#### Push (to end)
+
+```js
+fruits.push("grape");
+```
+
+#### Unshift (to start)
+
+```js
+fruits.unshift("kiwi");
+```
+
+
+### 🔹 Removing Elements
+
+#### Pop (from end)
+
+```js
+fruits.pop();
+```
+
+#### Shift (from start)
+
+```js
+fruits.shift();
+```
+
+
+### 🔹 Looping Through Arrays
+
+#### Using `for`
+
+```js
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+```
+
+#### Using `for...of`
+
+```js
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+```
+
+### 🔹 Array Methods
+
+#### `includes()`
+
+Check if value exists:
+
+```js
+fruits.includes("apple"); // true
+```
+
+#### `indexOf()`
+
+```js
+fruits.indexOf("banana"); // 1
+```
+
+#### `concat()`
+Add two or more array.
+```js
+const arr1=[1,2,3,4,5]
+const arr2=[1,2,3,4,5]
+
+const arr3 = arr1.concat(arr2)
+
+```
+
+#### `join()`
+
+```js
+fruits.join(", "); // "apple, banana, orange"
+```
+
+#### `slice(start, end)` – doesn't modify original
+
+```js
+let newFruits = fruits.slice(1, 3); // ["banana", "orange"]
+```
+
+#### `splice(start, deleteCount, item1, item2)` – modifies original
+
+```js
+fruits.splice(1, 1, "lemon"); // replaces 1 item at index 1
+```
+
+#### `reverse()`
+
+```js
+fruits.reverse();
+```
+
+#### `sort()`
+
+```js
+fruits.sort();
+```
+
+### 🔹 `map()`, `filter()`, `reduce()`
+
+#### `map()` – transform each element
+
+```js
+let numbers = [1, 2, 3];
+let doubled = numbers.map(num => num * 2);
+```
+
+#### `filter()` – filter elements based on condition
+
+```js
+let even = numbers.filter(num => num % 2 === 0);
+```
+
+#### `reduce()` – reduce array to a single value
+
+```js
+let sum = numbers.reduce((total, num) => total + num, 0);
+```
+
+### 🔹 Nested Arrays(Multidimensional Array)
+
+```js
+let matrix = [
+  [1, 2],
+  [3, 4]
+];
+console.log(matrix[1][0]); // 3
+```
+
+---
+
+# 🔄 JavaScript Shallow Copy vs Deep Copy
+
+In JavaScript, when copying objects or arrays, it's important to understand the difference between **shallow copy** and **deep copy**. This helps prevent unexpected changes due to **shared references**.
+
+## 🧪 What is a Shallow Copy?
+
+A **shallow copy** creates a new object or array, but **copies references of nested objects** instead of duplicating them.
+
+### 🔹 Example:
+
+```js
+let original = {
+  name: "Vikash",
+  address: {
+    city: "Delhi",
+    zip: 110001
+  }
+};
+
+let shallowCopy = { ...original };
+shallowCopy.name = "Amit";             // ✅ Changes only in shallowCopy
+shallowCopy.address.city = "Mumbai";   // ⚠️ Affects original too!
+
+console.log(original.address.city);     // Mumbai
+```
+
+### ✅ Common Shallow Copy Methods:
+
+* **Objects**: `Object.assign({}, obj)`, `{ ...obj }`
+* **Arrays**: `array.slice()`, `[...array]`
+
+### 🔥 Problem:
+
+Shallow copy does **not** clone nested objects — both original and copied object still reference the **same inner object**.
+
+## 🧬 What is a Deep Copy?
+
+A **deep copy** creates a new object or array **recursively**, so that **all nested objects** are also copied.
+
+### 🔹 Example:
+
+```js
+let original = {
+  name: "Vikash",
+  address: {
+    city: "Delhi",
+    zip: 110001
+  }
+};
+
+let deepCopy = JSON.parse(JSON.stringify(original));
+deepCopy.address.city = "Mumbai";
+
+console.log(original.address.city); // Delhi (✅ Unchanged)
+```
+
+### ✅ Common Deep Copy Techniques:
+
+#### 1. `JSON.parse(JSON.stringify())`
+
+```js
+let deepCopy = JSON.parse(JSON.stringify(original));
+```
+
+* ✅ Simple & fast
+* ⚠️ Fails for `undefined`, `functions`, `Date`, `Map`, `Set`, `RegExp`
+
+#### 2. `structuredClone()` (✅ Modern Browsers)
+
+```js
+let deepCopy = structuredClone(original);
+```
+
+* ✅ Safely copies almost all types
+* ❌ Not supported in older environments
+
+#### 3. Using Lodash Library
+
+```js
+import cloneDeep from 'lodash/cloneDeep';
+let deepCopy = cloneDeep(original);
+```
+
+* ✅ Accurate deep cloning
+* ❌ Requires lodash package
+
+
+### 🆚 Comparison Table
+
+| Feature                | Shallow Copy            | Deep Copy                           |
+| ---------------------- | ----------------------- | ----------------------------------- |
+| Copies nested objects? | ❌ References shared     | ✅ Fully copies recursively          |
+| Performance            | ✅ Fast                  | ⚠️ Slightly Slower                  |
+| Common Tools           | `Object.assign`, spread | `JSON.stringify`, `structuredClone` |
+| Ideal For              | Flat structures         | Complex nested objects              |
+
+
+### 🧠 Summary
+
+* Use **shallow copy** when your object/array is flat.
+* Use **deep copy** when you want full independence from the original, especially with nested structures.
+
+---
+# 🔁 JavaScript While Loop
+
+The `while` loop in JavaScript is a control flow statement that allows code to be executed repeatedly based on a given boolean condition.
+
+### ✅ Syntax:
+
+```javascript
+while (condition) {
+  // code block to execute
+}
+```
+
+* The loop **continues to run** as long as the condition is `true`.
+* The condition is evaluated **before** executing the code block (entry-controlled loop).
+
+### 🧠 Step-by-Step Execution:
+
+1. The condition is **evaluated**.
+2. If it is `true`, the code block runs.
+3. After executing the block, the condition is **evaluated again**.
+4. This repeats until the condition becomes `false`.
+5. Once false, the loop exits.
+
+### ⚠️ Infinite Loop Warning:
+
+If the condition **never becomes false**, the loop will run forever (infinite loop).
+
+```javascript
+while (true) {
+  console.log("This will run forever!");
+}
+```
+
+### 🧪 Practical Example:
+
+Let's print numbers from 1 to 5 using a `while` loop.
+
+```javascript
+let i = 1; // initialization
+while (i <= 5) { // condition
+  console.log(i); // code block
+  i++; // increment
+}
+```
+
+#### 🧩 Output:
+
+```
+1
+2
+3
+4
+5
+```
+
+### 🔍 Use Case Example: User Input Until Valid
+
+```javascript
+let userInput;
+while (userInput !== "yes") {
+  userInput = prompt("Type 'yes' to continue:");
+}
+console.log("Thank you!");
+```
+
+This will repeatedly ask the user until they type `yes`.
+
+### 🔄 Dry Run (Trace Table) of Loop:
+
+For the loop:
+
+```javascript
+let i = 1;
+while (i <= 3) {
+  console.log(i);
+  i++;
+}
+```
+
+| Iteration | i Value | Condition `i <= 3` | Output |
+| --------- | ------- | ------------------ | ------ |
+| 1         | 1       | true               | 1      |
+| 2         | 2       | true               | 2      |
+| 3         | 3       | true               | 3      |
+| 4         | 4       | false              | -      |
+
+### ❗ Common Mistakes
+
+* Forgetting to update the variable inside the loop → leads to infinite loop
+* Using `=` instead of `==` or `===` in the condition
+
+### ✅ When to Use While Loop:
+
+* When the number of iterations is **not known in advance**.
+* When we want to repeat something until a **specific condition** is met.
+
+---
+# 🔁 JavaScript for Loop
+
+The `for` loop in JavaScript is used to execute a block of code a specific number of times. It is one of the most commonly used loops when the number of iterations is known.
+
+### 📘 Syntax:
+
+```js
+for (initialization; condition; increment/decrement) {
+    // code block to be executed
+}
+```
+
+### 🔍 Explanation of Syntax:
+
+| Part                | Description                                                           |
+| ------------------- | --------------------------------------------------------------------- |
+| Initialization      | Runs once before the loop starts. Usually used to define the counter. |
+| Condition           | Checked before each iteration. If true, the loop body runs.           |
+| Increment/Decrement | Runs after each iteration. Used to update the loop control variable.  |
+
+
+### ✅ Step-by-Step Dry Run:
+
+```js
+for (let i = 1; i <= 3; i++) {
+    console.log("Count: ", i);
+}
+```
+
+**Execution Flow:**
+
+1. `let i = 1` (Initialization, runs once)
+2. `i <= 3` → true → executes loop body
+3. Prints: Count: 1
+4. `i++` → `i = 2`
+5. `i <= 3` → true → executes loop body
+6. Prints: Count: 2
+7. `i++` → `i = 3`
+8. `i <= 3` → true → executes loop body
+9. Prints: Count: 3
+10. `i++` → `i = 4`
+11. `i <= 3` → false → loop ends
+
+### 💡 Use Cases:
+
+* Iterating over arrays or collections
+* Running code a specific number of times
+* Generating HTML dynamically
+
+### ⚠️ Common Mistakes:
+
+* Forgetting to update the loop variable → infinite loop
+* Using incorrect condition (e.g., `i >= 3` with `i++`) → never enters
+
+### 🧪 Practical Example:
+
+```js
+const fruits = ["apple", "banana", "mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+```
+
+**Output:**
+apple
+banana
+mango
+
+### 🔄 Nested `for` Loop:
+
+```js
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 2; j++) {
+        console.log(`i = ${i}, j = ${j}`);
+    }
+}
+```
+
+**Output:**
+i = 1, j = 1
+i = 1, j = 2
+i = 2, j = 1
+i = 2, j = 2
+i = 3, j = 1
+i = 3, j = 2
+
+
+### 📌 Summary:
+
+* `for` loop is ideal when number of iterations is known.
+* Control comes from its 3 expressions (init, condition, increment).
+* Can be nested, and commonly used with arrays.
+
+
+---
+
+# 🔁 JavaScript `do...while` Loop
+
+The `do...while` loop is a control flow statement that executes a block of code **at least once**, and then repeats the loop **as long as the specified condition evaluates to true**.
+
+### 🔹 Syntax
+
+```js
+let i = 0;
+do {
+  // block of code to be executed
+  i++;
+} while (condition);
+```
+
+🧠 The key difference between `do...while` and `while` loop is that `do...while` **executes the code block first**, then checks the condition.
+
+### 🔸 Step-by-Step Working
+
+1. The block of code inside `do` executes **once** before the condition is checked.
+2. The condition is evaluated.
+3. If `true` ➝ loop runs again.
+4. If `false` ➝ loop stops.
+
+### 🔍 Dry Run Example
+
+```js
+let count = 1;
+do {
+  console.log("Count is:", count);
+  count++;
+} while (count <= 3);
+```
+
+#### 🔸 Dry Run Table:
+
+| Iteration | count | Output      | Condition (`count <= 3`) |
+| --------- | ----- | ----------- | ------------------------ |
+| 1         | 1     | Count is: 1 | ✅ true                   |
+| 2         | 2     | Count is: 2 | ✅ true                   |
+| 3         | 3     | Count is: 3 | ✅ true                   |
+| 4         | 4     | -           | ❌ false (loop stops)     |
+
+### 🔄 Infinite Loop Warning ⚠️
+
+If you forget to update the loop variable or give a condition that always remains true:
+
+```js
+do {
+  console.log("I run forever!");
+} while (true); // ⚠️ Infinite loop
+```
+
+### 🔁 Nested `do...while` Loop
+
+```js
+let i = 1;
+do {
+  let j = 1;
+  do {
+    console.log(`i = ${i}, j = ${j}`);
+    j++;
+  } while (j <= 2);
+  i++;
+} while (i <= 2);
+```
+
+#### Output:
+
+```
+i = 1, j = 1
+i = 1, j = 2
+i = 2, j = 1
+i = 2, j = 2
+```
+
+
+## ✅ Practical Example: Asking User Input Until Valid
+
+```js
+let number;
+do {
+  number = prompt("Enter a number greater than 100:");
+} while (number <= 100 && number !== null);
+```
+
+✅ This ensures user is prompted at least once.
+
+
+### ❌ Common Mistakes
+
+* Forgetting to update the loop variable ➝ infinite loop.
+* Using `=` instead of `==` or `===` in condition.
+* Expecting the condition to check **before** first run (it doesn’t).
+
+
+### 🧠 Key Takeaways
+
+* `do...while` runs the code block at least **once**.
+* Useful when you want the loop body to execute before checking the condition.
+* Great for user inputs, menus, retries, etc.
+
+---
+
+
+
 
 
 
