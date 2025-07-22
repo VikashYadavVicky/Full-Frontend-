@@ -2638,6 +2638,1218 @@ do {
 ---
 
 
+# 📘 JavaScript Function 
+
+In JavaScript, a function is a reusable block of code designed to perform a particular task. You can define a function once and call (or invoke) it multiple times, possibly with different inputs.
+
+In JavaScript, there are two primary ways to define a function:
+
+* **Function Declaration (Named Function)**
+* **Function Expression (Anonymous Function)**
+
+Let's understand both in detail with examples, similarities, and differences.
+
+## 🔹 Function Declaration
+
+A function declaration is a way to define a named function using the `function` keyword. This function can be reused throughout the code by calling its name.
+
+### ✅ Syntax:
+
+```js
+function functionName() {
+  // code block to execute
+}
+```
+
+```js
+
+// ✅ 1. Function Without Parameters
+
+function greet() {
+  console.log("Hello, welcome to JavaScript!");
+}
+
+// Call the function
+greet(); // ➤ Output: Hello, welcome to JavaScript!
+
+```
+```js
+// ✅ 2. Function With One Parameter
+function greetUser(name) {
+  // 'name' is a parameter (input)
+  console.log("Hello, " + name + "!");
+}
+
+// Call the function with one argument
+greetUser("Vikash"); // ➤ Output: Hello, Vikash!
+greetUser("John");   // ➤ Output: Hello, John!
+```
+
+```js
+// ✅ 3. Function With Multiple Parameters
+function addNumbers(a, b) {
+  // 'a' and 'b' are inputs to the function
+  let sum = a + b;
+  console.log("Sum is:", sum);
+}
+
+// Call the function with two arguments
+addNumbers(5, 3);   // ➤ Output: Sum is: 8
+addNumbers(10, 15); // ➤ Output: Sum is: 25
+```
+
+```js
+// ✅ 4. Function With Return Value
+function multiply(x, y) {
+  // This function returns the result instead of printing
+  return x * y;
+}
+
+// Store the returned result in a variable
+let result = multiply(4, 5);
+
+// Print the result
+console.log(result); // ➤ Output: 20
+
+// You can also use it directly
+console.log(multiply(7, 3)); // ➤ Output: 21
+
+```
+
+### ✅ Characteristics:
+
+* Hoisted to the top of the scope.
+* Can be called before the function is defined.
+* Has a name identifier.
+
+### 📌 Example with Hoisting:
+
+```js
+sayHello(); // ✅ Works due to hoisting
+
+function sayHello() {
+  console.log("Hello World");
+}
+```
+
+## 🔹 Function Expression
+
+A function expression is when a function is assigned to a variable. It can be:
+
+- Anonymous (no name)
+
+- Stored in a variable
+
+- Called using the variable name
+
+### ✅ Syntax:
+
+```js
+// ✅ 1. Function Expression Without Parameters
+const greet = function() {
+  // This function has no input
+  console.log("Hello from function expression!");
+};
+
+// Call the function
+greet(); // ➤ Output: Hello from function expression!
+```
+
+```js
+// ✅ 2. Function Expression With One Parameter
+const greetUser = function(name) {
+  // 'name' is a parameter
+  console.log("Hi, " + name + "!");
+};
+
+// Call the function with one argument
+greetUser("Vikash"); // ➤ Output: Hi, Vikash!
+greetUser("Alice");  // ➤ Output: Hi, Alice!
+
+```
+
+
+```js
+// ✅ 3. Function Expression With Multiple Parameters
+const addNumbers = function(a, b) {
+  let sum = a + b;
+  console.log("Sum is:", sum);
+};
+
+// Call the function
+addNumbers(10, 15); // ➤ Output: Sum is: 25
+addNumbers(4, 6);   // ➤ Output: Sum is: 10
+
+```
+
+```js
+// ✅ 4. Function Expression With Return Value
+const multiply = function(x, y) {
+  return x * y;
+};
+
+// Store the result
+let result = multiply(5, 6);
+console.log(result); // ➤ Output: 30
+
+// Or call it directly
+console.log(multiply(3, 7)); // ➤ Output: 21
+
+```
+### ✅ Characteristics:
+
+* Not hoisted (undefined before assignment).
+* Can be anonymous (no function name).
+* Must be defined before calling.
+
+### ❌ Example with Hoisting:
+
+```js
+sayHi(); // ❌ Error: Cannot access 'sayHi' before initialization
+
+const sayHi = function() {
+  console.log("Hi There");
+};
+```
+
+### 🔁 Similarities
+
+* Both create functions.
+* Both are function defination.
+* Both can take parameters and return values.
+* Both can be assigned to variables or passed as arguments.
+
+### 🔀 Differences Table
+
+| Feature                 | Function Declaration  | Function Expression          |
+| ----------------------- | --------------------- | ---------------------------- |
+| Hoisting                | ✅ Yes                 | ❌ No                         |
+| Anonymous Support       | ❌ No (must have name) | ✅ Yes                        |
+| Called Before Defined?  | ✅ Yes                 | ❌ No                         |
+| Syntax                  | `function name() {}`  | `const name = function() {}` |
+| Use in Conditional Code | ✅ Works               | ⚠️ Needs care                |
+
+---
+# Intermediate JavaScript
+---
+# 📘 Execution Context in JavaScript
+
+JavaScript is a single-threaded, synchronous, and non-blocking language that uses an **execution context** to manage the execution of code.
+
+## 🔄 What is Execution Context?
+
+- Execution context is the environment in which JavaScript code is evaluated and executed.
+- It defines **how variables, functions, and objects are stored and accessed** during runtime.
+
+### ✅ JavaScript Execution Context Phases
+
+Every time JavaScript code runs, it is executed inside an **Execution Context**. This context has two main phases:
+
+### 🔹 1. **Memory Creation Phase (a.k.a. Creation Phase / Hoisting Phase)**
+
+* JavaScript **allocates memory** for variables and functions **before** executing any code.
+* This is where **hoisting** happens.
+
+#### 🔧 Key Actions in This Phase:
+
+| Type                         | Action Taken                                                           |
+| ---------------------------- | ---------------------------------------------------------------------- |
+| `var`                        | Memory is reserved and initialized with `undefined`                    |
+| `let` / `const`              | Memory is reserved but **not initialized** (in **Temporal Dead Zone**) |
+| Function Declarations        | Entire function (including body) is hoisted and stored in memory       |
+| Function Expressions / Arrow | Only variable declared (`undefined`), **not the function body**        |
+
+#### 🔍 Example:
+
+```javascript
+console.log(x); // undefined
+console.log(y); // ReferenceError (TDZ)
+var x = 10;
+let y = 20;
+
+function sayHello() {
+  console.log("Hello");
+}
+```
+
+### 🔹 2. **Code Execution Phase**
+
+* JavaScript **executes the code line-by-line**.
+* Variables declared with `var`, `let`, or `const` get **assigned values**.
+* When a function is called, a **new Execution Context** is created **for that function**.
+
+  * This function execution context goes through **its own memory and code phases**.
+  * It is **pushed to the Call Stack**.
+
+#### 🔁 Cycle:
+
+* Global → Function1 → Function2 → ...
+* Each function creates its own **Local Execution Context**, which is removed after completion.
+
+### ✅ How Call Stack Works (Visual Representation):
+
+```
+    ┌────────────────────┐
+    │ sayHello Context   │  ← New function call
+    ├────────────────────┤
+    │ Global Context     │  ← Initial (bottom of stack)
+    └────────────────────┘
+```
+
+As functions execute and complete, their contexts are **popped** (removed) from the stack.
+
+### 📌 Final Definition (Simplified)
+
+### 🔸 Memory Creation Phase
+
+* JS reserves memory for variables and functions.
+* `var` is initialized with `undefined`.
+* `let`/`const` are hoisted but not initialized (TDZ).
+* Function declarations are hoisted with full body.
+
+### 🔸 Code Execution Phase
+
+* Runs code line by line.
+* Assigns actual values to variables.
+* Executes functions by creating local execution contexts.
+* Contexts are pushed/popped on the **call stack**.
+
+> ✅ Understanding this two-phase model is key to mastering JavaScript behavior and debugging tricky hoisting or scope issues.
+
+
+There are **three types** of execution contexts:
+
+1. **Global Execution Context (GEC)**
+2. **Function Execution Context (FEC)**
+3. **Eval Execution Context** (rarely used)
+
+
+## 🧠 1. Global Execution Context (GEC)
+
+* Created when the JavaScript file loads.
+* It creates a global `this` and stores global variables and functions.
+* Only one GEC exists at a time.
+
+```js
+var a = 10;
+function greet() {
+  console.log("Hello!");
+}
+```
+
+Here, `a` and `greet` are part of the GEC.
+
+## 🧠 2. Function Execution Context (FEC)
+
+* Created every time a function is called.
+* Each function has its own context.
+* Multiple FECs can exist in a stack (called the **call stack**).
+
+```js
+function sum(x, y) {
+  var total = x + y;
+  return total;
+}
+sum(5, 3);
+```
+
+Calling `sum(5, 3)` creates a new FEC.
+
+
+## 🧪 Execution Context Lifecycle
+
+Each context goes through **two phases**:
+
+### 1. 🏗️ Memory Creation Phase (aka Creation Phase)
+
+* Also called the **Hoisting phase**.
+* Memory is allocated for variables and functions.
+* Variables declared with `var` are initialized with `undefined`.
+* Functions are hoisted completely.
+
+```js
+console.log(a); // undefined
+var a = 5;
+function sayHi() {
+  console.log("Hi");
+}
+```
+
+### 2. ▶️ Code Execution Phase
+
+* Code is executed line-by-line.
+* Variable assignments are updated.
+* Functions are executed when called (new FEC is created).
+
+
+## 📊 Call Stack (Execution Stack)
+
+* It maintains the order of execution of execution contexts.
+* Its follow Lifo Rule (Last in first out)
+* Its have one function also that is anyonumous function. This function in already in call stact when code run.
+
+Example:
+
+```js
+function one() {
+  two();
+  console.log("One");
+}
+function two() {
+  console.log("Two");
+}
+one();
+```
+
+**Call Stack Flow:**
+
+1. GEC is pushed
+2. `one()` is called → push FEC of `one`
+3. `two()` is called → push FEC of `two`
+4. `two()` completes → pop `two`
+5. `one()` continues → prints → pop `one`
+6. GEC remains until script finishes
+
+## 🧠 Summary
+
+| Phase           | Responsibility                   |
+| --------------- | -------------------------------- |
+| Memory Phase    | Hoists variables and functions   |
+| Execution Phase | Executes code line-by-line       |
+| Call Stack      | Tracks active execution contexts |
+
+## 📈 Visual Diagrams
+
+### 🔷 Execution Context Flow Diagram
+
+```
+|-----------------------------------------|
+|        Global Execution Context         |
+|-----------------------------------------|
+|  Memory Phase → Hoist vars & functions  |
+|  Execution Phase → Execute line by line |
+|-----------------------------------------|
+          ↓ function call
+|-----------------------------------------|
+|     Function Execution Context (FEC)    |
+|-----------------------------------------|
+|  Memory Phase → local vars + arguments  |
+|  Execution Phase → execute logic        |
+|-----------------------------------------|
+```
+
+### 🧱 Call Stack Visualization
+
+```text
+[Empty Stack]      // after script ends
+------------------
+| GEC             |
+------------------
+| one() FEC       |
+------------------
+| two() FEC       |
+------------------
+```
+
+---
+
+# 🪄 Hoisting in JavaScript
+
+In simple way when we are able to assess any variable or function before the code execution phase then that variable or function is already lifted.
+We feel as if the variable and function declarations have been moved upwards but it is not so as they are first created in the memory creation phase only and hence we are able to access them.
+
+## 🧠 How Hoisting Works
+
+JavaScript's execution context goes through two phases:
+
+1. **Memory Creation Phase** (aka Hoisting Phase)
+2. **Code Execution Phase**
+
+During the **memory phase**, JS engine scans the code and hoists declarations:
+
+* **Function declarations** are fully hoisted (function body as well).
+* **Variables declared with `var`** are hoisted but **initialized as `undefined`**.
+* **Variables declared with `let` and `const`** are hoisted but **not initialized** (stay in **Temporal Dead Zone**).
+
+## ✅ Function Hoisting
+
+```js
+sayHello(); // Output: Hello!
+
+function sayHello() {
+  console.log("Hello!");
+}
+```
+
+✅ `function` declarations are fully hoisted, so they can be called before their definition.
+
+## ⚠️ `var` Hoisting
+
+```js
+console.log(a); // undefined
+var a = 10;
+```
+
+➡️ `a` is hoisted as `undefined`. So the memory is reserved, but assignment happens later.
+
+```js
+var a; // Hoisted as 'undefined'
+a = 10; // Initialization
+```
+
+## ❌ `let` and `const` Hoisting (TDZ)
+
+```js
+console.log(b); // ❌ ReferenceError
+let b = 20;
+```
+
+```js
+console.log(c); // ❌ ReferenceError
+const c = 30;
+```
+
+➡️ `let` and `const` are hoisted but not initialized.
+They remain in the **Temporal Dead Zone (TDZ)** from the start of the block until the line where they're declared.
+
+## 🧪 Example: Mixing Declarations
+
+```js
+var x = 1;
+function foo() {
+  console.log(x); // undefined (because of local var hoisting)
+  var x = 2;
+}
+foo();
+```
+
+➡️ Inside `foo()`, `var x` is hoisted and initialized as `undefined`, so global `x` is not accessed.
+
+## 🔍 Hoisting Summary Table
+
+| Declaration Type | Hoisted?      | Initialized?      | Temporal Dead Zone? |
+| ---------------- | ------------- | ----------------- | ------------------- |
+| `var`            | Yes           | Yes (`undefined`) | No                  |
+| `let`            | Yes           | ❌ No              | Yes                 |
+| `const`          | Yes           | ❌ No              | Yes                 |
+| `function`       | Yes           | Yes (body also)   | No                  |
+| `function expr.` | Only var name | No                | Yes (`let`/`const`) |
+
+## 🔁 Function Declaration vs Function Expression
+
+```js
+// Function Declaration
+hoistMe();
+function hoistMe() {
+  console.log("Yes, I'm hoisted!");
+}
+
+// Both are function defination 
+// Function Expression (not hoisted)
+notHoisted(); // ❌ TypeError: notHoisted is not a function
+var notHoisted = function() {
+  console.log("Nope!");
+};
+```
+
+➡️ Only **function declarations** are hoisted with their full body.
+➡️ **Function expressions** behave like regular variables (`var`, `let`, `const`).
+
+
+## 🧪 Practice Suggestion
+
+Open DevTools → Console tab → Paste these examples and experiment!
+
+---
+
+# 🌐 JavaScript Scopes
+
+- In JavaScript, **scope** determines the accessibility (visibility) of variables. It tells us **where a variable can be accessed or modified** in your code.
+- Scope means: At a specific line in the code (e.g., line 15), which variables can be accessed and from which area (global, local, block, or script).
+This determines what is visible and usable at that point in the code.
+
+## 🔸 Types of Scope
+
+### 1. **Global Scope**
+
+* A variable declared **outside** any function or block.
+* It can be accessed **anywhere** in the code.
+* In this Scope we access only var or function declearation method used.
+```js
+var globalVar = "I'm global";
+
+function greet() {
+  console.log(globalVar); // ✅ Accessible
+}
+
+greet();
+console.log(globalVar); // ✅ Accessible
+```
+
+## 2. ✅ Script Scope 
+
+> **Script Scope** means a variable is accessible **only within the script file** or **module** where it is defined — **not globally across other scripts** or globally on the `window` object.
+
+### 🔹 Simple Explanation:
+
+* If you use `let` or `const` at the **top level** (outside functions or blocks), it's **in script scope**, **not global scope** in terms of the `window` object.
+* It is **not accessible from other scripts** unless explicitly exported (e.g., in modules).
+* It is **not attached to `window`** like `var` is.
+
+### 🔍 Example:
+
+```javascript
+// Top-level code
+let scriptVar = "I'm in script scope";
+const anotherVar = "Also in script scope";
+var globalVar = "I'm in global scope";
+
+// Check window object (in browser)
+console.log(window.scriptVar);     // ❌ undefined
+console.log(window.anotherVar);    // ❌ undefined
+console.log(window.globalVar);     // ✅ I'm in global scope
+```
+
+### 🧠 Key Differences
+
+| Feature                 | `var`               | `let` / `const`                  |
+| ----------------------- | ------------------- | -------------------------------- |
+| Scope                   | Global Scope        | Script Scope                     |
+| Attached to `window`    | ✅ Yes               | ❌ No                             |
+| Access in other scripts | ✅ (if loaded first) | ❌ Not accessible unless exported |
+
+
+### 🔸 When Does Script Scope Matter?
+
+* In browser `<script>` files **not** using `type="module"`:
+
+  * `let` and `const` declared at the top level are in **script scope**, not attached to `window`.
+
+* In `<script type="module">`, everything is **module-scoped**, not accessible globally at all.
+
+> ✅ **Script scope** helps avoid polluting the global scope, especially in large applications with multiple script files.
+
+
+## 3. **Function Scope (Local Scope)**
+
+* Variables declared **inside a function** are only accessible **within that function**.
+
+```js
+function sayHello() {
+  var message = "Hello!";
+  console.log(message); // ✅ Accessible
+}
+
+sayHello();
+// console.log(message); ❌ Error: message is not defined
+```
+
+## 4. **Block Scope**
+
+* Introduced in ES6 with `let` and `const`.
+* A block is defined by `{}`.
+* `let` and `const` are **block-scoped**, `var` is **not**.
+* if(){} is a block scope 
+
+```js
+{
+  let a = 10;
+  const b = 20;
+  var c = 30;
+}
+
+// console.log(a); ❌ Not accessible
+// console.log(b); ❌ Not accessible
+console.log(c); // ✅ Accessible because 'var' is not block-scoped
+```
+## ✅ What is Lexical Scope in JavaScript?
+
+> **Lexical Scope** (also known as **Static Scope**) means that **a variable’s accessibility is determined by where it is written in the code** — not where it is called from.
+> The Lexical Scope mean when we create a function in side a function then this is laxical scope. Means outer function is a laxical of inner function.
+> Means someone said you what is the laxical scope of this function then tell their itself and thier parent function and if parent inside another function then this function till the global function not come.
+
+### 🔹 Simple Explanation:
+
+* JavaScript uses **lexical scoping** to resolve variable names.
+* When a function is defined inside another function, the **inner function has access to variables from its outer function**.
+* This access is based on **the position in the code (lexical position)**, not on the function call path.
+
+### 🔍 Example:
+
+```javascript
+function outer() {
+  let outerVar = "I'm from outer";
+
+  function inner() {
+    console.log(outerVar); // ✅ Accessible due to lexical scope
+  }
+
+  inner();
+}
+
+outer();
+```
+
+### 🔁 How Lexical Scope Works:
+
+* The `inner()` function is **defined inside** `outer()`, so it has access to `outerVar`.
+* Even if you call `inner()` elsewhere, it will still remember its **lexical environment**.
+
+
+### 🔸 Lexical Scope is Set at Definition Time, Not at Call Time
+
+```javascript
+function outer() {
+  let msg = "Outer scope";
+
+  return function inner() {
+    console.log(msg);
+  };
+}
+
+let fn = outer();
+fn(); // ✅ Output: Outer scope
+```
+
+Even though `fn()` is called **outside** of `outer()`, it still remembers `msg` because of **lexical scope**.
+
+
+### 📌 Lexical Scope vs Dynamic Scope (for reference):
+
+| Concept       | Lexical Scope                         | Dynamic Scope (not in JS)  |
+| ------------- | ------------------------------------- | -------------------------- |
+| Scope decided | At code definition (written location) | At function call (runtime) |
+| JS uses?      | ✅ Yes                                 | ❌ No                       |
+
+> ✅ Lexical scope is the foundation of how closures work in JavaScript. It allows inner functions to "remember" the environment they were created in.
+
+
+## 📌 Scope Chain
+
+When trying to access a variable, JS looks:
+
+1. In the **current scope**
+2. If not found, it goes to the **outer scope**
+3. Continues up the chain until it finds the variable or hits the **global scope**
+
+```js
+let outer = "I'm outside!";
+
+function outerFunc() {
+  let inner = "I'm inside!";
+
+  function innerFunc() {
+    console.log(outer); // ✅ Found in outer scope
+    console.log(inner); // ✅ Found in immediate parent scope
+  }
+
+  innerFunc();
+}
+
+outerFunc();
+```
+
+## ✅ Module Scope
+
+> **Module Scope** means that variables, functions, and classes declared in a JavaScript module are **only accessible within that module by default**, unless explicitly exported.
+
+### 🔹 Simple Explanation:
+
+* Each JavaScript module has its own **private scope**.
+* Code inside a module **does not pollute** the global scope.
+* To share values or functions between modules, you must use `export` and `import`.
+
+### 📦 Module Scope
+
+A module is just a JavaScript file with `<script type="module">` in the browser or a `.js` file used with `import/export` in Node.js or modern build tools.
+
+
+### 🔍 Example (Browser Module):
+
+```javascript
+// file: utils.js
+export let name = "Vikash";
+export function greet() {
+  console.log("Hello, " + name);
+}
+```
+
+```javascript
+// file: main.js
+import { name, greet } from './utils.js';
+
+console.log(name); // ✅ Accessible
+
+greet(); // ✅ Works
+```
+
+```html
+<!-- index.html -->
+<script type="module" src="main.js"></script>
+```
+
+
+### ❌ Not in Global Scope
+
+```javascript
+// In module.js
+let msg = "Hello Module";
+console.log(window.msg); // ❌ undefined
+```
+
+* In module scope, variables are **not attached to the `window` object** (even with `var`).
+* Everything stays local unless explicitly exported.
+
+### 🧠 Key Points
+
+| Feature                   | Module Scope       | Script Scope       | Global Scope         |
+| ------------------------- | ------------------ | ------------------ | -------------------- |
+| Defined using             | `type="module"`    | Regular `<script>` | Attached to `window` |
+| Variable visibility       | Inside module only | Inside script only | Everywhere           |
+| Uses `import` / `export`? | ✅ Yes              | ❌ No               | ❌ No                 |
+
+
+> ✅ **Module scope** is ideal for creating clean, maintainable codebases where each file is self-contained and avoids polluting the global environment.
+
+## 🔍 Summary
+
+| Scope Type | Accessible From                | Keyword Support |
+| ---------- | ------------------------------ | --------------- |
+| Global     | Anywhere                       | var, let, const |
+| Function   | Inside that function only      | var, let, const |
+| Block      | Inside that block only         | let, const      |
+| Script     | Script-wide (global or module) | var, let, const |
+
+
+---
+
+# 🔁 Higher Order Functions in JavaScript
+
+In Simple Way:-  
+- When we pass a function inside another function then those function we pass this is callback function and in which function we pass as a argument this is higherorder function
+- Example
+```js
+//higher order function
+function a(b) {
+    console.log('Hello');
+    b()
+}
+
+
+
+// //callback function
+a(function() {
+    console.log('Hello');
+})
+
+```
+In JavaScript, a **higher-order function (HOF)** is a function that either:
+
+* **Takes one or more functions as arguments**, or
+* **Returns a function as its result**
+
+JavaScript treats functions as **first-class citizens**, meaning:
+
+* Functions can be assigned to variables
+* Functions can be passed as arguments
+* Functions can be returned from other functions
+
+### 📌 Why Use Higher-Order Functions?
+
+* Reusability: Abstract out repetitive code patterns
+* Flexibility: Inject behavior through callbacks
+* Cleaner and more modular code
+
+### ✅ Examples of Higher-Order Functions
+
+#### 1. **Passing Functions as Arguments**
+
+```js
+function greet(name) {
+  return `Hello, ${name}`;
+}
+
+function processUserInput(callback) {
+  const name = "Vikash";
+  console.log(callback(name));
+}
+
+processUserInput(greet); // Output: Hello, Vikash
+```
+
+#### 2. **Returning Functions**
+
+```js
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+const double = multiplier(2);
+console.log(double(5)); // Output: 10
+```
+
+#### 3. **Built-in Higher-Order Functions**
+
+* `map()`, `filter()`, `reduce()` are common HOFs in JS:
+
+```js
+const numbers = [1, 2, 3, 4];
+
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9, 16]
+
+const even = numbers.filter(num => num % 2 === 0);
+console.log(even); // [2, 4]
+
+const sum = numbers.reduce((acc, val) => acc + val, 0);
+console.log(sum); // 10
+```
+
+## 🔁 Summary
+
+| Feature                 | Description                                 |
+| ----------------------- | ------------------------------------------- |
+| Takes function as input | Yes                                         |
+| Returns a function      | Yes                                         |
+| Examples                | map(), filter(), reduce(), custom callbacks |
+
+---
+
+# ⏱️ setTimeout() and setInterval() in JavaScript
+
+JavaScript provides two timer functions to execute code asynchronously:
+
+* `setTimeout()` — Executes a function **once after a delay**
+* `setInterval()` — Executes a function **repeatedly with a fixed delay**
+
+## ⏳ `setTimeout()`
+
+### 🔹 Syntax:
+
+```js
+setTimeout(function, delay, arg1, arg2, ...);
+```
+
+* `function`: The function to execute
+* `delay`: Time in milliseconds (1000ms = 1s)
+* `arg1...n`: Optional arguments passed to the function
+
+### 🔸 Example 1: Basic Timeout
+
+```js
+setTimeout(() => {
+  console.log("Hello after 2 seconds");
+}, 2000);
+```
+
+### 🔸 Example 2: Passing Function Reference
+
+```js
+function greet() {
+  console.log("Hello Vikash");
+}
+
+const id1 = setTimeout(greet, 3000); // Call greet after 3 sec
+```
+
+### 🔸 Example 3: Using Function with Arguments
+
+```js
+function greetUser(name) {
+  console.log("Hello, " + name);
+}
+
+setTimeout(greetUser, 2000, "Vikash");
+```
+
+### 🔸 Example 4: Using `arguments` and `clearTimeout`
+
+```js
+function b() {
+  console.log(arguments);
+  console.log("Hello Vikash");
+}
+
+const id4 = setTimeout(b, 5000, 1, 2, 3, 4, 'extra');
+clearTimeout(id4); // Cancels the timeout before it runs
+```
+
+### 🔸 Unsafe (Eval-style string, not recommended):
+
+```js
+setTimeout('console.log("Hello Vikash")', 4000);
+```
+
+## 🔁 `setInterval()`
+
+### 🔹 Syntax:
+
+```js
+setInterval(function, interval, arg1, arg2, ...);
+```
+
+* Runs the `function` every `interval` milliseconds
+
+### 🔸 Example 1: Repeating Message
+
+```js
+setInterval(() => {
+  console.log("This message repeats every 2 sec");
+}, 2000);
+```
+
+### 🔸 Example 2: Function with Arguments
+
+```js
+function b() {
+  console.log(arguments);
+  console.log("Hello from interval");
+}
+
+const id4 = setInterval(b, 3000, "JS", 42);
+```
+
+### 🔸 Example 3: Stop After Certain Time
+
+```js
+let counter = 0;
+
+const intervalId = setInterval(() => {
+  console.log(counter);
+  counter++;
+
+  if (counter === 5) clearInterval(intervalId); // Stop after 5 counts
+}, 1000);
+```
+
+### 🔸 Using clearInterval
+
+```js
+const id1 = setInterval(() => console.log("Tick"), 1000);
+clearInterval(id1); // Cancel it
+```
+
+## 🧠 Key Differences
+
+| Feature      | `setTimeout()`     | `setInterval()`                |
+| ------------ | ------------------ | ------------------------------ |
+| Execution    | Once after delay   | Repeatedly after each interval |
+| Return Value | Timeout ID         | Interval ID                    |
+| Stopping     | `clearTimeout(id)` | `clearInterval(id)`            |
+
+## 🛑 Avoid This Style:
+
+```js
+setTimeout('console.log("Hello")'); // ❌ Avoid using strings (unsafe)
+```
+
+Use function references or arrow functions instead:
+
+```js
+setTimeout(() => console.log("Hello"));
+```
+
+---
+# 🌀 JavaScript Event Loop + Callback Queue + Web APIs  
+_With SetTimeout & SetInterval Simulation_
+
+When the JavaScript compiler encounters an asynchronous function like `setTimeout()` or `setInterval()`, it sends them to the **Web APIs** environment.  
+There, the timer starts running.  
+Once the timer is complete, the callback function is moved to the **Callback Queue**.  
+The **Event Loop** continuously checks if the **Call Stack** is empty.  
+If the call stack is empty, the event loop pushes the callback from the callback queue into the call stack (in **FIFO order**, i.e., First-In-First-Out) and executes them.
+
+
+## 🔁 Step-by-Step Flow Diagram
+
+```mermaid
+graph TD
+    A[JavaScript Engine Starts] --> B[Code Execution Begins]
+    B --> C[setTimeout/setInterval Detected]
+    C --> D[Send to Web APIs]
+    D --> E[Timer Runs in Background]
+    E --> F[Timer Completes]
+    F --> G[Move Callback to Callback Queue]
+    G --> H[Event Loop Checks Call Stack]
+    H --> I{Is Call Stack Empty?}
+    I -- Yes --> J[Move Callback to Call Stack]
+    J --> K[Callback Executes]
+    I -- No --> H
+    K --> L[Execution Ends]
+```
+
+## ⚙️ Interactive Example (Pure HTML + JS)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Loop Demo</title>
+</head>
+<body>
+  <h2>⏰ JavaScript Event Loop Interactive Example</h2>
+  <button id="btn">Click me</button>
+
+  <script>
+    console.log("1️⃣ Program Start");
+
+    document.getElementById("btn").addEventListener("click", function () {
+      console.log("2️⃣ Button Clicked - setTimeout starts (2000ms)");
+
+      setTimeout(function () {
+        console.log("5️⃣ Inside setTimeout Callback");
+      }, 2000);
+
+      console.log("3️⃣ After setTimeout");
+    });
+
+    setTimeout(function () {
+      console.log("4️⃣ setTimeout Outside Click (5000ms)");
+    }, 5000);
+
+    console.log("6️⃣ Program End");
+  </script>
+</body>
+</html>
+```
+
+### 🔍 What Happens Here?
+
+- Logs `1️⃣` and `6️⃣` immediately.
+- When you click the button:
+  - Logs `2️⃣`, sets a timer, logs `3️⃣` instantly.
+  - After 2 seconds → logs `5️⃣`.
+- The global `setTimeout` logs `4️⃣` after 5 seconds.
+
+This shows:
+- **Timers don't block main thread.**
+- **Call stack, Web APIs, Callback Queue, and Event Loop** work in harmony.
+
+
+## 🧠 Side-by-Side Visualization (like Loupe)
+
+| Phase               | What Happens                                                                 |
+|--------------------|------------------------------------------------------------------------------|
+| 🧠 Call Stack       | Executes sync code like `console.log()`, sets up async functions             |
+| 🌐 Web APIs         | Timers (2s, 5s) start here – doesn't block the main thread                   |
+| 📥 Callback Queue   | After timer completes, callback is queued here                               |
+| 🔁 Event Loop       | Constantly checks: “Is Call Stack empty?” If yes → sends next callback        |
+| ✅ Execution        | Callback runs one-by-one in the order it entered the queue (FIFO)            |
+
+
+## 🧩 Simulation Tool Link  
+Try this yourself in the **Loupe visualizer**:  
+👉 [https://latentflip.com/loupe](https://latentflip.com/loupe)
+
+Paste the following code inside it:
+
+```js
+setTimeout(() => {
+  console.log("🔥 setTimeout callback");
+}, 2000);
+
+console.log("✅ Program Start");
+```
+
+
+---
+
+# 📌 Difference between Methods and Functions in JavaScript
+
+- In JavaScript, **functions** and **methods** are both blocks of reusable code, but they differ in **context** and **how they are invoked**.
+- Every Methods are function But Every function are not a methods.
+
+## 🔹 Function
+
+A **function** is a standalone block of code that can be defined and called independently.
+
+### ✅ Syntax:
+
+```js
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Vikash")); // Output: Hello, Vikash!
+```
+
+## 🔹 Method
+
+A **method** is a function that is a property of an object. It is called **using the object**.
+
+### ✅ Syntax:
+
+```js
+const person = {
+  name: "Vikash",
+  
+  add: function (a, b) {
+    return `${this.name} adds: ${a + b}`;
+  },
+  
+  subtract: function (a, b) {
+    return `${this.name} subtracts: ${a - b}`;
+  }
+
+  multiply(a,b){
+return a*b
+}
+};
+
+console.log(person.add(10, 5));       // Output: Vikash adds: 15
+console.log(person.subtract(10, 5));  // Output: Vikash subtracts: 5
+console.log(person.multiply(10, 5));  // Output: Vikash multiply : 50
+
+//multiply(a,b){
+//return a*b } // This is also a valid code and new feature
+```
+
+
+### 🔀 Common Points
+
+| Feature             | Explanation                                               |
+| ------------------- | --------------------------------------------------------- |
+| ✅ Reusable Code     | Both are used to encapsulate logic into a reusable block. |
+| ✅ Can accept params | Both can accept parameters and return values.             |
+| ✅ Can be nested     | You can define functions/methods inside others.           |
+
+### 🗀 Key Differences
+
+| Basis           | Function                            | Method                             |
+| --------------- | ----------------------------------- | ---------------------------------- |
+| 🔹 Context      | Independent block of code           | Belongs to an object               |
+| 🔹 Called As    | `functionName()`                    | `object.methodName()`              |
+| 🔹 `this` value | Global / undefined (in strict mode) | Refers to the object it belongs to |
+| 🔹 Example      | `greet("John")`                     | `person.greet()`                   |
+
+
+### 🧠 Example: `this` Behavior Difference
+
+```js
+function showThis() {
+  console.log(this);
+}
+
+const obj = {
+  name: "Vikash",
+  showThisMethod: function () {
+    console.log(this);
+  }
+};
+
+showThis();            // In browser: Window (global object)
+obj.showThisMethod();  // Logs: obj object
+```
+
+### 🎯 Summary
+
+| Feature       | Function            | Method           |
+| ------------- | ------------------- | ---------------- |
+| Belongs to    | Global/Module scope | Object           |
+| Invocation    | By name             | Through object   |
+| `this` refers | Global object       | Object owning it |
 
 
 
