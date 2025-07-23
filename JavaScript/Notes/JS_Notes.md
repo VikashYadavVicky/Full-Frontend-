@@ -3852,5 +3852,942 @@ obj.showThisMethod();  // Logs: obj object
 | `this` refers | Global object       | Object owning it |
 
 
+---
+
+# ⚡ JavaScript Arrow Functions
+
+Arrow functions are a modern way to write functions in JavaScript. They provide a cleaner, more concise syntax compared to regular functions.
+
+### ✅ Basic Syntax
+
+```js
+// Traditional Function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow Function
+const add = (a, b) => a + b;
+```
+
+If the function has:
+- **1 line** ➜ No `{}` or `return` needed.
+- **Multiple lines** ➜ Use `{}` and `return`.
 
 
+### 🔹 With One Parameter
+
+```js
+const greet = name => `Hello, ${name}`;
+console.log(greet("Vikash")); // Hello, Vikash
+```
+
+
+### 🔹 With Multiple Parameters
+
+```js
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4)); // 12
+```
+
+
+### 🔹 With No Parameters
+
+```js
+const sayHi = () => console.log("Hi!");
+sayHi(); // Hi!
+```
+
+
+### 🔹 Multi-Line Function Body
+
+```js
+const divide = (a, b) => {
+  if (b === 0) return "Can't divide by zero!";
+  return a / b;
+};
+console.log(divide(10, 2)); // 5
+```
+
+
+### 🔥 Special Notes on Arrow Functions
+
+### 1. **Lexical `this`**
+Arrow functions **do not have their own `this`**. They inherit `this` from their surrounding context.
+
+```js
+const person = {
+  name: "Vikash",
+  greet: () => `Hi, I'm ${this.name}`
+};
+
+console.log(person.greet()); // Hi, I'm undefined
+```
+
+### ✅ Fix Using Regular Function:
+```js
+const person = {
+  name: "Vikash",
+  greet() {
+    return `Hi, I'm ${this.name}`;
+  }
+};
+
+console.log(person.greet()); // Hi, I'm Vikash
+```
+
+
+### 🔍 Arrow Function vs Regular Function Table
+
+| Feature                  | Arrow Function             | Regular Function               |
+|--------------------------|----------------------------|-------------------------------|
+| Syntax                   | Concise                    | Verbose                       |
+| `this` Binding           | Lexical (inherits)         | Dynamic                       |
+| `arguments` object       | ❌ Not available            | ✅ Available                   |
+| Constructor Usage        | ❌ Not usable as constructor| ✅ Usable                      |
+
+## 🎯 Use Arrow Functions When:
+
+✅ You want short syntax  
+✅ No need for your own `this`  
+✅ Inside `map`, `filter`, `forEach`, etc.
+
+## ❗ Avoid Arrow Functions When:
+
+🚫 You need dynamic `this`  
+🚫 You need `arguments`  
+🚫 You're writing class methods or constructors
+
+---
+
+# 🔁 `for...of`, `for...in`, and `in` Keyword in JavaScript
+
+JavaScript provides different ways to loop over data. Let’s break it down:
+
+
+## ✅ `for...of` Loop
+
+- Used to loop through **iterable objects** (like arrays, strings, maps, sets)
+- Returns **values** (not keys)
+
+### ✅ Syntax:
+```js
+for (const item of iterable) {
+  // code block
+}
+```
+
+### 📌 Example 1: Array
+```js
+const fruits = ["apple", "banana", "mango"];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+// Output: apple, banana, mango
+```
+
+### 📌 Example 2: String
+```js
+const name = "Vikash";
+for (const letter of name) {
+  console.log(letter);
+}
+// Output: V, i, k, a, s, h
+```
+
+
+## 🔄 `for...in` Loop
+
+- Used to loop over **enumerable properties (keys)** of an object
+- Returns **keys** (not values)
+
+### ✅ Syntax:
+```js
+for (const key in object) {
+  // code block
+}
+```
+
+### 📌 Example:
+```js
+const user = {
+  name: "Vikash",
+  age: 24,
+  city: "Delhi"
+};
+
+for (const key in user) {
+  console.log(`${key}: ${user[key]}`);
+}
+// Output:
+// name: Vikash
+// age: 24
+// city: Delhi
+```
+
+## 🔍 `in` Keyword
+
+- Used to check **if a property/index exists** in an object or array
+
+### 📌 Example 1: In Object
+```js
+const car = { brand: "Toyota", model: "Fortuner" };
+console.log("brand" in car);  // true
+console.log("color" in car);  // false
+```
+
+### 📌 Example 2: In Array
+```js
+const numbers = [1, 2, 3];
+console.log(0 in numbers);  // true (index 0 exists)
+console.log(5 in numbers);  // false
+```
+
+## ⚖️ Difference Summary
+
+| Feature        | `for...of`         | `for...in`           | `in` Keyword          |
+|----------------|--------------------|-----------------------|------------------------|
+| Iterates over  | Values (arrays, strings) | Keys (objects/arrays) | Checks if key/index exists |
+| Works on       | Iterables           | Objects, arrays        | Objects, arrays        |
+| Returns        | Value               | Key                   | Boolean (true/false)   |
+| Use case       | Loop through items  | Loop through keys      | Check key/index        |
+
+### 🧠 Tip:
+- Use `for...of` for **arrays and strings**
+- Use `for...in` for **objects**
+- Use `in` when you want to check if something **exists**
+
+
+---
+
+
+# 📘 JavaScript Array Methods: forEach, map, filter, reduce, some, every
+
+## 🔄 `forEach()`
+
+### 🔹 Description:
+The `forEach()` method is used to execute a function once for each element in an array.  
+It **does not return** anything (its return value is always `undefined`).
+
+### 🔹 Syntax:
+```js
+array.forEach(callback(currentValue, index, array), thisArg)
+```
+
+### 🔹 Characteristics:
+- Executes side effects (e.g., logging, pushing to another array).
+- Cannot be chained or used for transformation.
+- Always returns `undefined`.
+
+### 🔹 Return Value:
+```js
+undefined
+```
+
+### 🔹 Examples:
+
+#### Example 1: Logging each item
+```js
+const items = ['pen', 'pencil', 'eraser'];
+items.forEach(item => console.log(item));
+// Output: logs each item one by one
+```
+
+#### Example 2: Attempting to return value (won’t work)
+```js
+const result = items.forEach(item => item.toUpperCase());
+console.log(result); // undefined
+```
+
+#### Example 3: Push to another array
+```js
+const numbers = [1, 2, 3];
+let doubled = [];
+numbers.forEach(num => doubled.push(num * 2));
+console.log(doubled); // [2, 4, 6]
+```
+
+## 🔁 `map()`
+
+### 🔹 Description:
+The `map()` method creates a **new array** by applying a function to each item of the original array.
+
+### 🔹 Syntax:
+```js
+const newArray = array.map(callback(currentValue, index, array), thisArg)
+```
+
+### 🔹 Characteristics:
+- Returns a new array of the **same length**.
+- Used to transform data.
+- Can be chained with other methods.
+
+### 🔹 Return Value:
+```js
+New array with transformed values
+```
+
+### 🔹 Examples:
+
+#### Example 1: Double each number
+```js
+const nums = [1, 2, 3];
+const result = nums.map(n => n * 2);
+console.log(result); // [2, 4, 6]
+```
+
+#### Example 2: Convert to uppercase
+```js
+const names = ['alice', 'bob'];
+const upper = names.map(name => name.toUpperCase());
+console.log(upper); // ['ALICE', 'BOB']
+```
+
+#### Example 3: Map returns same length
+```js
+const values = [10, 20, 30];
+const result = values.map(v => 'Value: ' + v);
+console.log(result); // ['Value: 10', 'Value: 20', 'Value: 30']
+```
+
+## 🔍 `filter()`
+
+### 🔹 Description:
+The `filter()` method returns a **new array** with all elements that pass the condition (i.e., return `true`).
+
+### 🔹 Syntax:
+```js
+const filteredArray = array.filter(callback(currentValue, index, array), thisArg)
+```
+
+### 🔹 Characteristics:
+- Returns only the elements that satisfy the condition.
+- Output array may be shorter or equal in length.
+
+### 🔹 Return Value:
+```js
+New array with only truthy results from the condition
+```
+
+### 🔹 Examples:
+
+#### Example 1: Filter even numbers
+```js
+const nums = [1, 2, 3, 4];
+const even = nums.filter(n => n % 2 === 0);
+console.log(even); // [2, 4]
+```
+
+#### Example 2: Filter long strings
+```js
+const fruits = ['apple', 'kiwi', 'banana'];
+const long = fruits.filter(fruit => fruit.length > 4);
+console.log(long); // ['apple', 'banana']
+```
+
+#### Example 3: Filter returns only matched values
+```js
+const mixed = [0, 1, false, 2, '', 3];
+const truthy = mixed.filter(Boolean);
+console.log(truthy); // [1, 2, 3]
+```
+
+## 🔗 `reduce()`
+
+### 🔹 Description:
+The `reduce()` method executes a reducer function on each element, resulting in a **single output value**.
+
+### 🔹 Syntax:
+```js
+const result = array.reduce(callback(accumulator, currentValue, index, array), initialValue)
+```
+
+### 🔹 Characteristics:
+- Reduces the array into a single value (number, string, object, etc.).
+- You **must** provide an `initialValue` for best practice.
+
+### 🔹 Return Value:
+```js
+Single accumulated result (e.g., sum, object, string)
+```
+
+### 🔹 Examples:
+
+#### Example 1: Sum all numbers
+```js
+const nums = [1, 2, 3, 4];
+const sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+```
+
+#### Example 2: Count element occurrences
+```js
+const chars = ['a', 'b', 'a', 'c', 'b', 'a'];
+const count = chars.reduce((acc, char) => {
+  acc[char] = (acc[char] || 0) + 1;
+  return acc;
+}, {});
+console.log(count); // { a: 3, b: 2, c: 1 }
+```
+
+#### Example 3: Flatten an array
+```js
+const nested = [[1, 2], [3, 4], [5]];
+const flat = nested.reduce((acc, curr) => acc.concat(curr), []);
+console.log(flat); // [1, 2, 3, 4, 5]
+```
+
+#### Example 4: Find max value
+```js
+const values = [5, 12, 8, 20];
+const max = values.reduce((acc, curr) => curr > acc ? curr : acc, 0);
+console.log(max); // 20
+```
+
+## 🔁 Comparison Table
+
+| Method     | Purpose                 | Returns        | Output Type       | Modifies Original? |
+|------------|--------------------------|----------------|-------------------|---------------------|
+| `forEach()`| Perform side-effects     | `undefined`    | N/A               | ❌                  |
+| `map()`    | Transform elements       | New Array      | Same Length Array | ❌                  |
+| `filter()` | Select elements conditionally | New Array | ≤ Original Length | ❌                  |
+| `reduce()` | Combine into one value   | Single value   | Any Type          | ❌                  |
+
+
+## ✅ `some()`
+
+### 🔹 Description:
+
+- The `some()` method checks if **at least one** element in the array passes the provided test (returns `true`).
+- The some Return true value when they find any true in array. Means if any value condition are true then the return true.
+- It stop itration when they find first true. Means when they see any true value they stop looping in this array.
+- It give false when all condition are false. Means no find any true value.
+
+### 🔹 Syntax:
+
+```js
+array.some(callback(currentValue, index, array), thisArg)
+```
+
+### 🔹 Characteristics:
+
+* Returns `true` if **any** element passes the condition.
+* Returns `false` if **none** pass.
+* Does **not** modify the original array.
+
+### 🔹 Return Value:
+
+```js
+Boolean (true or false)
+```
+
+### 🔹 Use Cases:
+
+* Check if any value is greater than a threshold.
+* Check if any item is valid.
+* Check if any user is online, etc.
+
+### 🔹 Examples:
+
+#### Example 1: At least one even number
+
+```js
+const numbers = [1, 3, 5, 8];
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // true
+```
+
+#### Example 2: Check if any string has length > 5
+
+```js
+const fruits = ['apple', 'pear', 'banana'];
+const longFruit = fruits.some(fruit => fruit.length > 5);
+console.log(longFruit); // true
+```
+
+#### Example 3: Check if array contains negative numbers
+
+```js
+const values = [2, -3, 7, 0];
+const hasNegative = values.some(n => n < 0);
+console.log(hasNegative); // true
+```
+
+#### Example 4: Check if any user is active
+
+```js
+const users = [
+  { name: 'Vikash', active: false },
+  { name: 'Yadav', active: true }
+];
+const active = users.some(user => user.active);
+console.log(active); // true
+```
+
+#### Example 5: Empty array behavior
+
+```js
+const arr = [];
+const result = arr.some(x => x > 0);
+console.log(result); // false
+```
+
+## ✅ `every()`
+
+### 🔹 Description:
+
+- The `every()` method checks if **all** elements in the array pass the provided test (return `true`).
+- The every Return false value when they find any false in array. Means if any value condition are false then the return false.
+- It stop itration when they find first false. Means when they see any false value they stop looping in this array.
+- It give true when all condition are true. Means no find any false value.
+
+### 🔹 Syntax:
+
+```js
+array.every(callback(currentValue, index, array), thisArg)
+```
+
+### 🔹 Characteristics:
+
+* Returns `true` if **all** elements pass the test.
+* Returns `false` if **any** element fails.
+* Stops checking as soon as one fails.
+
+### 🔹 Return Value:
+
+```js
+Boolean (true or false)
+```
+
+### 🔹 Use Cases:
+
+* Validate form fields.
+* Check all values are positive or in a range.
+* Check all users are verified.
+
+### 🔹 Examples:
+
+#### Example 1: All numbers positive
+
+```js
+const nums = [1, 5, 8];
+const allPositive = nums.every(n => n > 0);
+console.log(allPositive); // true
+```
+
+#### Example 2: Check if all items are strings
+
+```js
+const values = ['a', 'b', 'c'];
+const allStrings = values.every(v => typeof v === 'string');
+console.log(allStrings); // true
+```
+
+#### Example 3: Check if all users are active
+
+```js
+const users = [
+  { name: 'Alice', active: true },
+  { name: 'Bob', active: true }
+];
+const everyoneActive = users.every(user => user.active);
+console.log(everyoneActive); // true
+```
+
+#### Example 4: One fails the test
+
+```js
+const scores = [90, 80, 45, 70];
+const passed = scores.every(score => score >= 50);
+console.log(passed); // false
+```
+
+#### Example 5: Empty array behavior
+
+```js
+const empty = [];
+const result = empty.every(() => false);
+console.log(result); // true
+```
+
+> ✅ **Note**: `every()` returns `true` for an empty array (vacuous truth), just like `some()` returns `false`.
+
+## 🔁 Comparison Table
+
+| Method    | Condition  | Returns | Stops On      | Use Case             |
+| --------- | ---------- | ------- | ------------- | -------------------- |
+| `some()`  | Any `true` | Boolean | First `true`  | At least one matches |
+| `every()` | All `true` | Boolean | First `false` | All must match       |
+
+
+---
+
+# 📘 JavaScript: Parameters, Default Parameters, and `arguments` Keyword
+
+## ✅ 1. **Parameter**
+
+### 🔹 Description:
+A **parameter** is a named variable **inside a function definition**. It acts as a placeholder for the value (argument) you pass to the function when calling it.
+
+### 🔹 Example:
+```js
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("Vikash"); // Hello, Vikash!
+```
+
+> 🔹 Here, `name` is the **parameter**, and `"Vikash"` is the **argument** passed.
+
+## ✅ 2. **Default Parameter**
+
+### 🔹 Description:
+A **default parameter** provides a default value if **no argument is passed** or if the argument is `undefined`.
+
+### 🔹 Syntax:
+```js
+function functionName(param = defaultValue) { ... }
+```
+
+### 🔹 Example 1: Simple default
+```js
+function greet(name = "Guest") {
+  console.log("Hello, " + name + "!");
+}
+greet();         // Hello, Guest!
+greet("Vikash"); // Hello, Vikash!
+```
+
+### 🔹 Example 2: Multiple defaults
+```js
+function sum(a = 5, b = 10) {
+  return a + b;
+}
+console.log(sum());       // 15
+console.log(sum(3));      // 13
+console.log(sum(3, 7));   // 10
+```
+
+
+## ✅ 3. **`arguments` keyword**
+
+### 🔹 Description:
+`arguments` is an **array-like object** available inside **regular functions** (not arrow functions) that contains all arguments passed to the function.
+
+### 🔹 Key Points:
+- Only available in **non-arrow** functions.
+- Works even if you didn’t define parameters.
+- It does **not** have array methods like `map()`, `filter()`, etc.
+
+### 🔹 Example 1: Access all arguments
+```js
+function showArguments() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+showArguments("a", "b", "c");
+// Output: a b c
+```
+
+### 🔹 Example 2: Sum using arguments
+```js
+function sumAll() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+console.log(sumAll(1, 2, 3)); // 6
+```
+
+## ✅ 4. **Arguments vs Parameters**
+
+| Term         | When Used            | Definition                          |
+|--------------|----------------------|-------------------------------------|
+| **Parameter**| Function Definition  | Placeholder variable name           |
+| **Argument** | Function Call        | Actual value passed to a function   |
+
+### 🔹 Example:
+```js
+function greet(name, age) {  // name, age → parameters
+  console.log(`${name} is ${age} years old.`);
+}
+greet("Vikash", 24);         // "Vikash", 24 → arguments
+```
+
+
+## ✅ Bonus: Use `...rest` with Parameters
+
+Modern alternative to `arguments` (works with arrow functions too):
+
+```js
+const sumAll = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+};
+console.log(sumAll(1, 2, 3, 4)); // 10
+```
+
+> ✅ `...args` is a **rest parameter** that collects all arguments into a real array.
+
+---
+
+# 📘 JavaScript: Spread Operator and Rest Parameter
+
+## ✅ 1. **Spread Operator (`...`)**
+
+### 🔹 Description:
+The **spread operator** (`...`) is used to **expand** elements of an iterable (like an array or object) into individual elements.
+
+### 🔹 Use Cases:
+- Copying arrays/objects
+- Merging arrays/objects
+- Expanding elements in function calls
+
+### 🔹 Examples:
+
+#### Example 1: Spread in function call
+```js
+const numbers = [1, 2, 3];
+console.log(...numbers); // 1 2 3
+```
+
+#### Example 2: Copying an array
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+console.log(arr2); // [1, 2, 3]
+```
+
+#### Example 3: Merging arrays
+```js
+const a = [1, 2];
+const b = [3, 4];
+const merged = [...a, ...b];
+console.log(merged); // [1, 2, 3, 4]
+```
+
+#### Example 4: Spread in object
+```js
+const user = { name: "Vikash", age: 24 };
+const updated = { ...user, city: "Jaipur" };
+console.log(updated); // { name: "Vikash", age: 24, city: "Jaipur" }
+```
+
+#### Example 5: Array destructuring
+```js
+const nums = [1, 2, 3, 4, 5];
+const [first, ...rest] = nums;
+console.log(first); // 1
+console.log(rest);  // [2, 3, 4, 5]
+```
+
+#### Example 6: Spread for strings
+```js
+const word = "hello";
+const letters = [...word];
+console.log(letters); // ['h', 'e', 'l', 'l', 'o']
+```
+
+#### Example 7: Avoid reference copy
+```js
+const arr = [1, 2, 3];
+const copy = [...arr];
+copy.push(4);
+console.log(arr);  // [1, 2, 3]
+console.log(copy); // [1, 2, 3, 4]
+```
+
+## ✅ 2. **Rest Parameter (`...`)**
+
+### 🔹 Description:
+The **rest parameter** collects multiple arguments into a **single array**. It is used in function definitions.
+
+### 🔹 Syntax:
+```js
+function fn(...rest) { }
+```
+
+### 🔹 Use Cases:
+- Functions with variable number of arguments
+- Collecting remaining elements in destructuring
+
+### 🔹 Examples:
+
+#### Example 1: Function with variable arguments
+```js
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+```
+
+#### Example 2: Collecting rest after first parameter
+```js
+function show(first, ...others) {
+  console.log(first);   // 'a'
+  console.log(others);  // ['b', 'c']
+}
+show('a', 'b', 'c');
+```
+
+#### Example 3: Destructuring with rest
+```js
+const [x, y, ...others] = [10, 20, 30, 40];
+console.log(x);      // 10
+console.log(y);      // 20
+console.log(others); // [30, 40]
+```
+
+#### Example 4: Rest in arrow functions
+```js
+const multiplyAll = (...nums) => nums.map(n => n * 2);
+console.log(multiplyAll(1, 2, 3)); // [2, 4, 6]
+```
+
+#### Example 5: Combine rest with normal params
+```js
+function greet(greeting, ...names) {
+  names.forEach(name => console.log(`${greeting}, ${name}`));
+}
+greet("Hello", "Vikash", "Yadav");
+// Hello, Vikash
+// Hello, Yadav
+```
+
+#### Example 6: Edge case - no arguments
+```js
+function countArgs(...args) {
+  console.log(args.length);
+}
+countArgs(); // 0
+countArgs(1); // 1
+countArgs(1, 2, 3); // 3
+```
+
+## 🆚 Comparison Table
+
+| Feature         | Spread Operator         | Rest Parameter           |
+|------------------|--------------------------|----------------------------|
+| Use Position     | In calls or literals     | In function definitions     |
+| Purpose          | Expands values           | Gathers values              |
+| Type Returned    | Individual elements      | Array                       |
+| Syntax           | `...array`               | `function(...args)`         |
+
+---
+
+# 📦 JavaScript Destructuring
+
+JavaScript **destructuring** is a shorthand syntax to unpack values from arrays or properties from objects into distinct variables.
+
+
+## 📘 1. Array Destructuring
+
+```js
+const colors = ['red', 'green', 'blue'];
+
+// Traditional
+const first = colors[0];
+const second = colors[1];
+```
+###  // ✅ Using Destructuring
+```js
+const [firstColor, secondColor, thirdColor] = colors;
+
+console.log(firstColor);  // 'red'
+console.log(thirdColor);  // 'blue'
+```
+
+### 🔄 Skip Elements
+```js
+const [ , , third ] = colors;
+console.log(third); // 'blue'
+```
+### ✅ Default Values
+
+```js
+const [a, b, c = 'yellow'] = ['red', 'green'];
+console.log(c); // 'yellow'
+```
+
+## 📗 2. Object Destructuring
+
+```js
+const person = {
+  name: 'Vikash',
+  age: 25,
+  city: 'Delhi'
+};
+```
+###  // ✅ Destructuring
+```js
+const { name, age } = person;
+
+console.log(name); // Vikash
+console.log(age);  // 25
+```
+
+✅ Rename Variables
+```js
+const { city: myCity } = person;
+console.log(myCity); // Delhi
+```
+### ✅ Default Values
+```js
+const { gender = 'Not specified' } = person;
+console.log(gender); // 'Not specified'
+```
+
+## 📙 3. Nested Destructuring
+```js
+const student = {
+  name: 'Vicky',
+  marks: {
+    math: 90,
+    english: 85
+  }
+};
+
+const {
+  marks: { math, english }
+} = student;
+
+console.log(math);    // 90
+console.log(english); // 85
+```
+
+## 📒 4. Destructuring in Function Parameters
+```js
+function greet({ name, age }) {
+  console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+}
+
+greet({ name: 'Vikash', age: 25 });
+```
+
+## 🔁 5. Mixed Example (Array + Object)
+```js
+const users = [
+  { id: 1, name: 'Vikash' },
+  { id: 2, name: 'Vicky' }
+];
+
+const [ { name: firstUser }, { name: secondUser } ] = users;
+
+console.log(firstUser);  // Vikash
+console.log(secondUser); // Vicky
+```
+
+### 📌 Summary Table
+
+| Feature           | Array | Object |
+| ----------------- | ----- | ------ |
+| Syntax            | `[]`  | `{}`   |
+| Order Matters     | ✅ Yes | ❌ No   |
+| Default Values    | ✅ Yes | ✅ Yes  |
+| Skipping Elements | ✅ Yes | ❌ N/A  |
+| Renaming          | ❌ No  | ✅ Yes  |
+
+
+✨ Destructuring makes code cleaner, reduces repetition, and improves readability.
