@@ -1,3 +1,43 @@
+### 🧭 JavaScript Topics - Internal Links Table
+
+| No. | Topic | Link |
+|-----|-------|------|
+| 1️⃣ | 📘 Introduction to JavaScript | [🔗 Go](#-introduction-to-javascript) |
+| 2️⃣ | 📗 How to Use JavaScript in HTML | [🔗 Go](#-how-to-use-javascript-in-html) |
+| 3️⃣ | 📕 JavaScript Syntax and Statements | [🔗 Go](#-javascript-syntax-and-statements) |
+| 4️⃣ | 📙 JavaScript Data Types | [🔗 Go](#-javascript-data-types) |
+| 5️⃣ | 📒 JavaScript Type Conversion | [🔗 Go](#-javascript-type-conversion) |
+| 6️⃣ | 🧾 JavaScript Variables | [🔗 Go](#-javascript-variables) |
+| 7️⃣ | ⚙️ JavaScript Code Execution Process | [🔗 Go](#-javascript-code-execution-process) |
+| 8️⃣ | 💬 JavaScript Dialog Boxes | [🔗 Go](#-javascript-dialog-boxes) |
+| 9️⃣ | 💡 JavaScript Template Literals & String Methods | [🔗 Go](#-javascript-template-literals--string-methods) |
+| 🔟 | 📐 JavaScript Math Object | [🔗 Go](#-javascript-math-object) |
+| 1️⃣1️⃣ | 🧪 JavaScript Truthy and Falsy Values | [🔗 Go](#-javascript-truthy-and-falsy-values) |
+| 1️⃣2️⃣ | ➕ JavaScript Operators | [🔗 Go](#-javascript-operators) |
+| 1️⃣3️⃣ | 🤔 JavaScript Decision Making | [🔗 Go](#-javascript-decision-making) |
+| 1️⃣4️⃣ | 🕵️ How to See JavaScript Variable Address in Chrome DevTools | [🔗 Go](#-how-to-see-javascript-variable-address-in-chrome-devtools) |
+| 1️⃣5️⃣ | 📦 JavaScript Objects Full Guide | [🔗 Go](#-javascript-objects-full-guide) |
+| 1️⃣6️⃣ | 📚 JavaScript Arrays Full Guide | [🔗 Go](#-javascript-arrays-full-guide) |
+| 1️⃣7️⃣ | 📤 JavaScript Shallow Copy vs Deep Copy | [🔗 Go](#-javascript-shallow-copy-vs-deep-copy) |
+| 1️⃣8️⃣ | 🔁 JavaScript While Loop | [🔗 Go](#-javascript-while-loop) |
+| 1️⃣9️⃣ | 🔄 JavaScript for Loop | [🔗 Go](#-javascript-for-loop) |
+| 2️⃣0️⃣ | ⏬ JavaScript do...while Loop | [🔗 Go](#-javascript-dowhile-loop) |
+| 2️⃣1️⃣ | 🧠 JavaScript Function | [🔗 Go](#-javascript-function) |
+| 2️⃣2️⃣ | 🔬 Execution Context in JavaScript | [🔗 Go](#-execution-context-in-javascript) |
+| 2️⃣3️⃣ | 📈 Hoisting in JavaScript | [🔗 Go](#-hoisting-in-javascript) |
+| 2️⃣4️⃣ | 🌐 JavaScript Scopes | [🔗 Go](#-javascript-scopes) |
+| 2️⃣5️⃣ | 🧩 Higher Order Functions in JavaScript | [🔗 Go](#-higher-order-functions-in-javascript) |
+| 2️⃣6️⃣ | 🕰️ JavaScript Event Loop + Callback Queue + Web APIs | [🔗 Go](#-javascript-event-loop--callback-queue--web-apis) |
+| 2️⃣7️⃣ | 📎 Difference between Methods and Functions in JavaScript | [🔗 Go](#-difference-between-methods-and-functions-in-javascript) |
+| 2️⃣8️⃣ | 🎯 JavaScript Arrow Functions | [🔗 Go](#-javascript-arrow-functions) |
+| 2️⃣9️⃣ | 🔍 for...of, for...in, and in Keyword in JavaScript | [🔗 Go](#-forof-forin-and-in-keyword-in-javascript) |
+| 3️⃣0️⃣ | 🧰 JavaScript Array Methods: forEach, map, filter, reduce, some, every | [🔗 Go](#-javascript-array-methods-foreach-map-filter-reduce-some-every) |
+| 3️⃣1️⃣ | 🧵 JavaScript: Parameters, Default Parameters, and arguments Keyword | [🔗 Go](#-javascript-parameters-default-parameters-and-arguments-keyword) |
+| 3️⃣2️⃣ | 🧃 JavaScript: Spread Operator and Rest Parameter | [🔗 Go](#-javascript-spread-operator-and-rest-parameter) |
+| 3️⃣3️⃣ | 📓 JavaScript Destructuring | [🔗 Go](#-javascript-destructuring) |
+
+
+
 # 📘 Introduction to JavaScript
 
 JavaScript is a **programming language** that allows us to add interactivity, behavior, and logic to websites.
@@ -838,7 +878,7 @@ console.log(`${firstName} is ${age} years old and lives in ${country}`);
 * Understand the memory model: primitives store values directly, non-primitives store references.
 
 ---
-# ⚙️ JavaScript Code Execution Process 
+# ⚙️ JavaScript Code Execution Process
 
 JavaScript executes code in two main phases whenever it runs a script:
 (JavaScript jab bhi code chalata hai, woh do main phases mein kaam karta hai:)
@@ -1512,7 +1552,7 @@ Used to check the type of a variable or instance.
 
 ---
 
-# 🧠 JavaScript Decision Making (Conditional Statements)
+# 🧠 JavaScript Decision Making
 
 Decision-making in JavaScript allows your program to take different paths based on different conditions. These are commonly referred to as **conditional statements** and they play a vital role in logic building and control flow.
 
