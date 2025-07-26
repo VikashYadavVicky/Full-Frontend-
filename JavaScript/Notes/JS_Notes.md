@@ -125,7 +125,7 @@ Let’s look at the background of this powerful language:
 
 > ✨ “JavaScript is the brush that paints interactivity on the canvas of the web.”
 
-
+#### [Practical Example Link](../Practical-Examples/Introduction_to_JavaScript/)
 ---
 # 📘 How to Use JavaScript in HTML
 
@@ -230,6 +230,7 @@ function showMessage() {
 | Internal  | `<script>` in HTML file      | Small projects      | Organized but limited scope   | Not reusable across pages     |
 | External  | Separate `.js` file          | Large applications  | Clean, reusable, maintainable | Setup slightly more complex   |
 
+#### [Practical Example Link](../Practical-Examples/How_to_Use_JavaScript_in_HTML/)
 ---
 # 🧾 JavaScript Syntax and Statements
 
@@ -335,6 +336,7 @@ Used to group statements together.
 </html>
 ```
 - If you don't understand some syntax like if else and some more don't worry we discuss this topics in very detailed in this JS notes.
+#### [Practical Example Link](../Practical-Examples/JavaScript_Syntax_and_Statements/)
 
 ---
 # 🔢 FUNDAMENTALS Of JavaScripts
@@ -524,6 +526,8 @@ console.log(typeof 123n);       // bigint
 
 - ✅ Also we have a type NaN Not a Number. We Dicuss in this topic in upcoming topics.
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Data_Types/)
+
 ---
 # 📘 JavaScript Type Conversion 
 
@@ -699,6 +703,8 @@ false + true;       // 1
 "10" - 1;           // 9     (string - number = number)
 +"100";             // 100 (string to number)
 ```
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Type_Conversion/)
 
 ---
 
@@ -877,6 +883,8 @@ console.log(`${firstName} is ${age} years old and lives in ${country}`);
 * Use `camelCase` for variable names and `PascalCase` for class names.
 * Understand the memory model: primitives store values directly, non-primitives store references.
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Variables/)
+
 ---
 # ⚙️ JavaScript Code Execution Process
 
@@ -1001,6 +1009,8 @@ console.log(add(a, b));  // 30
 | Code Execution    | - Assign values<br>- Execute functions<br>- Control flow statements are processed              |
 | (Code Execution)  | (Values assign hoti hain, functions execute hote hain, control flow statements run karte hain) |
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Code_Execution_Process/)
+
 ---
 # 🛈 JavaScript Dialog Boxes
 
@@ -1085,6 +1095,8 @@ if (response) {
 
 
 📝 These dialog boxes are useful in small interactions, testing, or learning — but are rarely used in modern UI-heavy web apps due to limited styling and blocking behavior.
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Dialog_Boxes/)
 
 ---
 # 📌 JavaScript Template Literals & String Methods
@@ -1253,6 +1265,8 @@ console.log(csv.split(",")); // ["red", "green", "blue"]
 console.log(str.charAt(0));      // "J"
 console.log(str.charCodeAt(0));  // 74
 ```
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Template_Literals_&_String_Methods/)
 ---
 
 # 📐 JavaScript Math Object
@@ -1396,7 +1410,7 @@ console.log(Math.log(10));     // 2.302...
 console.log(Math.log10(100));  // 2
 console.log(Math.exp(1));      // 2.718...
 ```
-
+#### [Practical Example Link](../Practical-Examples/JavaScript_Math_Object/)
 ---
 # ✅ JavaScript Truthy and Falsy Values
 
@@ -1463,6 +1477,9 @@ if (items.length) {
   console.log("Array is empty");
 }
 ```
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Truthy_and_Falsy_Values/)
+
 ---
 # ⚙️ JavaScript Operators
 
@@ -1549,6 +1566,8 @@ Used to check the type of a variable or instance.
 | ------------ | --------------------------------------------- | ------------------------------- |
 | `typeof`     | Returns the type of a variable                | `typeof 123` → "number"         |
 | `instanceof` | Checks if object is instance of a constructor | `arr instanceof Array` → `true` |
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Operators/)
 
 ---
 
@@ -1816,6 +1835,8 @@ When you want to write a short and simple `if...else` decision in a single line.
 | `switch`              | `switch(expression)`          | Match one value from many cases             |
 | Ternary               | `condition ? val1 : val2`     | Short `if...else` decisions, compact syntax |
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Decision_Making/)
+
 ---
 
 # 🧠 How to See JavaScript Variable Address in Chrome DevTools
@@ -1886,6 +1907,8 @@ window.myUser = user; // ✅ Make it global
 * Always attach to `window` for global access: `window.obj = yourObj`
 * Name your variables clearly to find them quickly in memory.
 * Use `console.log(obj)` and **right-click → Store as Global Variable** for inspection too.
+
+#### [Practical Example Link](../Practical-Examples/How_to_See_JavaScript_Variable_Address_in_Chrome_DevTools/)
 
 ---
 
@@ -2084,7 +2107,7 @@ Object.seal(person);
 person.age = 40; // works
 person.gender = "Male"; // won't add
 ```
-
+#### [Practical Example Link](../Practical-Examples/JavaScript_Objects/)
 ---
 
 # 📚 JavaScript Arrays Full Guide
@@ -2274,7 +2297,7 @@ let matrix = [
 ];
 console.log(matrix[1][0]); // 3
 ```
-
+#### [Practical Example Link](../Practical-Examples/JavaScript_Arrays/)
 ---
 
 # 🔄 JavaScript Shallow Copy vs Deep Copy
@@ -2379,6 +2402,8 @@ let deepCopy = cloneDeep(original);
 * Use **shallow copy** when your object/array is flat.
 * Use **deep copy** when you want full independence from the original, especially with nested structures.
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Shallow_Copy_vs_Deep_Copy/)
+
 ---
 # 🔁 JavaScript While Loop
 
@@ -2476,6 +2501,7 @@ while (i <= 3) {
 * When the number of iterations is **not known in advance**.
 * When we want to repeat something until a **specific condition** is met.
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_While_Loop/)
 ---
 # 🔁 JavaScript for Loop
 
@@ -2571,7 +2597,7 @@ i = 3, j = 2
 * Control comes from its 3 expressions (init, condition, increment).
 * Can be nested, and commonly used with arrays.
 
-
+#### [Practical Example Link](../Practical-Examples/JavaScript_for_Loop/)
 ---
 
 # 🔁 JavaScript `do...while` Loop
@@ -2674,6 +2700,8 @@ do {
 * `do...while` runs the code block at least **once**.
 * Useful when you want the loop body to execute before checking the condition.
 * Great for user inputs, menus, retries, etc.
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_do_while_Loop/)
 
 ---
 
@@ -2868,6 +2896,8 @@ const sayHi = function() {
 | Called Before Defined?  | ✅ Yes                 | ❌ No                         |
 | Syntax                  | `function name() {}`  | `const name = function() {}` |
 | Use in Conditional Code | ✅ Works               | ⚠️ Needs care                |
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Function/)
 
 ---
 # Intermediate JavaScript
@@ -3091,6 +3121,8 @@ one();
 ------------------
 ```
 
+#### [Practical Example Link](../Practical-Examples/Execution_Context_in_JavaScript/)
+
 ---
 
 # 🪄 Hoisting in JavaScript
@@ -3200,6 +3232,7 @@ var notHoisted = function() {
 
 Open DevTools → Console tab → Paste these examples and experiment!
 
+#### [Practical Example Link](../Practical-Examples/Hoisting_in_JavaScript/)
 ---
 
 # 🌐 JavaScript Scopes
@@ -3460,6 +3493,8 @@ console.log(window.msg); // ❌ undefined
 | Block      | Inside that block only         | let, const      |
 | Script     | Script-wide (global or module) | var, let, const |
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Scopes/)
+
 
 ---
 
@@ -3554,6 +3589,9 @@ console.log(sum); // 10
 | Takes function as input | Yes                                         |
 | Returns a function      | Yes                                         |
 | Examples                | map(), filter(), reduce(), custom callbacks |
+
+#### [Practical Example Link](../Practical-Examples/Higher_Order_Functions_in_JavaScript/)
+
 
 ---
 
@@ -3691,6 +3729,8 @@ Use function references or arrow functions instead:
 setTimeout(() => console.log("Hello"));
 ```
 
+#### [Practical Example Link](../Practical-Examples/Higher_Order_Functions_in_JavaScript/)
+
 ---
 # 🌀 JavaScript Event Loop + Callback Queue + Web APIs  
 _With SetTimeout & SetInterval Simulation_
@@ -3792,6 +3832,7 @@ setTimeout(() => {
 
 console.log("✅ Program Start");
 ```
+#### [Practical Example Link](../Practical-Examples/JavaScript_Event_Loop_Callback_Queue_Web_APIs/)
 
 
 ---
@@ -3890,6 +3931,8 @@ obj.showThisMethod();  // Logs: obj object
 | Belongs to    | Global/Module scope | Object           |
 | Invocation    | By name             | Through object   |
 | `this` refers | Global object       | Object owning it |
+
+#### [Practical Example Link](../Practical-Examples/Difference_between_Methods_and_Functions_in_JavaScript/)
 
 
 ---
@@ -3998,6 +4041,8 @@ console.log(person.greet()); // Hi, I'm Vikash
 🚫 You need `arguments`  
 🚫 You're writing class methods or constructors
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Arrow_Functions/)
+
 ---
 
 # 🔁 `for...of`, `for...in`, and `in` Keyword in JavaScript
@@ -4097,7 +4142,7 @@ console.log(5 in numbers);  // false
 - Use `for...in` for **objects**
 - Use `in` when you want to check if something **exists**
 
-
+#### [Practical Example Link](../Practical-Examples/forof_forin_and_in_Keyword_in_JavaScript/)
 ---
 
 
@@ -4459,6 +4504,7 @@ console.log(result); // true
 | `some()`  | Any `true` | Boolean | First `true`  | At least one matches |
 | `every()` | All `true` | Boolean | First `false` | All must match       |
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Array_Methods_forEach_map_filter_reduce_some_every/)
 
 ---
 
@@ -4570,6 +4616,8 @@ console.log(sumAll(1, 2, 3, 4)); // 10
 ```
 
 > ✅ `...args` is a **rest parameter** that collects all arguments into a real array.
+
+#### [Practical Example Link](../Practical-Examples/JavaScript_Parameters_Default_Parameters_and_arguments_Keyword/)
 
 ---
 
@@ -4715,6 +4763,8 @@ countArgs(1, 2, 3); // 3
 | Type Returned    | Individual elements      | Array                       |
 | Syntax           | `...array`               | `function(...args)`         |
 
+#### [Practical Example Link](../Practical-Examples/JavaScript_Spread_Operator_and_Rest_Parameter/)
+
 ---
 
 # 📦 JavaScript Destructuring
@@ -4831,3 +4881,4 @@ console.log(secondUser); // Vicky
 
 
 ✨ Destructuring makes code cleaner, reduces repetition, and improves readability.
+#### [Practical Example Link](../Practical-Examples/JavaScript_Destructuring/)
