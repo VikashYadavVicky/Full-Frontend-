@@ -2,11 +2,13 @@
 
 This is a simple and responsive **Landing Page (Project 01)** created using **HTML5** and **CSS3**. The design showcases a modern layout, attractive call-to-action, and is fully responsive across all screen sizes.
 
+- [Original Link](https://www.behance.net/gallery/64208001/DESIGNERD-20)
 ---
 
 ## 📸 Preview
 
-![Desktop View](./assets/Desktop%View.png)
+![Desktop View](./assets/Desktop%20View.png)
+![Mobile View](./assets/Mobile%20View.png)
 
 ---
 
@@ -29,8 +31,6 @@ LP01_LandingPage/
 └── assets/            # Images, fonts, or icons (if any)
 ```
 
----
-
 ## 💡 Features
 
 - Clean and minimal design
@@ -40,19 +40,16 @@ LP01_LandingPage/
 - Services or Features section
 - Footer with social/contact links
 
----
 
 ## 🖥️ Live Demo
 
 [🔗 View Live](https://your-live-link.com) *(Replace with your deployed URL)*
 
----
-
 ## 📌 Setup Instructions
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/LP01_LandingPage.git
+   git clone Url
    ```
 
 2. Open the project folder  
@@ -62,15 +59,5 @@ LP01_LandingPage/
 
 3. Open `index.html` in your browser
 
----
-
-## 📧 Contact
-
-For any questions or feedback, feel free to reach out:
-
-- GitHub: [your-username](https://github.com/your-username)
-- Email: your-email@example.com
-
----
 
 > ✨ **This project is part of my CSS practical learning series.**
