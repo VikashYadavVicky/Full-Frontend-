@@ -49,7 +49,17 @@ https://github.com/VikashYadavVicky/CSS-Projects.git
 | Project Name                          | Preview                                                  | Folder Path                                               |
 |--------------------------------------|-----------------------------------------------------------|------------------------------------------------------------|
 | Landing Page 01              | 👉 [Click to preview](./Landing%20Pages/Landing-Page-01/LP01_Readme.md) | `Landing Pages/Landing-Page-01/`     |
-| Landing Page 01                    | 👉 [Click to preview](./Landing%20Pages/Landing-Page-02/LP02_Readme.md)                | `Landing Pages/Landing-Page-02/`                  |         
+| Landing Page 01                    | 👉 [Click to preview](./Landing%20Pages/Landing-Page-02/LP02_Readme.md)                | `Landing Pages/Landing-Page-02/`                  |   
+
+
+
+
+## 💼 Small Projects
+
+| Project Name                          | Preview                                                  | Folder Path                                               |
+|--------------------------------------|-----------------------------------------------------------|------------------------------------------------------------|
+| Image Overlap Stack             | 👉 [Click to preview](./Small-Projects/Image%20Overlap%20Stack/Readme.md) | `Small-Projects/Image Overlap Stack/`     |
+   
 
 
 > 📝 Click the preview link to view full project details.
