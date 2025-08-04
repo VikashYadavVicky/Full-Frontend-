@@ -48,8 +48,10 @@ https://github.com/VikashYadavVicky/CSS-Projects.git
 
 | Project Name                          | Preview                                                  | Folder Path                                               |
 |--------------------------------------|-----------------------------------------------------------|------------------------------------------------------------|
-| Landing Page 01              | 👉 [Click to preview](./Landing%20Pages/Landing-Page-01/LP01_Readme.md) | `Landing Pages/Landing-Page-01/`     |
-| Landing Page 01                    | 👉 [Click to preview](./Landing%20Pages/Landing-Page-02/LP02_Readme.md)                | `Landing Pages/Landing-Page-02/`                  |   
+| Landing Page 01              | 👉 [Click to preview](./Landing%20Pages/Landing-Page-01/Readme.md) | `Landing Pages/Landing-Page-01/`     |
+| Landing Page 02                    | 👉 [Click to preview](./Landing%20Pages/Landing-Page-02/Readme.md)                | `Landing Pages/Landing-Page-02/`                  |  
+| Landing Page 03                    | 👉 [Click to preview](./Landing%20Pages/Landing-Page-03/Readme.md)                | `Landing Pages/Landing-Page-03/`                  |         
+
 
 
 
