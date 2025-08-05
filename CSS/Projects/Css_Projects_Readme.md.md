@@ -54,6 +54,12 @@ https://github.com/VikashYadavVicky/CSS-Projects.git
 
 
 
+## 💼 Gsap Projects
+
+| Project Name                          | Preview                                                  | Folder Path                                               |
+|--------------------------------------|-----------------------------------------------------------|------------------------------------------------------------|
+| Landing Page 001             | 👉 [Click to preview](./Gsap%20Projects/Landing%20Pages/Landing-Page-001/Readme.md) | `GSAP-Projects/Gsap Landing Pages/Landing-Page-001/`     |
+
 
 
 ## 💼 Small Projects

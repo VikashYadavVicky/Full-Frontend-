@@ -7,7 +7,7 @@ This is a simple and responsive **Landing Page (Project 02)** created using **HT
 
 ## 📸 Preview
 
-![Desktop View](./assets/images/Destop%20View.png)
+![Desktop View](./assets/images/Design%20second%20page%20page.png)
 
 
 ---

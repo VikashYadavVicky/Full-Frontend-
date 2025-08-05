@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Page */
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* Main animated page */
+.main-page {
+    width: 70%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* As a cover paga */
+.main-page-center {
+    width: 95%;
+    height: 80%;
+    display: flex;
+}
+
+/* First div main page */
+.logo-and-page-no {
+    height: 100%;
+    width: 12%;
+}
+
+
+.logo-and-page-no .logo {
+    height: 20%;
+    width: 100%;
+    padding-left: 20%;
+    position: relative;
+}
+
+.logo-and-page-no .logo i {
+    font-size: 3.1rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -7px;
+
+    animation: zoomInOut 1.5s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.logo-and-page-no .pagebar {
+    padding-left: 20%;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2%;
+    justify-content: center;
+
+}
+
+.logo-and-page-no .pagebar .page-box {
+    height: 25%;
+    width: 2%;
+    background-color: rgba(0, 0, 0);
+    opacity: 0.2;
+    border-radius: 10px;
+}
+
+
+
+.logo-and-page-no .More-Section {
+    height: 20%;
+    width: 100%;
+    position: relative;
+}
+
+.logo-and-page-no .More-Section .more {
+    font-size: 1.1rem;
+    font-family: "Inter";
+    font-weight: 500;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 53%;
+    left: -80px;
+    z-index: 99;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-and-page-no .More-Section .more:hover {
+    transform: scale(1.3);
+}
+
+.logo-and-page-no .More-Section .arrow i {
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 52%;
+    left: -20px;
+    z-index: 99;
+    opacity: 0;
+
+    animation: moveArrow 4s infinite ease-in-out;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(30px); /* forward movement */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0); /* back to original */
+        opacity: 0.5;
+    }
+}
+
+/* Second div main page */
+.image-and-text-animation {
+    height: 100%;
+    width: 80%;
+    position: relative;
+}
+
+
+.image-and-text-animation .main-text {
+    overflow: hidden;
+    position: absolute;
+    left: -7%;
+
+    top: 32%;
+    width: 600px;
+    height: 200px;
+    z-index: 999;
+}
+
+.image-and-text-animation .main-text h4 {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 10rem;
+    left: -200px;
+    opacity: 0;
+    position: absolute;
+    letter-spacing: 0.4rem;
+
+}
+
+.paragraph {
+    font-family: "serif";
+    overflow: hidden;
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: -7%;
+
+    top: 65%;
+    z-index: 999;
+}
+
+.paragraph p {
+    font-size: 1rem;
+    font-weight: 200;
+    bottom: -20px;
+    opacity: 0;
+    position: absolute;
+}
+
+
+.imagecontainer {
+    overflow: hidden;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 4%;
+}
+
+
+img {
+    height: 100%;
+
+}
+
+/* Third div main page */
+.navbar {
+    height: 100%;
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.navbar .icons {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.navbar .icons i {
+    padding-right: 1vh;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .icons i:hover {
+    transform: scale(1.3);
+}
+
+.navbar .menu {
+    padding-right: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+}
+
+.navbar .menu .menu-box {
+    height: 3px;
+    width: 28px;
+    background-color: rgba(0, 0, 0);
+    opacity: 0.6;
+    border-radius: 10px;
+
+}
