@@ -79,7 +79,7 @@ A bordered card that contains:
 
 ## 📸 Screenshots
 
-> [Full View](./images/Full%20Layout.png)
+![Full View](./images/Full%20Layout.png)
 
 ---
 

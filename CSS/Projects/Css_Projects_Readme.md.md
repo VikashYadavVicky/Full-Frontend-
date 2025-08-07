@@ -68,6 +68,7 @@ https://github.com/VikashYadavVicky/CSS-Projects.git
 |--------------------------------------|-----------------------------------------------------------|------------------------------------------------------------|
 | Image Overlap Stack             | 👉 [Click to preview](./Small-Projects/Image%20Overlap%20Stack/Readme.md) | `Small-Projects/Image Overlap Stack/`     |
 | Cards01             | 👉 [Click to preview](./Small-Projects/Cards01/Readme.md) | `Small-Projects/Cards01/`     |
+| Responsive Web Components             | 👉 [Click to preview](./Small-Projects/Responsive%20Web%20Components/readme.md) | `Small-Projects/Responsive Web Components/`     |
    
 
 

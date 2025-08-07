@@ -40,7 +40,7 @@ Image Overlap Stack/
 
 ## 🖥️ Live Demo
 
-[🔗 View Live](https://your-live-link.com) *(Replace with your deployed URL)*
+[🔗 View Live](https://your-live-link.com)
 
 ## 📌 Setup Instructions
 
