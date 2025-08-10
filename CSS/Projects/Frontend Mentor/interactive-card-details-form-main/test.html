@@ -1,0 +1,76 @@
+Skip to content
+Open sidebar
+
+ChatGPT
+You said:
+lets i have a form with the help of js how i get data from this and at the same time update this text or number in another div
+ChatGPT said:
+Got it — you want to grab data from a form field as the user types or changes it and then instantly update another <div> with that value using JavaScript.
+
+Here’s a simple example:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Form Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .output-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #333;
+            display: inline-block;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live Update Form</h2>
+
+    <form id="myForm">
+        <label for="username">Enter your name:</label><br>
+        <input type="text" id="username" name="username" placeholder="Type here...">
+    </form>
+
+    <h3>Live Output:</h3>
+    <div id="output" class="output-box">Nothing yet...</div>
+
+    <script>
+        // Get references to elements
+        const inputField = document.getElementById('username');
+        const outputDiv = document.getElementById('output');
+
+        // Event listener for real-time updates
+        inputField.addEventListener('input', function () {
+            let value = inputField.value;
+
+            // If empty, show default text
+            outputDiv.textContent = value || "Nothing yet...";
+        });
+    </script>
+
+</body>
+</html>
+How this works
+addEventListener('input', ...) → runs every time the user types or deletes something.
+
+We read the input value using .value.
+
+We update the <div> using .textContent.
+
+If the field is empty, we display "Nothing yet...".
+
+If you want, I can also show how to do this for multiple form fields and update numbers in real-time for calculations (like live price totals). That way, your form updates another div dynamically while typing.
+
+Do you want me to make the multiple-field live update example?
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.

@@ -41,7 +41,8 @@ https://github.com/VikashYadavVicky/CSS-Projects.git
 | QR Code Component                    | 👉 [Click to preview](Frontend%20Mentor/QR-code-component-main/README.md)                | `Frontend Mentor/QR-code-component-main`                  |
 | Results Summary Component            | 👉 [Click to preview](Frontend%20Mentor/Results-summary-component-main/README.md)         | `Frontend Mentor/Results-summary-component-main`           |
 | Social Links Profile                 | 👉 [Click to preview](Frontend%20Mentor/Social-links-profile-main/Social-links-profile-main/README.md)              | `Frontend Mentor/Social-links-profile-main`                |
-| Css Grid Project                     | 👉 [Click to preview](Frontend%20Mentor/Css-Grid-Project/README.md)              |  `Frontend Mentor/Css-Grid-Project`           
+| Css Grid Project                     | 👉 [Click to preview](Frontend%20Mentor/Css-Grid-Project/README.md)              |  `Frontend Mentor/Css-Grid-Project`           |
+| interactive card details form main                 | 👉 [Click to preview](Frontend%20Mentor/interactive-card-details-form-main/Readme.md)              | `Frontend Mentor/interactive-card-details-form-main/`                |  
 
 
 ## 💼 Landing Pages
