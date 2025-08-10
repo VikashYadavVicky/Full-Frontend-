@@ -52,9 +52,9 @@ Each main technology (HTML, CSS, JS, React) includes:
 
 | Topic        | Notes Link                             |
 |--------------|-----------------------------------------|
-| HTML         | [HTML Notes](./HTML/Notes/)            |
-| CSS          | [CSS Notes](./CSS/Notes/)              |
-| JavaScript   | [JavaScript Notes](./JavaScript/Notes/)|
+| HTML         | [HTML Notes](./HTML/readme.md)            |
+| CSS          | [CSS Notes](./CSS/readme.md)              |
+| JavaScript   | [JavaScript Notes](./JavaScript/readme.md)|
 | React        | [React Notes](./React/Notes/)          |
 | Git & GitHub | [Git Notes](./Others/Git-and-GitHub/)  |
 
